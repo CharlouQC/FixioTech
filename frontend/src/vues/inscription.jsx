@@ -87,7 +87,7 @@ const Inscription = () => {
             <label htmlFor="courriel">Adresse courriel</label>
             <input
               type="email"
-              id="email"
+              id="courriel"
               name="courriel"
               value={formData.courriel}
               onChange={handleChange}
@@ -95,7 +95,7 @@ const Inscription = () => {
             />
           </div>
           <div className="form-groupe">
-            <label htmlFor="mot_de_passe">Mot de passe</label>
+            <label htmlFor="password">Mot de passe</label>
             <input
               type="password"
               id="password"
