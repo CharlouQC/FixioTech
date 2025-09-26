@@ -4,13 +4,12 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  preview: {
+    allowedHosts: ['fixiotexh.onrender.com'],
+  },
   test: {
-    host: true,
-    strictPort: true,
-    port: 5173,
-    preview,allowedHosts: ['fixiotexh.onrender.com'],
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./frontend/src/setupTests.js'],
-  }
+  },
 })
