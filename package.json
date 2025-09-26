@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "start": "vite preview --port 3000 --host 0.0.0.0"
+    "start": "vite preview --port $PORT --host"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
