@@ -29,6 +29,8 @@ app.use("/", (req, res) => {
 
 app.use('/api/utilisateurs', routerUtilisateur);
 
+// Ici on va rajouter les routes pour les autres entités
+
 app.use(errorHandler);
 
 const PORT = 5000;

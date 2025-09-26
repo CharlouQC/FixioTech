@@ -5,7 +5,8 @@ import {
     getUtilisateurById, 
     addUtilisateur, 
     updateUtilisateur, 
-    deleteUtilisateur 
+    deleteUtilisateur,
+    loginUtilisateur
 } from '../controleurs/controleurUtilisateur.js';
 
 import {
@@ -20,5 +21,6 @@ routerUtilisateur.get('/', getUtilisateurs);
 routerUtilisateur.get('/:id', getUtilisateurById);
 routerUtilisateur.put('/:id', updateUtilisateurValidation, updateUtilisateur);
 routerUtilisateur.delete('/:id', deleteUtilisateur);
+routerUtilisateur.post('/login', loginUtilisateur);
 
 export default routerUtilisateur;

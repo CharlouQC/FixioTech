@@ -68,4 +68,30 @@ const deleteUtilisateur = async (req, res, next) => {
     });
 };
 
-export { getUtilisateurs, getUtilisateurById, addUtilisateur, updateUtilisateur, deleteUtilisateur };
+const loginUtilisateur = async (req, res, next) => {
+    const { email, mot_de_passe } = req.body;
+
+    if (!email || !mot_de_passe) {
+        return res.status(400).json({ message: 'Champs requis manquant' });
+    }
+
+    db.query('SELECT * FROM utilisateurs WHERE email = ? AND mot_de_passe = ?', 
+    [email, mot_de_passe], (err, results) => {
+        if (err) {
+            return next(err);
+        }
+        if (results.length === 0) {
+            return res.status(401).json({ message: 'Email ou mot de passe incorrect' });
+        }
+        res.status(200).json({ message: 'Connexion réussie', utilisateur: results[0] });
+    });
+};
+
+export { 
+    getUtilisateurs, 
+    getUtilisateurById, 
+    addUtilisateur, 
+    updateUtilisateur, 
+    deleteUtilisateur, 
+    loginUtilisateur
+};
