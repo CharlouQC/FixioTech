@@ -1,11 +1,11 @@
 import express from 'express';
-// import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import cors from 'cors';
 
 import routerUtilisateur from './routes/routeUtilisateur.js';
 import errorHandler from './middlewares/errorHandler.js';
 
-// dotenv.config();
+dotenv.config();
 
 const app = express();
 
@@ -33,7 +33,7 @@ app.use('/api/utilisateurs', routerUtilisateur);
 
 app.use(errorHandler);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Api écoute sur le port ${PORT}`));
 
 export default app;
