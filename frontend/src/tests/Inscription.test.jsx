@@ -1,14 +1,21 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import Inscription from "../vues/inscription";
 
-// Mock du hook useNavigate
 const mockNavigate = vi.fn();
-vi.mock("react-router-dom", () => ({
-  ...vi.importActual("react-router-dom"),
-  useNavigate: () => mockNavigate,
-}));
+
+vi.mock("react-router-dom", async () => {
+  const actual = await vi.importActual("react-router-dom");
+  return {
+    __esModule: true,
+    ...actual,
+    useNavigate: () => mockNavigate,
+    Link: actual.Link,
+    NavLink: actual.NavLink,
+  };
+});
 
 describe("Inscription Component", () => {
   beforeEach(() => {
@@ -16,7 +23,11 @@ describe("Inscription Component", () => {
   });
 
   it("devrait rendre le formulaire d'inscription", () => {
-    render(<Inscription />);
+    render(
+      <MemoryRouter>
+        <Inscription />
+      </MemoryRouter>
+    );
 
     // Vérifie que les éléments essentiels sont présents
     expect(screen.getByText("Inscription")).toBeInTheDocument();
@@ -32,7 +43,11 @@ describe("Inscription Component", () => {
   });
 
   it("devrait afficher une erreur si les champs sont vides", async () => {
-    render(<Inscription />);
+    render(
+      <MemoryRouter>
+        <Inscription />
+      </MemoryRouter>
+    );
 
     const submitButton = screen.getByRole("button", { name: "S'inscrire" });
     await userEvent.click(submitButton);
@@ -43,7 +58,11 @@ describe("Inscription Component", () => {
   });
 
   it("devrait afficher une erreur si les mots de passe ne correspondent pas", async () => {
-    render(<Inscription />);
+    render(
+      <MemoryRouter>
+        <Inscription />
+      </MemoryRouter>
+    );
 
     // Remplit le formulaire avec des mots de passe différents
     await userEvent.type(
@@ -65,7 +84,11 @@ describe("Inscription Component", () => {
   });
 
   it("devrait afficher une erreur si le mot de passe est trop court", async () => {
-    render(<Inscription />);
+    render(
+      <MemoryRouter>
+        <Inscription />
+      </MemoryRouter>
+    );
 
     // Remplit le formulaire avec un mot de passe court
     await userEvent.type(
@@ -87,7 +110,11 @@ describe("Inscription Component", () => {
   });
 
   it("devrait permettre une inscription réussie", async () => {
-    render(<Inscription />);
+    render(
+      <MemoryRouter>
+        <Inscription />
+      </MemoryRouter>
+    );
 
     // Remplit le formulaire correctement
     await userEvent.type(
