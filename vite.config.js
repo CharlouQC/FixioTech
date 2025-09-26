@@ -8,6 +8,7 @@ export default defineConfig({
     host: true,
     strictPort: true,
     port: 5173,
+    preview,allowedHosts: ['fixiotexh.onrender.com'],
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./frontend/src/setupTests.js'],
