@@ -29,16 +29,16 @@ const Login = () => {
       return;
     }
 
-    // Active l'état de chargement
+    // Activer l'état de chargement
     setIsLoading(true);
 
-    // Simule une vérification d'authentification (à remplacer par l'appel API réel - Bastien)
+    // Simuler une vérification d'authentification (à remplacer par l'appel API réel plus tard)
     setTimeout(() => {
       // Pour l'instant, on simule une connexion réussie
       console.log("Tentative de connexion:", formData);
       setIsLoading(false);
-      // Redirige vers la page d'accueil
-      navigate("/");
+      // Rediriger vers la page d'accueil
+      navigate('/');
     }, 1000);
   };
 
@@ -70,11 +70,7 @@ const Login = () => {
               placeholder="Entrez votre mot de passe"
             />
           </div>
-          <button
-            type="submit"
-            className="bouton-soumettre"
-            disabled={isLoading}
-          >
+          <button type="submit" className="bouton-soumettre" disabled={isLoading}>
             {isLoading ? "Connexion en cours..." : "Se connecter"}
           </button>
         </form>
