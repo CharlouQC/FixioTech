@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/utilisateurs';
+const API_URL = 'http://localhost:3000/api/utilisateurs';
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {

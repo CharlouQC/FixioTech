@@ -23,10 +23,6 @@ app.use(
 
 app.use(express.json());
 
-app.use("/", (req, res) => {
-  res.send("API Utilisateurs fonctionne !");
-});
-
 app.use('/api/utilisateurs', routerUtilisateur);
 
 // Ici on va rajouter les routes pour les autres entités
