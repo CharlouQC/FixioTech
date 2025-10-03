@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./inscription.css";
+import { addUtilisateur } from "../../services/apiUtilisateur";
 
 const Inscription = () => {
   const [formData, setFormData] = useState({
@@ -20,7 +21,7 @@ const Inscription = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
@@ -55,10 +56,13 @@ const Inscription = () => {
     // Réinitialise les messages d'erreur
     setError("");
 
-    // TODO: Intégrer avec le backend - Bastien
-    // Simulation de la création de compte réussie
-    setSuccessMessage("Votre compte a été créé avec succès !");
-    console.log("Tentative d'inscription:", formData);
+    try {
+      await addUtilisateur(formData); 
+      setSuccessMessage("Votre compte a été créé avec succès !");
+      // navigate("/login");
+    } catch (err) {
+      setError(err.message || "Erreur lors de la création du compte");
+    }
   };
 
   return (
