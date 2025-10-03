@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
+import { loginUtilisateur } from "../../services/apiUtilisateur";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,14 +33,19 @@ const Login = () => {
     // Active l'état de chargement
     setIsLoading(true);
 
-    // Simule une vérification d'authentification (à remplacer par l'appel API réel - Bastien)
-    setTimeout(() => {
-      // Pour l'instant, on simule une connexion réussie
-      console.log("Tentative de connexion:", formData);
-      setIsLoading(false);
-      // Redirige vers la page d'accueil
-      navigate("/");
-    }, 1000);
+    loginUtilisateur(null, formData)
+      .then((response) => {
+        console.log("Réponse de l'API:", response);
+        // Redirige vers la page d'accueil ou tableau de bord après connexion réussie
+        navigate("/");
+      })
+      .catch((err) => {
+        console.error("Erreur lors de la connexion:", err);
+        setError(err.message || "Erreur lors de la connexion");
+      })
+      .finally(() => {
+        setIsLoading(false); // Désactive l'état de chargement
+      });
   };
 
   return (
