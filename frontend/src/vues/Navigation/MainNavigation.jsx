@@ -17,7 +17,7 @@ const MainNavigation = () => {
           </Link>
         </li>
         <li>
-          <Link to="/services" className="nav-link">
+          <Link to="/services_aides" className="nav-link">
             Services
           </Link>
         </li>

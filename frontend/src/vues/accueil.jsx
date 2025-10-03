@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./accueil.css";
 
 const Accueil = () => {
@@ -8,15 +8,16 @@ const Accueil = () => {
       <div className="hero-section">
         <h1>Bienvenue sur FixioTech !</h1>
         <p className="hero-text">
-          Votre solution de soutien technique en ligne disponible 24h/24.
-          Prenez rendez-vous avec un technicien qualifié et obtenez de l'aide
-          sans quitter le confort de votre domicile.
+          Votre solution de soutien technique en ligne disponible 24h/24. Prenez
+          rendez-vous avec un technicien qualifié et obtenez de l'aide sans
+          quitter le confort de votre domicile.
         </p>
+
         <div className="cta-boutons">
           <Link to="/rendez-vous" className="cta-bouton-rendez-vous">
             Prendre rendez-vous
           </Link>
-          <Link to="/services" className="cta-bouton-services">
+          <Link to="/services_aides" className="cta-bouton-services">
             Nos services
           </Link>
         </div>
