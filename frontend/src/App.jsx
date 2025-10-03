@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import MainNavigation from './vues/Navigation/MainNavigation';
-import Accueil from './vues/accueil';
-import Login from './vues/login';
-import Inscription from './vues/inscription';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import MainNavigation from "./vues/Navigation/MainNavigation";
+import Accueil from "./vues/accueil";
+import Login from "./vues/login";
+import Inscription from "./vues/inscription";
 
 function App() {
   return (
