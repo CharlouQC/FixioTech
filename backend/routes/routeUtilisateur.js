@@ -16,9 +16,9 @@ import {
 
 const routerUtilisateur = express.Router();
 
-routerUtilisateur.post('/', addUtilisateurValidation, addUtilisateur);
 routerUtilisateur.get('/', getUtilisateurs);
 routerUtilisateur.get('/:id', getUtilisateurById);
+routerUtilisateur.post('/', addUtilisateurValidation, addUtilisateur);
 routerUtilisateur.put('/:id', updateUtilisateurValidation, updateUtilisateur);
 routerUtilisateur.delete('/:id', deleteUtilisateur);
 routerUtilisateur.post('/login', loginUtilisateur);

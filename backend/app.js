@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import routerUtilisateur from './routes/routeUtilisateur.js';
+import routerHoraire from './routes/routeHoraire.js';
 import errorHandler from './middlewares/errorHandler.js';
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(
 app.use(express.json());
 
 app.use('/api/utilisateurs', routerUtilisateur);
+app.use('/api/horaires', routerHoraire);
 
 // Ici on va rajouter les routes pour les autres entités
 
