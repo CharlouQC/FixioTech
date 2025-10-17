@@ -7,6 +7,8 @@ import Login from "./vues/login";
 import Inscription from "./vues/inscription";
 import Services from "./vues/services_aides";
 import Horaires from "./vues/horaires";
+import RendezVous from "./vues/rendez-vous";
+import Contact from "./vues/contact";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/inscription" element={<Inscription />} />
             <Route path="/services_aides" element={<Services />} />
             <Route path="/horaires" element={<Horaires />} />
+            <Route path="/rendez-vous" element={<RendezVous />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       </div>
