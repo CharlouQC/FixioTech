@@ -47,6 +47,11 @@ const MainNavigation = () => {
           </Link>
         </li>
         <li>
+          <Link to="/logs" className="nav-link">
+            📊 Logs
+          </Link>
+        </li>
+        <li>
           <Link to="/login" className="nav-link login-link">
             Connexion
           </Link>
