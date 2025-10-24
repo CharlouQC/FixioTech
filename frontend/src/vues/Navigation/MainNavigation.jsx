@@ -37,6 +37,16 @@ const MainNavigation = () => {
           </Link>
         </li>
         <li>
+          <Link to="/client" className="nav-link">
+            Mes demandes
+          </Link>
+        </li>
+        <li>
+          <Link to="/employe" className="nav-link">
+            Espace employé
+          </Link>
+        </li>
+        <li>
           <Link to="/login" className="nav-link login-link">
             Connexion
           </Link>
