@@ -92,6 +92,7 @@ CREATE TABLE rendez_vous (
   employe_id INT NOT NULL,
   date_rdv   DATE NOT NULL,
   heure_rdv  TIME NOT NULL,
+  description_probleme TEXT NULL,
   statut ENUM('Programmé','Annulé','Terminé') DEFAULT 'Programmé',
 
   CONSTRAINT fk_rdv_client
