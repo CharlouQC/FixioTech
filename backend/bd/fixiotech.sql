@@ -17,6 +17,7 @@ CREATE TABLE utilisateurs (
   id INT AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(100) NOT NULL UNIQUE,
   mot_de_passe VARCHAR(255) NOT NULL,
+  nom_complet VARCHAR(100) NOT NULL,
   role ENUM('client','employe','admin') NOT NULL DEFAULT 'client'
 );
 
