@@ -5,6 +5,7 @@ import { addUtilisateur } from "../../services/apiUtilisateur";
 
 const Inscription = () => {
   const [formData, setFormData] = useState({
+    nom_complet: "",
     courriel: "",
     mot_de_passe: "",
     confirmer_mot_de_passe: "",
@@ -27,12 +28,19 @@ const Inscription = () => {
 
     // Validations
     if (
+      !formData.nom_complet ||
       !formData.courriel ||
       !formData.mot_de_passe ||
       !formData.confirmer_mot_de_passe ||
       !formData.role
     ) {
       setError("Veuillez remplir tous les champs");
+      return;
+    }
+
+    // Validation du nom complet
+    if (formData.nom_complet.trim().length < 2) {
+      setError("Veuillez entrer un nom complet valide");
       return;
     }
 
@@ -57,7 +65,7 @@ const Inscription = () => {
     setError("");
 
     try {
-      await addUtilisateur(formData); 
+      await addUtilisateur(formData);
       setSuccessMessage("Votre compte a été créé avec succès !");
       // navigate("/login");
     } catch (err) {
@@ -86,6 +94,17 @@ const Inscription = () => {
               <option value="client">Client</option>
               <option value="employe">Employé</option>
             </select>
+          </div>
+          <div className="form-groupe">
+            <label htmlFor="nom_complet">Nom complet</label>
+            <input
+              type="text"
+              id="nom_complet"
+              name="nom_complet"
+              value={formData.nom_complet}
+              onChange={handleChange}
+              placeholder="Entrez votre nom complet"
+            />
           </div>
           <div className="form-groupe">
             <label htmlFor="courriel">Adresse courriel</label>
