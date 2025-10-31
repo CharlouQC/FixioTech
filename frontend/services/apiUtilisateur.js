@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/utilisateurs';
+const API_URL = "http://localhost:3000/api/utilisateurs";
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {
@@ -46,7 +46,7 @@ async function addUtilisateur(utilisateur) {
   const payload = {
     email: utilisateur.courriel,
     mot_de_passe: utilisateur.mot_de_passe,
-    nom_complet: utilisateur.nom_complet, 
+    nom_complet: utilisateur.nom_complet,
     role: utilisateur.role || "client",
   };
 
@@ -77,15 +77,26 @@ async function updateUtilisateur(id, updates) {
 
 async function deleteUtilisateur(id) {
   return httpJson(`${API_URL}/${id}`, {
-    method: "DELETE"
+    method: "DELETE",
   });
 }
 
-export { 
-  getUtilisateurs, 
-  getUtilisateur, 
-  addUtilisateur, 
+async function getEmployes() {
+  return httpJson(`${API_URL}?role=employe`);
+}
+
+async function getEmployesDisponibles(dateISO, heureHHmm) {
+  const qs = new URLSearchParams({ date: dateISO, heure: heureHHmm });
+  return httpJson(`${API_URL}/disponibles?${qs.toString()}`);
+}
+
+export {
+  getUtilisateurs,
+  getUtilisateur,
+  addUtilisateur,
   loginUtilisateur,
   updateUtilisateur,
-  deleteUtilisateur
+  deleteUtilisateur,
+  getEmployes,
+  getEmployesDisponibles,
 };

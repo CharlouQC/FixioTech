@@ -1,21 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./rendez-vous.css";
+import { useAuth } from "../context/AuthContext";
+import { addRendezVous } from "../../services/apiRendezVous";
+import {
+  getEmployes,
+  getEmployesDisponibles,
+} from "../../services/apiUtilisateur";
 
 const RendezVous = () => {
-  // États pour le formulaire
+  const { user, role } = useAuth();
+
+  // ---------- UI state ----------
   const [formData, setFormData] = useState({
     service: "",
     date: "",
     heure: "",
-    technicien: "",
+    technicien: "", // employe_id (string)
     description: "",
   });
 
+  // Tous les employés (pour affichage quand pas de date)
+  const [allEmployes, setAllEmployes] = useState([]);
+  const [loadingAllTech, setLoadingAllTech] = useState(true);
+
+  // Employés disponibles pour un créneau (date+heure)
+  const [techniciensDispo, setTechniciensDispo] = useState([]);
+  const [loadingDispo, setLoadingDispo] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
 
-  // Liste des services disponibles (identiques à ceux de la page services)
+  // ---------- Constantes ----------
   const services = [
     "Réparation d'ordinateurs",
     "Réparation de cellulaires",
@@ -25,107 +41,146 @@ const RendezVous = () => {
     "Formation personnalisée",
   ];
 
-  // Liste temporaire des techniciens (sera remplacée par les données du backend)
-  const techniciensDisponibles = [
-    { id: 1, nom: "Jean Tremblay", specialite: "Ordinateurs et Réseaux" },
-    { id: 2, nom: "Marie Dubois", specialite: "Appareils Mobiles" },
-    { id: 3, nom: "Pierre Gagnon", specialite: "Support Général" },
-    { id: 4, nom: "Sophie Leblanc", specialite: "Formation" },
-  ];
+  // 08:00 → 18:00, format "HH:mm"
+  const creneauxHoraires = useMemo(
+    () =>
+      Array.from({ length: 11 }, (_, i) => {
+        const h = String(i + 8).padStart(2, "0");
+        return `${h}:00`;
+      }),
+    []
+  );
 
-  // Génère les créneaux horaires disponibles (8h à 18h)
-  const creneauxHoraires = Array.from({ length: 11 }, (_, i) => {
-    const heure = i + 8;
-    return `${heure}:00`;
-  });
-
-  // Gère les changements dans le formulaire
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-    setError("");
-  };
-
-  // Gère la soumission du formulaire
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setSuccessMessage("");
-
-    // Validations
-    if (!formData.service) {
-      setError("Veuillez sélectionner un service");
-      return;
-    }
-
-    if (!formData.date) {
-      setError("Veuillez sélectionner une date");
-      return;
-    }
-
-    if (!formData.heure) {
-      setError("Veuillez sélectionner une heure");
-      return;
-    }
-
-    if (!formData.technicien) {
-      setError("Veuillez sélectionner un technicien");
-      return;
-    }
-
-    if (!formData.description.trim()) {
-      setError("Veuillez décrire brièvement votre problème");
-      return;
-    }
-
-    // Validation de la date (ne peut pas être dans le passé)
-    const dateSelectionnee = new Date(formData.date);
-    const aujourdhui = new Date();
-    aujourdhui.setHours(0, 0, 0, 0);
-
-    if (dateSelectionnee < aujourdhui) {
-      setError("La date ne peut pas être dans le passé");
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      // TODO: Appel à l'API backend pour créer le rendez-vous
-      // await createRendezVous(formData);
-
-      // Simulation d'un appel API
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      setSuccessMessage(
-        "Votre demande de rendez-vous a été envoyée avec succès ! Un technicien vous contactera bientôt pour confirmer."
-      );
-
-      // Réinitialise le formulaire
-      setFormData({
-        service: "",
-        date: "",
-        heure: "",
-        technicien: "",
-        description: "",
-      });
-    } catch (err) {
-      setError(
-        err.message || "Erreur lors de l'envoi de la demande de rendez-vous"
-      );
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  // Obtient la date minimale (aujourd'hui) pour le sélecteur de date
+  // ---------- Helpers ----------
   const getMinDate = () => {
     const today = new Date();
     return today.toISOString().split("T")[0];
   };
 
+  const handleChange = (e) => {
+    setError("");
+    setFormData((f) => ({ ...f, [e.target.name]: e.target.value }));
+  };
+
+  useEffect(() => {
+    let alive = true;
+    setLoadingAllTech(true);
+    setError("");
+
+    getEmployes()
+      .then((list) => {
+        if (!alive) return;
+        setAllEmployes(list || []);
+      })
+      .catch((err) => {
+        if (!alive) return;
+        setAllEmployes([]);
+        setError(err.message || "Erreur lors du chargement des techniciens.");
+      })
+      .finally(() => alive && setLoadingAllTech(false));
+
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // Charger dynamiquement les techniciens disponibles dès qu'on a date + heure
+  useEffect(() => {
+    const { date, heure } = formData;
+
+    // Pas de date → on n’appelle pas /disponibles
+    if (!date) {
+      setTechniciensDispo([]);
+      return;
+    }
+    // Date sans heure → on attend l’heure
+    if (date && !heure) {
+      setTechniciensDispo([]);
+      return;
+    }
+
+    let alive = true;
+    setLoadingDispo(true);
+    setError("");
+
+    getEmployesDisponibles(date, heure)
+      .then((list) => {
+        if (!alive) return;
+        setTechniciensDispo(list || []);
+        // Si un tech sélectionné n'est plus dans la liste, on le déselectionne
+        if (
+          formData.technicien &&
+          !(list || []).some(
+            (t) => String(t.id) === String(formData.technicien)
+          )
+        ) {
+          setFormData((f) => ({ ...f, technicien: "" }));
+        }
+      })
+      .catch((err) => {
+        if (!alive) return;
+        setTechniciensDispo([]);
+        setError(
+          err.message ||
+            "Erreur lors du chargement des techniciens disponibles."
+        );
+      })
+      .finally(() => alive && setLoadingDispo(false));
+
+    return () => {
+      alive = false;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formData.date, formData.heure]);
+
+  // ---------- Submit ----------
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setSuccessMessage("");
+
+    if (!formData.service) return setError("Veuillez sélectionner un service");
+    if (!formData.date) return setError("Veuillez sélectionner une date");
+    if (!formData.heure) return setError("Veuillez sélectionner une heure");
+    if (!formData.description.trim())
+      return setError("Veuillez décrire brièvement votre problème");
+
+    const dateSelectionnee = new Date(formData.date);
+    const aujourdhui = new Date();
+    aujourdhui.setHours(0, 0, 0, 0);
+
+    if (dateSelectionnee < aujourdhui)
+      return setError("La date ne peut pas être dans le passé");
+
+    if (!user?.id) return setError("Vous devez être connecté pour réserver.");
+
+    setIsLoading(true);
+
+    try {
+      await addRendezVous({
+        client_id: user.id,
+        date_rdv: formData.date,
+        heure_rdv: formData.heure,
+        description_probleme: formData.description,
+      });
+
+      setSuccessMessage("Votre rendez-vous a été réservé avec succès !");
+      setFormData({ service: "", date: "", heure: "", description: "" });
+    } catch (err) {
+      setError(err.message || "Aucun technicien disponible à cette heure.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Liste de techniciens à afficher selon le contexte :
+  // - Pas de date → TOUS les employés (allEmployes)
+  // - Date+heure → seulement les disponibles (techniciensDispo)
+  const afficherAll = !(formData.date && formData.heure);
+  const listeTechniciens = afficherAll ? allEmployes : techniciensDispo;
+  const loadingTech = afficherAll ? loadingAllTech : loadingDispo;
+
+  // ---------- Render ----------
   return (
     <div className="rendez-vous-container">
       <div className="rendez-vous-header">
@@ -137,41 +192,93 @@ const RendezVous = () => {
       </div>
 
       <div className="rendez-vous-content">
-        {/* Section des techniciens disponibles */}
+        {/* TECHNICIENS */}
         <div className="techniciens-section">
-          <h2>Techniciens Disponibles</h2>
-          <div className="techniciens-liste">
-            {techniciensDisponibles.map((technicien) => (
-              <div
-                key={technicien.id}
-                className={`technicien-card ${
-                  formData.technicien === technicien.id.toString()
-                    ? "technicien-selected"
-                    : ""
-                }`}
-                onClick={() =>
-                  setFormData({
-                    ...formData,
-                    technicien: technicien.id.toString(),
-                  })
-                }
-              >
-                <div className="technicien-avatar">
-                  {technicien.nom.charAt(0)}
-                </div>
-                <div className="technicien-info">
-                  <h3>{technicien.nom}</h3>
-                  <p>{technicien.specialite}</p>
-                </div>
-                {formData.technicien === technicien.id.toString() && (
-                  <div className="technicien-check">✓</div>
-                )}
+          <h2>Techniciens {afficherAll ? " (tous)" : "Disponibles"}</h2>
+
+          {afficherAll ? (
+            // Aucun date sélectionnée → on affiche TOUS les employés
+            loadingTech ? (
+              <div className="loading-tech">Chargement des techniciens…</div>
+            ) : listeTechniciens.length === 0 ? (
+              <div className="no-tech">
+                Aucun technicien disponible pour ce créneau.
               </div>
-            ))}
-          </div>
+            ) : (
+              <div className="techniciens-liste">
+                {listeTechniciens.map((t) => (
+                  <div
+                    key={t.id}
+                    className={`technicien-card ${
+                      formData.technicien === String(t.id)
+                        ? "technicien-selected"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      setFormData((f) => ({ ...f, technicien: String(t.id) }))
+                    }
+                  >
+                    <div className="technicien-avatar">
+                      {String(t.nom_complet || t.email || "T")
+                        .charAt(0)
+                        .toUpperCase()}
+                    </div>
+                    <div className="technicien-info">
+                      <h3>{t.nom_complet || "Technicien"}</h3>
+                      <p>Support & Réparation</p>
+                    </div>
+                    {formData.technicien === String(t.id) && (
+                      <div className="technicien-check">✓</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )
+          ) : !formData.heure ? (
+            // Date choisie mais pas l'heure
+            <div className="no-tech">
+              Sélectionnez une heure pour voir les techniciens disponibles.
+            </div>
+          ) : loadingTech ? (
+            <div className="loading-tech">Chargement des techniciens…</div>
+          ) : listeTechniciens.length === 0 ? (
+            // Date + heure choisies ET aucun dispo
+            <div className="no-tech">
+              Aucun technicien disponible pour ce créneau.
+            </div>
+          ) : (
+            <div className="techniciens-liste">
+              {listeTechniciens.map((t) => (
+                <div
+                  key={t.id}
+                  className={`technicien-card ${
+                    formData.technicien === String(t.id)
+                      ? "technicien-selected"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    setFormData((f) => ({ ...f, technicien: String(t.id) }))
+                  }
+                >
+                  <div className="technicien-avatar">
+                    {String(t.nom_complet || t.email || "T")
+                      .charAt(0)
+                      .toUpperCase()}
+                  </div>
+                  <div className="technicien-info">
+                    <h3>{t.nom_complet || "Technicien"}</h3>
+                    <p>Support & Réparation</p>
+                  </div>
+                  {formData.technicien === String(t.id) && (
+                    <div className="technicien-check">✓</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* Formulaire de rendez-vous */}
+        {/* FORMULAIRE */}
         <div className="formulaire-section">
           <h2>Détails du Rendez-vous</h2>
 
@@ -223,9 +330,9 @@ const RendezVous = () => {
                   className="form-select"
                 >
                   <option value="">-- Sélectionnez une heure --</option>
-                  {creneauxHoraires.map((heure) => (
-                    <option key={heure} value={heure}>
-                      {heure}
+                  {creneauxHoraires.map((h) => (
+                    <option key={h} value={h}>
+                      {h}
                     </option>
                   ))}
                 </select>

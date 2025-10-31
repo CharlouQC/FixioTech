@@ -27,7 +27,7 @@ app.use(express.json());
 
 app.use("/api/utilisateurs", routerUtilisateur);
 app.use("/api/horaires", routerHoraire);
-app.use("/api/rendezvous", routerRendezVous);
+app.use("/api/rendezVous", routerRendezVous);
 
 // Ici on va rajouter les routes pour les autres entités
 
