@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { loginUtilisateur } from "../../services/apiUtilisateur";
+import { useAuth } from "../context/AuthContext.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Login = () => {
     });
   };
 
+  const { login } = useAuth();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setError("");
@@ -34,10 +37,7 @@ const Login = () => {
     loginUtilisateur(formData)
       .then((response) => {
         console.log("Réponse API login:", response);
-
-        // Optionnel : stocker l'utilisateur loggé
-        // localStorage.setItem("user", JSON.stringify(response.utilisateur));
-
+        login(response.utilisateur);
         navigate("/");
       })
       .catch((err) => {
@@ -78,7 +78,11 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="bouton-soumettre" disabled={isLoading}>
+          <button
+            type="submit"
+            className="bouton-soumettre"
+            disabled={isLoading}
+          >
             {isLoading ? "Connexion en cours..." : "Se connecter"}
           </button>
         </form>

@@ -12,6 +12,11 @@ CREATE DATABASE fixiotech
 
 USE fixiotech;
 
+DROP USER IF EXISTS 'fixio'@'localhost';
+CREATE USER 'fixio'@'localhost' IDENTIFIED BY 'fixio123!?$';
+GRANT ALL PRIVILEGES ON fixiotech.* TO 'fixio'@'localhost';
+FLUSH PRIVILEGES;
+
 -- =========================
 -- Table des utilisateurs
 -- =========================
