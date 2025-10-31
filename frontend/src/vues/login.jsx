@@ -24,28 +24,27 @@ const Login = () => {
     e.preventDefault();
     setError("");
 
-    // Validation basique
     if (!formData.courriel || !formData.mot_de_passe) {
       setError("Veuillez remplir tous les champs");
       return;
     }
 
-    // Active l'état de chargement
     setIsLoading(true);
 
-    loginUtilisateur(null, formData)
+    loginUtilisateur(formData)
       .then((response) => {
-        console.log("Réponse de l'API:", response);
-        // Redirige vers la page d'accueil ou tableau de bord après connexion réussie
+        console.log("Réponse API login:", response);
+
+        // Optionnel : stocker l'utilisateur loggé
+        // localStorage.setItem("user", JSON.stringify(response.utilisateur));
+
         navigate("/");
       })
       .catch((err) => {
-        console.error("Erreur lors de la connexion:", err);
+        console.error("Erreur connexion:", err);
         setError(err.message || "Erreur lors de la connexion");
       })
-      .finally(() => {
-        setIsLoading(false); // Désactive l'état de chargement
-      });
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -53,6 +52,7 @@ const Login = () => {
       <div className="login-box">
         <h2>Connexion</h2>
         {error && <div className="error-message">{error}</div>}
+
         <form onSubmit={handleSubmit}>
           <div className="form-groupe">
             <label htmlFor="courriel">Adresse courriel</label>
@@ -65,6 +65,7 @@ const Login = () => {
               placeholder="Entrez votre adresse courriel"
             />
           </div>
+
           <div className="form-groupe">
             <label htmlFor="password">Mot de passe</label>
             <input
@@ -76,14 +77,12 @@ const Login = () => {
               placeholder="Entrez votre mot de passe"
             />
           </div>
-          <button
-            type="submit"
-            className="bouton-soumettre"
-            disabled={isLoading}
-          >
+
+          <button type="submit" className="bouton-soumettre" disabled={isLoading}>
             {isLoading ? "Connexion en cours..." : "Se connecter"}
           </button>
         </form>
+
         <p className="redirect-text">
           Pas encore de compte ? <Link to="/inscription">Inscrivez-vous</Link>
         </p>
