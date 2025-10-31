@@ -14,14 +14,14 @@ const Login = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const { login } = useAuth();
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,13 +36,49 @@ const Login = () => {
 
     loginUtilisateur(formData)
       .then((response) => {
-        console.log("Réponse API login:", response);
-        login(response.utilisateur);
-        navigate("/");
+        // Exemple de payload attendu :
+        // { utilisateur: {...}, token?: "..." }
+        const u = response?.utilisateur || response?.user || {};
+
+        // Normalisation des champs clés
+        const normalized = {
+          ...u,
+          id:
+            u.id ?? u.client_id ?? u.utilisateur_id ?? u.id_utilisateur ?? null,
+          role: ((u.role ?? u.type ?? "") + "").toLowerCase() || "client",
+          email: u.email ?? u.courriel ?? "",
+          nom_complet:
+            u.nom_complet ??
+            u.nom ??
+            `${u.prenom ?? ""} ${u.nom_famille ?? ""}`.trim(),
+        };
+
+        // (Optionnel) stocker le token si fourni
+        if (response?.token) {
+          localStorage.setItem("auth_token", response.token);
+        }
+
+        // Injection dans le contexte
+        login(normalized);
+
+        // Redirection par rôle (adapte aux routes existantes)
+        switch (normalized.role) {
+          case "admin":
+            navigate("/admin");
+            break;
+          case "employe":
+          case "employé":
+            navigate("/employe");
+            break;
+          case "client":
+          default:
+            navigate("/client");
+            break;
+        }
       })
       .catch((err) => {
         console.error("Erreur connexion:", err);
-        setError(err.message || "Erreur lors de la connexion");
+        setError(err?.message || "Erreur lors de la connexion");
       })
       .finally(() => setIsLoading(false));
   };
@@ -63,6 +99,7 @@ const Login = () => {
               value={formData.courriel}
               onChange={handleChange}
               placeholder="Entrez votre adresse courriel"
+              autoComplete="email"
             />
           </div>
 
@@ -75,6 +112,7 @@ const Login = () => {
               value={formData.mot_de_passe}
               onChange={handleChange}
               placeholder="Entrez votre mot de passe"
+              autoComplete="current-password"
             />
           </div>
 

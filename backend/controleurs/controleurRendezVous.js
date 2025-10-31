@@ -1,11 +1,36 @@
-import db from "../config/databaseConnexion.js";
+import { db } from "../config/databaseConnexion.js";
 
-const getRendezVous = async (req, res, next) => {
-  db.query("SELECT * FROM rendez_vous", (err, results) => {
+const getRendezVous = (req, res, next) => {
+  const { client_id, employe_id } = req.query;
+  let sql = "SELECT * FROM rendez_vous";
+  const params = [];
+
+  if (client_id) {
+    sql += " WHERE client_id = ?";
+    params.push(client_id);
+  } else if (employe_id) {
+    sql += " WHERE employe_id = ?";
+    params.push(employe_id);
+  }
+
+  sql += " ORDER BY date_rdv ASC, heure_rdv ASC";
+
+  db.query(sql, params, (err, results) => {
+    if (err) return next(err);
+    res.json(results);
+  });
+};
+
+const getRendezVousById = async (req, res, next) => {
+  const { id } = req.params;
+  db.query("SELECT * FROM rendez_vous WHERE id = ?", [id], (err, results) => {
     if (err) {
       return next(err);
     }
-    res.json(results);
+    if (results.length === 0) {
+      return res.status(404).json({ message: "Rendez-vous non trouvé" });
+    }
+    res.json(results[0]);
   });
 };
 
@@ -23,19 +48,6 @@ function colonnesJour(dateISO) {
   const jour = noms[j];
   return { debutCol: `${jour}_debut`, finCol: `${jour}_fin` };
 }
-
-const getRendezVousById = async (req, res, next) => {
-  const { id } = req.params;
-  db.query("SELECT * FROM rendez_vous WHERE id = ?", [id], (err, results) => {
-    if (err) {
-      return next(err);
-    }
-    if (results.length === 0) {
-      return res.status(404).json({ message: "Rendez-vous non trouvé" });
-    }
-    res.json(results[0]);
-  });
-};
 
 const addRendezVous = (req, res, next) => {
   const { client_id, employe_id, date_rdv, heure_rdv } = req.body;
@@ -160,10 +172,44 @@ const deleteRendezVous = async (req, res, next) => {
   });
 };
 
+// --- LISTER les rendez-vous d'un EMPLOYÉ donné ---
+const getRendezVousByEmployeId = async (req, res, next) => {
+  const { employe_id } = req.params;
+  db.query(
+    `SELECT * 
+     FROM rendez_vous 
+     WHERE employe_id = ? 
+     ORDER BY date_rdv ASC, heure_rdv ASC`,
+    [employe_id],
+    (err, results) => {
+      if (err) return next(err);
+      res.json(results);
+    }
+  );
+};
+
+// --- LISTER les rendez-vous d'un CLIENT donné ---
+const getRendezVousByClientId = async (req, res, next) => {
+  const { client_id } = req.params;
+  db.query(
+    `SELECT * 
+     FROM rendez_vous 
+     WHERE client_id = ? 
+     ORDER BY date_rdv ASC, heure_rdv ASC`,
+    [client_id],
+    (err, results) => {
+      if (err) return next(err);
+      res.json(results);
+    }
+  );
+};
+
 export {
   getRendezVous,
   getRendezVousById,
   addRendezVous,
   updateRendezVous,
   deleteRendezVous,
+  getRendezVousByEmployeId,
+  getRendezVousByClientId,
 };
