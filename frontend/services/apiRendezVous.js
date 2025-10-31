@@ -85,3 +85,11 @@ export async function deleteRendezVous(id) {
     method: "DELETE",
   });
 }
+
+export async function getRendezVousByEmploye(employeId) {
+  return httpJson(`${API_URL}/employe/${encodeURIComponent(employeId)}`);
+}
+
+export async function getRendezVousByClient(clientId) {
+  return httpJson(`${API_URL}/client/${encodeURIComponent(clientId)}`);
+}

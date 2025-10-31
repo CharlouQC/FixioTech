@@ -1,140 +1,124 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./employe.css";
+import { useAuth } from "../context/AuthContext";
+import { getRendezVous } from "../../services/apiRendezVous";
+import { getEmployes } from "../../services/apiUtilisateur"; // optionnel: pour croiser les techniciens si utile plus tard
+
+const mapDbStatutToUi = (db) => {
+  // DB: 'Programmé' | 'Annulé' | 'Terminé'
+  // UI (classes CSS existantes): en_attente | en_cours | traitee
+  if (!db) return "en_attente";
+  const s = db.toLowerCase();
+  if (s === "terminé" || s === "termine") return "traitee";
+  if (s === "programmé" || s === "programme") return "en_attente";
+  if (s === "annulé" || s === "annule") return "en_cours"; // fallback visuel neutre
+  return "en_attente";
+};
+
+const getStatutBadge = (ui) => {
+  // ui ∈ { en_attente, en_cours, traitee }
+  const badges = {
+    en_attente: { classe: "statut-attente", texte: "En attente" },
+    en_cours: { classe: "statut-encours", texte: "En cours" },
+    traitee: { classe: "statut-traitee", texte: "Traitée" },
+  };
+  return badges[ui] || badges.en_attente;
+};
+
+const getStatutIcon = (ui) => {
+  const icons = {
+    en_attente: "⏱️",
+    en_cours: "🔧",
+    traitee: "✅",
+  };
+  return icons[ui] || "📋";
+};
 
 const Employe = () => {
-  // Simulation de demandes reçues (sera remplacé par les données du backend)
-  const [demandes, setDemandes] = useState([
-    {
-      id: 1,
-      client: {
-        nom: "Sophie Martin",
-        courriel: "sophie.martin@email.com",
-      },
-      service: "Réparation d'ordinateurs",
-      technicien: "Jean Tremblay",
-      date: "2025-10-20",
-      heure: "10:00",
-      description: "Mon ordinateur ne démarre plus, écran noir au démarrage.",
-      statut: "en_attente",
-      dateCreation: "2025-10-17",
-    },
-    {
-      id: 2,
-      client: {
-        nom: "Marc Lefebvre",
-        courriel: "marc.lefebvre@email.com",
-      },
-      service: "Support technique",
-      technicien: "Marie Dubois",
-      date: "2025-10-18",
-      heure: "14:00",
-      description: "Problème de connexion internet sur mon portable.",
-      statut: "traitee",
-      dateCreation: "2025-10-15",
-      resultat:
-        "Problème résolu ! Le pilote WiFi était désactivé. Nous l'avons réactivé et tout fonctionne correctement maintenant.",
-    },
-    {
-      id: 3,
-      client: {
-        nom: "Julie Gagnon",
-        courriel: "julie.gagnon@email.com",
-      },
-      service: "Réparation de cellulaires",
-      technicien: "Pierre Gagnon",
-      date: "2025-10-25",
-      heure: "15:00",
-      description:
-        "L'écran de mon téléphone est fissuré et ne répond plus au toucher.",
-      statut: "en_cours",
-      dateCreation: "2025-10-16",
-    },
-  ]);
+  const { user, role } = useAuth();
+
+  const [loading, setLoading] = useState(true);
+  const [rdvs, setRdvs] = useState([]);
+  const [error, setError] = useState("");
 
   const [filtreStatut, setFiltreStatut] = useState("tous");
-  const [demandeSelectionnee, setDemandeSelectionnee] = useState(null);
-  const [messageResolution, setMessageResolution] = useState("");
-  const [afficherModal, setAfficherModal] = useState(false);
 
-  const demandesFiltrees =
-    filtreStatut === "tous"
-      ? demandes
-      : demandes.filter((d) => d.statut === filtreStatut);
-
-  const getStatutBadge = (statut) => {
-    const badges = {
-      en_attente: { classe: "statut-attente", texte: "En attente" },
-      en_cours: { classe: "statut-encours", texte: "En cours" },
-      traitee: { classe: "statut-traitee", texte: "Traitée" },
-    };
-    return badges[statut] || badges.en_attente;
-  };
-
-  const getStatutIcon = (statut) => {
-    const icons = {
-      en_attente: "⏱️",
-      en_cours: "🔧",
-      traitee: "✅",
-    };
-    return icons[statut] || "📋";
-  };
-
-  const ouvrirModalTraitement = (demande) => {
-    setDemandeSelectionnee(demande);
-    setMessageResolution(demande.resultat || "");
-    setAfficherModal(true);
-  };
-
-  const fermerModal = () => {
-    setAfficherModal(false);
-    setDemandeSelectionnee(null);
-    setMessageResolution("");
-  };
-
-  const changerStatut = (demandeId, nouveauStatut) => {
-    setDemandes(
-      demandes.map((d) =>
-        d.id === demandeId ? { ...d, statut: nouveauStatut } : d
-      )
-    );
-  };
-
-  const enregistrerTraitement = () => {
-    if (!messageResolution.trim()) {
-      alert("Veuillez ajouter un message de résolution");
+  useEffect(() => {
+    if (!user?.id) {
+      setLoading(false);
+      setError("Vous devez être connecté pour voir vos demandes.");
+      return;
+    }
+    if (role !== "employe") {
+      setLoading(false);
+      setError("Cette page est réservée aux techniciens.");
       return;
     }
 
-    setDemandes(
-      demandes.map((d) =>
-        d.id === demandeSelectionnee.id
-          ? { ...d, statut: "traitee", resultat: messageResolution }
-          : d
-      )
-    );
+    let alive = true;
+    setLoading(true);
+    setError("");
 
-    fermerModal();
-  };
+    (async () => {
+      try {
+        // Récupère uniquement les RDV assignés à cet employé
+        const list = await getRendezVous({ employe_id: user.id });
+        // Tri: plus récents en haut
+        (list || []).sort((a, b) => {
+          const ak = `${a.date_rdv} ${a.heure_rdv || ""}`;
+          const bk = `${b.date_rdv} ${b.heure_rdv || ""}`;
+          return bk.localeCompare(ak);
+        });
+        if (!alive) return;
+        setRdvs(list || []);
+      } catch (err) {
+        if (!alive) return;
+        setError(err?.message || "Erreur lors du chargement des demandes.");
+      } finally {
+        if (alive) setLoading(false);
+      }
+    })();
 
-  const supprimerDemande = (demandeId) => {
-    const confirmation = window.confirm(
-      "Êtes-vous sûr de vouloir supprimer cette demande ?\n\nCette action est irréversible."
-    );
+    return () => {
+      alive = false;
+    };
+  }, [user, role]);
 
-    if (confirmation) {
-      // Ici, le backend supprimera la demande
-      setDemandes(demandes.filter((d) => d.id !== demandeId));
-      alert("Demande supprimée avec succès.");
-    }
-  };
+  const demandes = useMemo(() => {
+    // Adapte chaque RDV aux champs attendus par le rendu existant
+    return (rdvs || []).map((r) => {
+      const ui = mapDbStatutToUi(r.statut || "Programmé");
+      return {
+        id: r.id,
+        // On n’a pas le détail client (nom/email) côté RDV → on affiche un identifiant simple.
+        client: {
+          nom: `Client #${r.client_id}`,
+          courriel: "",
+        },
+        service: r.service || "Support technique", // champ “service” non stocké en DB : valeur par défaut
+        technicien: `Vous (#${r.employe_id})`,
+        date: r.date_rdv, // "YYYY-MM-DD"
+        heure: r.heure_rdv || "—", // "HH:mm"
+        description: r.description_probleme || "—",
+        statut: ui, // pour les badges CSS existants
+        dateCreation: r.created_at || r.date_rdv || "", // fallback si pas de timestamp
+      };
+    });
+  }, [rdvs]);
+
+  const demandesFiltrees = useMemo(() => {
+    if (filtreStatut === "tous") return demandes;
+    return demandes.filter((d) => d.statut === filtreStatut);
+  }, [demandes, filtreStatut]);
+
+  const countBy = (ui) => demandes.filter((d) => d.statut === ui).length;
 
   return (
     <div className="employe-container">
       <div className="employe-header">
         <h1>Espace Employé</h1>
         <p className="employe-intro">
-          Gérez les demandes de support de vos clients et suivez leur
-          avancement.
+          Gérez les demandes de support qui vous sont assignées.
         </p>
       </div>
 
@@ -143,27 +127,21 @@ const Employe = () => {
         <div className="stat-card">
           <div className="stat-icon">⏱️</div>
           <div className="stat-info">
-            <span className="stat-nombre">
-              {demandes.filter((d) => d.statut === "en_attente").length}
-            </span>
+            <span className="stat-nombre">{countBy("en_attente")}</span>
             <span className="stat-label">En attente</span>
           </div>
         </div>
         <div className="stat-card">
           <div className="stat-icon">🔧</div>
           <div className="stat-info">
-            <span className="stat-nombre">
-              {demandes.filter((d) => d.statut === "en_cours").length}
-            </span>
+            <span className="stat-nombre">{countBy("en_cours")}</span>
             <span className="stat-label">En cours</span>
           </div>
         </div>
         <div className="stat-card">
           <div className="stat-icon">✅</div>
           <div className="stat-info">
-            <span className="stat-nombre">
-              {demandes.filter((d) => d.statut === "traitee").length}
-            </span>
+            <span className="stat-nombre">{countBy("traitee")}</span>
             <span className="stat-label">Traitées</span>
           </div>
         </div>
@@ -191,8 +169,7 @@ const Employe = () => {
             }`}
             onClick={() => setFiltreStatut("en_attente")}
           >
-            En attente (
-            {demandes.filter((d) => d.statut === "en_attente").length})
+            En attente ({countBy("en_attente")})
           </button>
           <button
             className={`filtre-btn ${
@@ -200,7 +177,7 @@ const Employe = () => {
             }`}
             onClick={() => setFiltreStatut("en_cours")}
           >
-            En cours ({demandes.filter((d) => d.statut === "en_cours").length})
+            En cours ({countBy("en_cours")})
           </button>
           <button
             className={`filtre-btn ${
@@ -208,43 +185,52 @@ const Employe = () => {
             }`}
             onClick={() => setFiltreStatut("traitee")}
           >
-            Traitées ({demandes.filter((d) => d.statut === "traitee").length})
+            Traitées ({countBy("traitee")})
           </button>
         </div>
       </div>
 
       {/* Liste des demandes */}
       <div className="demandes-container">
-        {demandesFiltrees.length === 0 ? (
+        {loading ? (
+          <div className="aucune-demande">
+            <div className="aucune-demande-icon">⏳</div>
+            <h2>Chargement de vos demandes…</h2>
+          </div>
+        ) : error ? (
+          <div className="aucune-demande">
+            <div className="aucune-demande-icon">⚠️</div>
+            <h2>{error}</h2>
+          </div>
+        ) : demandesFiltrees.length === 0 ? (
           <div className="aucune-demande">
             <div className="aucune-demande-icon">📭</div>
-            <h2>Vous n'avez reçu aucune demande pour l'instant</h2>
-            <p>
-              Les nouvelles demandes de support apparaîtront ici dès qu'un
-              client prendra rendez-vous.
-            </p>
+            <h2>Aucune demande pour ce filtre</h2>
+            <p>Les nouvelles demandes apparaîtront ici.</p>
           </div>
         ) : (
           <div className="demandes-liste">
             {demandesFiltrees.map((demande) => {
-              const statut = getStatutBadge(demande.statut);
+              const badge = getStatutBadge(demande.statut);
               return (
                 <div key={demande.id} className="demande-card">
                   <div className="demande-header-card">
                     <div className="demande-id-statut">
                       <span className="demande-id">Demande #{demande.id}</span>
-                      <span className={`statut-badge ${statut.classe}`}>
-                        {getStatutIcon(demande.statut)} {statut.texte}
+                      <span className={`statut-badge ${badge.classe}`}>
+                        {getStatutIcon(demande.statut)} {badge.texte}
                       </span>
                     </div>
-                    <span className="demande-date">
-                      Créée le{" "}
-                      {new Date(demande.dateCreation).toLocaleDateString()}
-                    </span>
+                    {demande.dateCreation ? (
+                      <span className="demande-date">
+                        Créée le{" "}
+                        {new Date(demande.dateCreation).toLocaleDateString()}
+                      </span>
+                    ) : null}
                   </div>
 
                   <div className="demande-body">
-                    {/* Informations client */}
+                    {/* Informations client (basique, faute de détails DB) */}
                     <div className="client-info">
                       <h3>👤 Informations client</h3>
                       <div className="client-details">
@@ -252,12 +238,6 @@ const Employe = () => {
                           <span className="detail-label">Nom :</span>
                           <span className="detail-value">
                             {demande.client.nom}
-                          </span>
-                        </div>
-                        <div className="client-detail">
-                          <span className="detail-label">Courriel :</span>
-                          <span className="detail-value">
-                            {demande.client.courriel}
                           </span>
                         </div>
                       </div>
@@ -279,8 +259,8 @@ const Employe = () => {
                       <div className="demande-info-item">
                         <span className="info-label">Date du rendez-vous</span>
                         <span className="info-value">
-                          {new Date(demande.date).toLocaleDateString()} à{" "}
-                          {demande.heure}
+                          {demande.date}{" "}
+                          {demande.heure !== "—" ? `à ${demande.heure}` : ""}
                         </span>
                       </div>
                     </div>
@@ -291,51 +271,6 @@ const Employe = () => {
                       </span>
                       <p>{demande.description}</p>
                     </div>
-
-                    {demande.statut === "traitee" && demande.resultat && (
-                      <div className="demande-resultat">
-                        <span className="resultat-label">
-                          ✅ Message de résolution
-                        </span>
-                        <p className="resultat-texte">{demande.resultat}</p>
-                      </div>
-                    )}
-
-                    {/* Actions */}
-                    <div className="actions-container">
-                      {demande.statut === "en_attente" && (
-                        <button
-                          className="btn-action btn-encours"
-                          onClick={() => changerStatut(demande.id, "en_cours")}
-                        >
-                          🔧 Prendre en charge
-                        </button>
-                      )}
-                      {demande.statut === "en_cours" && (
-                        <button
-                          className="btn-action btn-traiter"
-                          onClick={() => ouvrirModalTraitement(demande)}
-                        >
-                          ✅ Marquer comme traitée
-                        </button>
-                      )}
-                      {demande.statut === "traitee" && (
-                        <button
-                          className="btn-action btn-modifier"
-                          onClick={() => ouvrirModalTraitement(demande)}
-                        >
-                          ✏️ Modifier la résolution
-                        </button>
-                      )}
-
-                      {/* Bouton Supprimer (visible par défaut, backend gérera l'affichage Admin) */}
-                      <button
-                        className="btn-action btn-supprimer"
-                        onClick={() => supprimerDemande(demande.id)}
-                      >
-                        🗑️ Supprimer la demande
-                      </button>
-                    </div>
                   </div>
                 </div>
               );
@@ -343,49 +278,6 @@ const Employe = () => {
           </div>
         )}
       </div>
-
-      {/* Modal de traitement */}
-      {afficherModal && demandeSelectionnee && (
-        <div className="modal-overlay" onClick={fermerModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h2>Traiter la demande #{demandeSelectionnee.id}</h2>
-              <button className="modal-close" onClick={fermerModal}>
-                ×
-              </button>
-            </div>
-            <div className="modal-body">
-              <p className="modal-info">
-                Client : <strong>{demandeSelectionnee.client.nom}</strong>
-              </p>
-              <p className="modal-info">
-                Service : <strong>{demandeSelectionnee.service}</strong>
-              </p>
-              <label htmlFor="messageResolution">
-                Message de résolution pour le client *
-              </label>
-              <textarea
-                id="messageResolution"
-                value={messageResolution}
-                onChange={(e) => setMessageResolution(e.target.value)}
-                placeholder="Décrivez la solution apportée au problème du client..."
-                rows="6"
-              />
-            </div>
-            <div className="modal-footer">
-              <button className="btn-annuler" onClick={fermerModal}>
-                Annuler
-              </button>
-              <button
-                className="btn-enregistrer"
-                onClick={enregistrerTraitement}
-              >
-                Enregistrer
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
