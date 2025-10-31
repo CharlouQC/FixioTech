@@ -1,61 +1,95 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./horaires.css";
+import { useAuth } from "../context/AuthContext";
+import {
+  getHoraireByEmploye,
+  addHoraire,
+  updateHoraire,
+} from "../../services/apiHoraire";
+
+const JOURS = [
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi",
+  "Dimanche",
+];
+
+// Helpers de mapping Front <-> Backend
+const k = (jour, type) => `${jour.toLowerCase()}_${type}`; // ex: "Lundi","debut" -> "lundi_debut"
 
 const Horaires = () => {
-  const [isEmploye] = useState(true);
+  const { user, role } = useAuth();
+  const isEmploye = role === "employe";
 
-  // État pour les services sélectionnés
-  const [servicesSelectionnes, setServicesSelectionnes] = useState([]);
-
-  // État pour les horaires par jour (début et fin)
-  const [horairesParJour, setHorairesParJour] = useState({
-    Lundi: { actif: false, debut: "08:00", fin: "17:00" },
-    Mardi: { actif: false, debut: "08:00", fin: "17:00" },
-    Mercredi: { actif: false, debut: "08:00", fin: "17:00" },
-    Jeudi: { actif: false, debut: "08:00", fin: "17:00" },
-    Vendredi: { actif: false, debut: "08:00", fin: "17:00" },
-    Samedi: { actif: false, debut: "08:00", fin: "17:00" },
-    Dimanche: { actif: false, debut: "08:00", fin: "17:00" },
+  // État pour les horaires par jour (début et fin) + actif
+  const [horairesParJour, setHorairesParJour] = useState(() => {
+    // état initial : tout inactif, 08:00-17:00 par défaut
+    const base = {};
+    JOURS.forEach((j) => {
+      base[j] = { actif: false, debut: "08:00", fin: "17:00" };
+    });
+    return base;
   });
 
+  const [horaireId, setHoraireId] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Liste des services disponibles
-  const services = [
-    "Réparation d'ordinateurs",
-    "Réparation de cellulaires",
-    "Réparation de tablettes",
-    "Services à domicile",
-    "Support technique",
-    "Formation personnalisée",
-  ];
-
   // Génère les heures disponibles (8h à 18h)
-  const heuresDisponibles = Array.from({ length: 11 }, (_, i) => {
-    const heure = i + 8;
-    return `${heure.toString().padStart(2, "0")}:00`;
-  });
+  const heuresDisponibles = useMemo(
+    () =>
+      Array.from({ length: 11 }, (_, i) => {
+        const h = String(i + 8).padStart(2, "0");
+        return `${h}:00`;
+      }),
+    []
+  );
 
-  // Génère les jours de la semaine
-  const joursSemaines = [
-    "Lundi",
-    "Mardi",
-    "Mercredi",
-    "Jeudi",
-    "Vendredi",
-    "Samedi",
-    "Dimanche",
-  ];
+  // Charger l'horaire existant pour l'employé connecté (s’il existe)
+  useEffect(() => {
+    if (!user?.id || !isEmploye) {
+      setLoading(false);
+      return;
+    }
 
-  // Gère la sélection/déselection des services
-  const handleServiceToggle = (service) => {
-    setServicesSelectionnes((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
-    );
-  };
+    setLoading(true);
+    setError("");
+    setSuccessMessage("");
+
+    getHoraireByEmploye(user.id)
+      .then((h) => {
+        // Aucun horaire encore créé → cas normal : on laisse le formulaire vide
+        if (!h) {
+          setHoraireId(null);
+          return; // ✅ PAS de setForm ici
+        }
+
+        const next = {};
+        JOURS.forEach((jour) => {
+          const debut = h[k(jour, "debut")]; // ex: h.lundi_debut
+          const fin = h[k(jour, "fin")];
+          const actif = debut != null && fin != null;
+
+          next[jour] = {
+            actif,
+            debut: actif ? String(debut).slice(0, 5) : "08:00",
+            fin: actif ? String(fin).slice(0, 5) : "17:00",
+          };
+        });
+        setHorairesParJour(next);
+        setHoraireId(h.id);
+      })
+      .catch((err) => {
+        // Toute autre erreur (réseau/serveur)
+        setError(err.message || "Erreur lors du chargement de l'horaire.");
+        setHoraireId(null);
+      })
+      .finally(() => setLoading(false));
+  }, [user, isEmploye]);
 
   // Gère l'activation/désactivation d'un jour
   const handleJourToggle = (jour) => {
@@ -90,31 +124,15 @@ const Horaires = () => {
     }));
   };
 
-  // Sauvegarde l'horaire
+  // Sauvegarde (create ou update)
   const handleSauvegarder = async () => {
     setError("");
     setSuccessMessage("");
 
-    // Validation : au moins un service sélectionné
-    if (servicesSelectionnes.length === 0) {
-      setError("Veuillez sélectionner au moins un service");
-      return;
-    }
-
-    // Validation : au moins un jour actif
-    const joursActifs = Object.entries(horairesParJour).filter(
-      // eslint-disable-next-line no-unused-vars
-      ([_, data]) => data.actif
-    );
-
-    if (joursActifs.length === 0) {
-      setError("Veuillez sélectionner au moins un jour de disponibilité");
-      return;
-    }
-
-    // Validation : vérifier que l'heure de fin est après l'heure de début
-    for (const [jour, data] of joursActifs) {
-      if (data.actif && data.debut >= data.fin) {
+    // Validation : si un jour est actif, fin > début
+    for (const jour of JOURS) {
+      const d = horairesParJour[jour];
+      if (d.actif && d.debut >= d.fin) {
         setError(
           `Erreur pour ${jour} : L'heure de fin doit être après l'heure de début`
         );
@@ -123,13 +141,25 @@ const Horaires = () => {
     }
 
     try {
-      // TODO: Appel à l'API backend pour sauvegarder l'horaire
-      // await saveHoraire({ services: servicesSelectionnes, horaires: horairesParJour });
+      // Construire le payload backend
+      // Jours inactifs => null
+      const payload = {
+        employe_id: user.id,
+      };
+      JOURS.forEach((jour) => {
+        const d = horairesParJour[jour];
+        payload[k(jour, "debut")] = d.actif ? d.debut : null;
+        payload[k(jour, "fin")] = d.actif ? d.fin : null;
+      });
 
-      // Simulation d'un appel API
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      setSuccessMessage("Votre horaire a été enregistré avec succès !");
+      if (horaireId) {
+        await updateHoraire(horaireId, payload);
+        setSuccessMessage("Votre horaire a été mis à jour avec succès !");
+      } else {
+        const created = await addHoraire(payload);
+        setHoraireId(created?.id ?? null);
+        setSuccessMessage("Votre horaire a été créé avec succès !");
+      }
     } catch (err) {
       setError(err.message || "Erreur lors de l'enregistrement de l'horaire");
     }
@@ -145,6 +175,15 @@ const Horaires = () => {
     );
   }
 
+  if (loading) {
+    return (
+      <div className="horaires-container">
+        <h1 className="horaires-titres">Gestion de mon horaire</h1>
+        <div className="calendrier-section">Chargement…</div>
+      </div>
+    );
+  }
+
   return (
     <div className="horaires-container">
       <h1 className="horaires-titres">Gestion de mon horaire</h1>
@@ -155,24 +194,7 @@ const Horaires = () => {
       )}
 
       <div className="horaires-grid">
-        {/* Section des services */}
-        <div className="services-section">
-          <h2 className="services-titres">Mes services proposés</h2>
-          <div className="liste-services">
-            {services.map((service) => (
-              <label key={service} className="service-checkbox">
-                <input
-                  type="checkbox"
-                  checked={servicesSelectionnes.includes(service)}
-                  onChange={() => handleServiceToggle(service)}
-                />
-                {service}
-              </label>
-            ))}
-          </div>
-        </div>
-
-        {/* Section des disponibilités */}
+        {/* Section des disponibilités (seule section conservée) */}
         <div className="calendrier-section">
           <h2 className="calendrier-titre">Mes disponibilités</h2>
           <p className="calendrier-description">
@@ -181,7 +203,7 @@ const Horaires = () => {
           </p>
 
           <div className="disponibilites-liste">
-            {joursSemaines.map((jour) => (
+            {JOURS.map((jour) => (
               <div
                 key={jour}
                 className={`jour-row ${
