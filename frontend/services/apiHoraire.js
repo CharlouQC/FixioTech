@@ -1,4 +1,4 @@
-const API_URL = env.API_URL;
+const API_URL = process.env.API_URL;
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {
