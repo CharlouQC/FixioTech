@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/utilisateurs';
+const API_URL = "http://localhost:3000/api/utilisateurs";
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {
@@ -8,7 +8,6 @@ async function httpJson(url, options = {}) {
 
   const contentType = res.headers.get("content-type") || "";
 
-  // Cas erreur HTTP : essaye d'extraire un message JSON, sinon texte brut
   if (!res.ok) {
     let message = `Erreur HTTP ${res.status}`;
     if (contentType.includes("application/json")) {
@@ -25,10 +24,8 @@ async function httpJson(url, options = {}) {
     throw new Error(message);
   }
 
-  // 204 No Content
   if (res.status === 204) return null;
 
-  // Succès : ne parser en JSON que si c'est du JSON; sinon renvoyer le texte
   if (contentType.includes("application/json")) {
     return res.json();
   } else {
@@ -38,33 +35,68 @@ async function httpJson(url, options = {}) {
 }
 
 async function getUtilisateurs() {
-    // TODO
+  return httpJson(API_URL); // GET /api/utilisateurs
 }
 
 async function getUtilisateur(id) {
-    // TODO
+  return httpJson(`${API_URL}/${id}`); // GET /api/utilisateurs/:id
 }
 
 async function addUtilisateur(utilisateur) {
-    const payload = {
-        email: utilisateur.courriel,         
-        mot_de_passe: utilisateur.mot_de_passe, 
-    };
-    return httpJson(`${API_URL}`, {
-        method: "POST",
-        body: JSON.stringify(payload),
-    });
+  const payload = {
+    email: utilisateur.courriel,
+    mot_de_passe: utilisateur.mot_de_passe,
+    nom_complet: utilisateur.nom_complet,
+    role: utilisateur.role || "client",
+  };
+
+  return httpJson(API_URL, {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
 }
 
-async function loginUtilisateur(id, utilisateur) {
-    const payload = {
-        email: utilisateur.courriel,         
-        mot_de_passe: utilisateur.mot_de_passe, 
-    };
-    return httpJson(`${API_URL}/login`, {
-        method: "POST",
-        body: JSON.stringify(payload),
-    });
+async function loginUtilisateur(utilisateur) {
+  const payload = {
+    email: utilisateur.courriel,
+    mot_de_passe: utilisateur.mot_de_passe,
+  };
+
+  return httpJson(`${API_URL}/login`, {
+    method: "POST",
+    body: JSON.stringify(payload),
+  });
 }
 
-export { getUtilisateurs, getUtilisateur, addUtilisateur, loginUtilisateur };
+async function updateUtilisateur(id, updates) {
+  return httpJson(`${API_URL}/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(updates),
+  });
+}
+
+async function deleteUtilisateur(id) {
+  return httpJson(`${API_URL}/${id}`, {
+    method: "DELETE",
+  });
+}
+
+async function getEmployes() {
+  return httpJson(`${API_URL}?role=employe`);
+}
+
+async function getEmployesDisponibles(dateISO, heureHHmm) {
+  const qs = new URLSearchParams({ date: dateISO, heure: heureHHmm });
+  return httpJson(`${API_URL}/disponibles?${qs.toString()}`);
+}
+
+export {
+  getUtilisateurs,
+  getUtilisateur,
+  addUtilisateur,
+  loginUtilisateur,
+  updateUtilisateur,
+  deleteUtilisateur,
+  getEmployes,
+  getEmployesDisponibles,
+};
