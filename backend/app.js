@@ -1,10 +1,11 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import cors from 'cors';
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
 
-import routerUtilisateur from './routes/routeUtilisateur.js';
-import routerHoraire from './routes/routeHoraire.js';
-import errorHandler from './middlewares/errorHandler.js';
+import routerUtilisateur from "./routes/routeUtilisateur.js";
+import routerHoraire from "./routes/routeHoraire.js";
+import routerRendezVous from "./routes/routeRendezVous.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 dotenv.config();
 
@@ -24,8 +25,9 @@ app.use(
 
 app.use(express.json());
 
-app.use('/api/utilisateurs', routerUtilisateur);
-app.use('/api/horaires', routerHoraire);
+app.use("/api/utilisateurs", routerUtilisateur);
+app.use("/api/horaires", routerHoraire);
+app.use("/api/rendezvous", routerRendezVous);
 
 // Ici on va rajouter les routes pour les autres entités
 
@@ -35,4 +37,3 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Api écoute sur le port ${PORT}`));
 
 export default app;
-
