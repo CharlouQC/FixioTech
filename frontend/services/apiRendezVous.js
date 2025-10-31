@@ -1,5 +1,5 @@
 // services/apiRendezVous.js
-const API_URL = "http://localhost:3000/api/rendezVous";
+const API_URL = env.API_URL;
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {
