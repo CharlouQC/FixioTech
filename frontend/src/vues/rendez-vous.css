@@ -374,3 +374,13 @@
     padding: 0.875rem;
   }
 }
+
+.no-tech {
+  padding: 12px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: black;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
