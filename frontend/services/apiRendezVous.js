@@ -1,4 +1,6 @@
-const API_URL = process.env.API_URL;
+const API_URL =
+  import.meta.env.VITE_API_URL?.replace("/utilisateurs", "/rendezVous") ||
+  "http://localhost:3000/api/rendezVous";
 
 async function httpJson(url, options = {}) {
   const res = await fetch(url, {
@@ -14,12 +16,16 @@ async function httpJson(url, options = {}) {
       try {
         const body = await res.json();
         message = body?.message || message;
-      } catch {}
+      } catch {
+        // Ignore JSON parsing errors
+      }
     } else {
       try {
         const text = await res.text();
         if (text) message = text;
-      } catch {}
+      } catch {
+        // Ignore text parsing errors
+      }
     }
     throw new Error(message);
   }

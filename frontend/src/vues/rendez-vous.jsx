@@ -8,7 +8,7 @@ import {
 } from "../../services/apiUtilisateur";
 
 const RendezVous = () => {
-  const { user, role } = useAuth();
+  const { user } = useAuth();
 
   // ---------- UI state ----------
   const [formData, setFormData] = useState({

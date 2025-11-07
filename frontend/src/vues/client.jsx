@@ -1,20 +1,18 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./client.css";
 import { useAuth } from "../context/AuthContext";
 import { getRendezVousByClient } from "../../services/apiRendezVous";
 import { getEmployes } from "../../services/apiUtilisateur";
 
 const Client = () => {
-  const { user, role } = useAuth();
+  const { user } = useAuth();
 
-  // --- ÉTATS : toujours déclarer avant les effets ---
   const [loading, setLoading] = useState(true);
   const [rdvs, setRdvs] = useState([]);
   const [error, setError] = useState("");
   const [employesMap, setEmployesMap] = useState({}); // { [id]: employé }
 
-  // ✅ AJOUT : helper local pour formater la date (défini AVANT useMemo)
-  const fmtDate = (isoDate) => {
+  const fmtDate = useCallback((isoDate) => {
     if (typeof isoDate === "string" && /^\d{4}-\d{2}-\d{2}$/.test(isoDate)) {
       return isoDate; // évite les décalages de fuseau
     }
@@ -26,9 +24,8 @@ const Client = () => {
     } catch {
       return String(isoDate ?? "");
     }
-  };
+  }, []);
 
-  // ID robuste (selon la forme retournée par le backend)
   const clientId =
     user?.id ??
     user?.client_id ??

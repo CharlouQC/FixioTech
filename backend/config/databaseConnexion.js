@@ -1,4 +1,5 @@
 import mysql from "mysql2/promise";
+import process from "process";
 
 const ssl =
   process.env.DB_SSL === "true"

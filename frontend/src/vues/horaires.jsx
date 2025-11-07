@@ -24,6 +24,9 @@ const Horaires = () => {
   const { user, role } = useAuth();
   const isEmploye = role === "employe";
 
+  // État pour les services sélectionnés
+  const [servicesSelectionnes, setServicesSelectionnes] = useState([]);
+
   // État pour les horaires par jour (début et fin) + actif
   const [horairesParJour, setHorairesParJour] = useState(() => {
     // état initial : tout inactif, 08:00-17:00 par défaut
@@ -38,6 +41,16 @@ const Horaires = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+
+  // Liste des services disponibles
+  const services = [
+    "Réparation d'ordinateurs",
+    "Réparation de cellulaires",
+    "Réparation de tablettes",
+    "Services à domicile",
+    "Support technique",
+    "Formation personnalisée",
+  ];
 
   // Génère les heures disponibles (8h à 18h)
   const heuresDisponibles = useMemo(
@@ -100,6 +113,15 @@ const Horaires = () => {
         actif: !prev[jour].actif,
       },
     }));
+  };
+
+  // Gère la sélection/déselection des services
+  const handleServiceToggle = (service) => {
+    setServicesSelectionnes((prev) =>
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
+    );
   };
 
   // Gère le changement d'heure de début
@@ -194,7 +216,24 @@ const Horaires = () => {
       )}
 
       <div className="horaires-grid">
-        {/* Section des disponibilités (seule section conservée) */}
+        {/* Section des services */}
+        <div className="services-section">
+          <h2 className="services-titres">Mes services proposés</h2>
+          <div className="liste-services">
+            {services.map((service) => (
+              <label key={service} className="service-checkbox">
+                <input
+                  type="checkbox"
+                  checked={servicesSelectionnes.includes(service)}
+                  onChange={() => handleServiceToggle(service)}
+                />
+                {service}
+              </label>
+            ))}
+          </div>
+        </div>
+
+        {/* Section des disponibilités */}
         <div className="calendrier-section">
           <h2 className="calendrier-titre">Mes disponibilités</h2>
           <p className="calendrier-description">
