@@ -10,11 +10,6 @@ CREATE DATABASE IF NOT EXISTS fixiotech
 
 USE fixiotech;
 
--- 2) Créer l'utilisateur si absent
-CREATE USER IF NOT EXISTS 'fixio'@'localhost' IDENTIFIED BY 'fixio123!?$';
-GRANT ALL PRIVILEGES ON fixiotech.* TO 'fixio'@'localhost';
-FLUSH PRIVILEGES;
-
 -- ====================================================================
 -- TABLE utilisateurs
 -- ====================================================================

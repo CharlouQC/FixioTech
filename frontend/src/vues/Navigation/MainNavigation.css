@@ -39,11 +39,40 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
   color: #3498db;
+}
+
+.nav-username {
+  color: #ffffff !important;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li {
+  color: #ffffff;
+}
+
+.nav-links li span.nav-link {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
 }
 
 .login-link, .signup-link {

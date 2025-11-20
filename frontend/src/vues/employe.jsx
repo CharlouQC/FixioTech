@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import "./employe.css";
 import { useAuth } from "../context/AuthContext";
 import { getRendezVous } from "../../services/apiRendezVous";
-import { getEmployes } from "../../services/apiUtilisateur"; // optionnel: pour croiser les techniciens si utile plus tard
 
 const mapDbStatutToUi = (db) => {
   // DB: 'Programmé' | 'Annulé' | 'Terminé'
@@ -259,7 +258,7 @@ const Employe = () => {
                       <div className="demande-info-item">
                         <span className="info-label">Date du rendez-vous</span>
                         <span className="info-value">
-                          {demande.date}{" "}
+                          {new Date(demande.date).toLocaleDateString("fr-CA")}{" "}
                           {demande.heure !== "—" ? `à ${demande.heure}` : ""}
                         </span>
                       </div>

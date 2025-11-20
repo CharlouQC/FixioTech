@@ -95,7 +95,9 @@ const MainNavigation = () => {
           </>
         ) : (
           <>
-            <li className="nav-username">Bienvenue, {user?.nom_complet}</li>
+            <li>
+              <span className="nav-link">Bienvenue, {user?.nom_complet}</span>
+            </li>
             <li>
               <button onClick={handleLogout} className="nav-link logout-btn">
                 Déconnexion

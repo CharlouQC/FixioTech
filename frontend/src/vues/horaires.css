@@ -33,14 +33,84 @@
   text-align: center;
 }
 
-/* Grille : pleine largeur (on n’a plus de colonne services) */
+/* Grille : deux colonnes (services + calendrier) */
 .horaires-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
   width: 100%;
   max-width: 100%;
-  /* plus de grid-template-columns ici */
 }
 
-/* (Optionnel) Si tu veux garder un léger conteneur “carte” comme ailleurs */
+/* Section des services */
+.services-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.services-titres {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.liste-services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  color: #2c3e50;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.service-checkbox:hover {
+  background-color: #f8f9fa;
+}
+
+.service-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 2px solid #2c3e50;
+  border-radius: 4px;
+  position: relative;
+  outline: none;
+  flex-shrink: 0;
+}
+
+.service-checkbox input[type="checkbox"]:checked {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.service-checkbox input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Section calendrier (reste inchangée) */
 .calendrier-section {
   background-color: white;
   padding: 1.5rem;
