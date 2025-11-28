@@ -1,29 +1,54 @@
-import mysql from "mysql2/promise";
+import pkg from "pg";
 import dotenv from "dotenv";
-import process from "process";
 
-// CRITICAL: Charger dotenv ICI avant d'utiliser process.env
-// car les imports ES6 sont hoistés avant l'exécution de app.js
 dotenv.config();
 
-const ssl =
-  process.env.DB_SSL === "true"
-    ? { rejectUnauthorized: true, minVersion: "TLSv1.2" }
-    : undefined;
+const { Pool } = pkg;
 
-export const db = mysql.createPool({
-  host: process.env.DB_HOST || "127.0.0.1",
-  port: Number(process.env.DB_PORT || 3306),
-  user: process.env.DB_USER || "root",
-  password: process.env.DB_PASSWORD || "",
-  database: process.env.DB_NAME || "",
-  ssl,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
-});
+const isProduction = process.env.NODE_ENV === "production";
+
+let pool;
+
+if (isProduction) {
+  // PROD (Render) → on utilise DATABASE_URL + SSL
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+  });
+} else {
+  // DEV LOCAL → on se connecte explicitement à ta base locale
+  pool = new Pool({
+    host: "localhost",
+    port: 5432,
+    user: "fixio_local",
+    password: "fixio_local123",
+    database: "fixiotech_local",
+    ssl: false,
+  });
+}
+
+export const db = {
+  query(text, params, callback) {
+    if (typeof params === "function") {
+      callback = params;
+      params = [];
+    }
+
+    pool
+      .query(text, params)
+      .then((res) => callback(null, res))
+      .catch((err) => callback(err));
+  },
+};
 
 export async function assertDb() {
-  const [rows] = await db.query("SELECT 1 AS ok");
-  return rows[0]?.ok === 1;
+  try {
+    const res = await pool.query("SELECT 1 AS ok");
+    return res.rows[0].ok === 1;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
 }
