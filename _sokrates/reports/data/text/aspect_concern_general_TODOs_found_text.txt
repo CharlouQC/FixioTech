@@ -1,0 +1,4 @@
+Summary: 1 instance, 1 unique
+
+Text	Count
+// TODO: Appel à l'API backend pour envoyer le message	1

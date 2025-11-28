@@ -1,0 +1,14 @@
+Path	Lines of Code
+backend\app.js	44
+backend\bd\fixiotech.sql	88
+backend\config\databaseConnexion.js	23
+backend\controleurs\controleurHoraire.js	185
+backend\controleurs\controleurRendezVous.js	187
+backend\controleurs\controleurUtilisateur.js	184
+backend\middlewares\errorHandler.js	31
+backend\routes\routeHoraire.js	21
+backend\routes\routeRendezVous.js	23
+backend\routes\routeUtilisateur.js	23
+backend\validateurs\validateurHoraire.js	8
+backend\validateurs\validateurRendezVous.js	37
+backend\validateurs\validateurUtilisateur.js	45

@@ -126,7 +126,10 @@ const addRendezVous = (req, res, next) => {
 const updateRendezVous = async (req, res, next) => {
   const { id } = req.params;
   const { client_id, employe_id, date_rdv, heure_rdv } = req.body;
-  const description_probleme = emptyToNull(req.body.description_probleme);
+  const description_probleme =
+    (req.body.description_probleme ?? "") === ""
+      ? null
+      : req.body.description_probleme;
 
   const sql = `
     UPDATE rendez_vous

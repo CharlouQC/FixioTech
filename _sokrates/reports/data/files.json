@@ -1,0 +1,295 @@
+[ {
+  "relativePath" : "backend\\app.js",
+  "extension" : "js",
+  "linesOfCode" : 44,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\bd\\fixiotech.sql",
+  "extension" : "sql",
+  "linesOfCode" : 88,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\config\\databaseConnexion.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 185,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 187,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 184,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\middlewares\\errorHandler.js",
+  "extension" : "js",
+  "linesOfCode" : 31,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\routes\\routeHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 21,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\routes\\routeRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\routes\\routeUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\validateurs\\validateurHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 8,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 37,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "backend\\validateurs\\validateurUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 45,
+  "components" : [ "primary::backend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "eslint.config.js",
+  "extension" : "js",
+  "linesOfCode" : 28,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\services\\apiHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 97,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\services\\apiRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 78,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\services\\apiUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 89,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\App.css",
+  "extension" : "css",
+  "linesOfCode" : 71,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\App.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 45,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\context\\AuthContext.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 25,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\index.css",
+  "extension" : "css",
+  "linesOfCode" : 61,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\main.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 15,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\routes\\ProtectedRoute.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 11,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\setupTests.js",
+  "extension" : "js",
+  "linesOfCode" : 16,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\accueil.css",
+  "extension" : "css",
+  "linesOfCode" : 325,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\accueil.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 195,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\client.css",
+  "extension" : "css",
+  "linesOfCode" : 108,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\client.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 146,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\contact.css",
+  "extension" : "css",
+  "linesOfCode" : 272,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\contact.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 235,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::TODOs" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\employe.css",
+  "extension" : "css",
+  "linesOfCode" : 524,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\employe.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 262,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\horaires.css",
+  "extension" : "css",
+  "linesOfCode" : 222,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 287,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\inscription.css",
+  "extension" : "css",
+  "linesOfCode" : 118,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 149,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\login.css",
+  "extension" : "css",
+  "linesOfCode" : 86,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\login.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 118,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\logs.css",
+  "extension" : "css",
+  "linesOfCode" : 369,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\logs.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 345,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.css",
+  "extension" : "css",
+  "linesOfCode" : 76,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 104,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+  "extension" : "css",
+  "linesOfCode" : 329,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 336,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\services_aides.css",
+  "extension" : "css",
+  "linesOfCode" : 121,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "frontend\\src\\vues\\services_aides.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 111,
+  "components" : [ "primary::frontend" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "index.html",
+  "extension" : "html",
+  "linesOfCode" : 27,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "vite.config.js",
+  "extension" : "js",
+  "linesOfCode" : 13,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+}, {
+  "relativePath" : "vitest.config.js",
+  "extension" : "js",
+  "linesOfCode" : 11,
+  "components" : [ "primary::ROOT" ],
+  "concerns" : [ "::Unclassified" ]
+} ]

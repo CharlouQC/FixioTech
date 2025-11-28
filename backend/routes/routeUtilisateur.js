@@ -18,6 +18,7 @@ import {
 const routerUtilisateur = express.Router();
 
 routerUtilisateur.get("/", getUtilisateurs);
+// IMPORTANT: Route spécifique AVANT route paramétrique
 routerUtilisateur.get("/disponibles", getEmployesDisponibles);
 routerUtilisateur.get("/:id", getUtilisateurById);
 routerUtilisateur.post("/", addUtilisateurValidation, addUtilisateur);

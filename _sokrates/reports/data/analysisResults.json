@@ -1,0 +1,6318 @@
+{
+  "metadata" : {
+    "name" : "FixioTech",
+    "description" : "",
+    "tooltip" : "",
+    "logoLink" : "",
+    "links" : [ ]
+  },
+  "metricsList" : {
+    "metrics" : [ {
+      "id" : "TOTAL_NUMBER_OF_FILES",
+      "value" : 79559,
+      "description" : "Total number of files in the source folder"
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN",
+      "value" : 49,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN",
+      "value" : 6324,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_CSS",
+      "value" : 13,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_CSS",
+      "value" : 2682,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_JSX",
+      "value" : 15,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_JSX",
+      "value" : 2384,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_JS",
+      "value" : 19,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_JS",
+      "value" : 1143,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_SQL",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_SQL",
+      "value" : 88,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_MAIN_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_MAIN_EXT_HTML",
+      "value" : 27,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST",
+      "value" : 211,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_TEST_EXT_JSX",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_TEST_EXT_JSX",
+      "value" : 211,
+      "description" : null
+    }, {
+      "id" : "TEST_VS_MAIN_LINES_OF_CODE_PERCENTAGE",
+      "value" : 3.33,
+      "description" : "Test / main code ratio"
+    }, {
+      "id" : "NUMBER_OF_FILES_GENERATED",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_GENERATED",
+      "value" : 6888,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_GENERATED_EXT_JSON",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_GENERATED_EXT_JSON",
+      "value" : 6888,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_BUILD_AND_DEPLOYMENT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER",
+      "value" : 7009,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_JSON",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_JSON",
+      "value" : 6953,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_OTHER_EXT_MD",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_OTHER_EXT_MD",
+      "value" : 56,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_BACKEND",
+      "value" : 13,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_BACKEND",
+      "value" : 899,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_BACKEND_EXT_JS",
+      "value" : 12,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_BACKEND_EXT_JS",
+      "value" : 811,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_BACKEND_EXT_SQL",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_BACKEND_EXT_SQL",
+      "value" : 88,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT",
+      "value" : 79,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT_EXT_JS",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT_EXT_JS",
+      "value" : 52,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_ROOT_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_ROOT_EXT_HTML",
+      "value" : 27,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND",
+      "value" : 32,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND",
+      "value" : 5346,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_CSS",
+      "value" : 13,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_CSS",
+      "value" : 2682,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JSX",
+      "value" : 15,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JSX",
+      "value" : 2384,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JS",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_DECOMPOSITION_PRIMARY_FRONTEND_EXT_JS",
+      "value" : 280,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCY_LINKS_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : "Number of anchor dependencies"
+    }, {
+      "id" : "NUMBER_OF_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_PLACES_WITH_CYCLIC_DEPENDENCIES_DECOMPOSITION_PRIMARY",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_TODOS",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_TODOS",
+      "value" : 235,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_TODOS_EXT_JSX",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_TODOS_EXT_JSX",
+      "value" : 235,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 48,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED",
+      "value" : 6089,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 13,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_CSS",
+      "value" : 2682,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_JSX",
+      "value" : 14,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_JSX",
+      "value" : 2149,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_JS",
+      "value" : 19,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_JS",
+      "value" : 1143,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_SQL",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_SQL",
+      "value" : 88,
+      "description" : null
+    }, {
+      "id" : "NUMBER_OF_FILES_CONCERN_GENERAL_UNCLASSIFIED_EXT_HTML",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "LINES_OF_CODE_CONCERN_GENERAL_UNCLASSIFIED_EXT_HTML",
+      "value" : 27,
+      "description" : null
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_COUNT",
+      "value" : 26,
+      "description" : "Number of  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_COUNT",
+      "value" : 12,
+      "description" : "Number of  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_COUNT",
+      "value" : 10,
+      "description" : "Number of  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 1,
+      "description" : "Number of  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+      "value" : 0,
+      "description" : "Number of  files with more than 1000 lines of code"
+    }, {
+      "id" : "NEGLIGIBLE_RISK_FILE_SIZE_LOC",
+      "value" : 1092,
+      "description" : "Lines of code in  files with 100 or less lines of code"
+    }, {
+      "id" : "LOW_RISK_FILE_SIZE_LOC",
+      "value" : 1726,
+      "description" : "Lines of code in  files with 100 to 200 lines of code"
+    }, {
+      "id" : "MEDIUM_RISK_FILE_SIZE_LOC",
+      "value" : 2982,
+      "description" : "Lines of code in  files with 200 to 500 lines of code"
+    }, {
+      "id" : "HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 524,
+      "description" : "Lines of code in  files with 500 to 1000 lines of code"
+    }, {
+      "id" : "VERY_HIGH_RISK_FILE_SIZE_LOC",
+      "value" : 0,
+      "description" : "Lines of code in  files with more than 1000 lines of code"
+    }, {
+      "id" : "NUMBER_OF_UNITS",
+      "value" : 36,
+      "description" : "Number of units"
+    }, {
+      "id" : "LINES_OF_CODE_IN_UNITS",
+      "value" : 381,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "LINES_OF_CODE_OUTSIDE_UNITS",
+      "value" : 5943,
+      "description" : "Lines of code in units"
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_LOC",
+      "value" : 119,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 31.233595800524935,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_NEGLIGIBLE_RISK_COUNT",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_LOC",
+      "value" : 51,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_PERCENTAGE",
+      "value" : 13.385826771653543,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_LOW_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_LOC",
+      "value" : 211,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_PERCENTAGE",
+      "value" : 55.38057742782152,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_MEDIUM_RISK_COUNT",
+      "value" : 8,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 14,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 15.053763440860216,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_LOC",
+      "value" : 28,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_PERCENTAGE",
+      "value" : 30.107526881720432,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_LOW_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_LOC",
+      "value" : 51,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 54.83870967741935,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_MEDIUM_RISK_COUNT",
+      "value" : 2,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_BACKEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_NEGLIGIBLE_RISK_LOC",
+      "value" : 8,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 19.51219512195122,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_NEGLIGIBLE_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_LOW_RISK_LOC",
+      "value" : 11,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_LOW_RISK_PERCENTAGE",
+      "value" : 26.829268292682926,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_LOW_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_MEDIUM_RISK_LOC",
+      "value" : 22,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_MEDIUM_RISK_PERCENTAGE",
+      "value" : 53.65853658536585,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_MEDIUM_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_ROOT_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 97,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 39.27125506072875,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 21,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_LOC",
+      "value" : 12,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_PERCENTAGE",
+      "value" : 4.8582995951417,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_LOW_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_LOC",
+      "value" : 138,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 55.87044534412956,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_MEDIUM_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_COMPONENT_FRONTEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_LOC",
+      "value" : 119,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 31.233595800524935,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_LOC",
+      "value" : 51,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_PERCENTAGE",
+      "value" : 13.385826771653543,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_LOW_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_LOC",
+      "value" : 211,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 55.38057742782152,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_MEDIUM_RISK_COUNT",
+      "value" : 8,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "UNIT_SIZE_EXTENSION_JS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_LOC",
+      "value" : 259,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 67.97900262467192,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_NEGLIGIBLE_RISK_COUNT",
+      "value" : 32,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_LOC",
+      "value" : 122,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_PERCENTAGE",
+      "value" : 32.020997375328086,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_MEDIUM_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_HIGH_PLUS_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 63,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 67.74193548387096,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 5,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_LOC",
+      "value" : 30,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 32.25806451612903,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_MEDIUM_RISK_COUNT",
+      "value" : 1,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_BACKEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_NEGLIGIBLE_RISK_LOC",
+      "value" : 41,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 100.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_NEGLIGIBLE_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_MEDIUM_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_MEDIUM_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_MEDIUM_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_ROOT_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_LOC",
+      "value" : 155,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 62.75303643724696,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_NEGLIGIBLE_RISK_COUNT",
+      "value" : 24,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_LOC",
+      "value" : 92,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_PERCENTAGE",
+      "value" : 37.24696356275304,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_MEDIUM_RISK_COUNT",
+      "value" : 3,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_FRONTEND_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_LOC",
+      "value" : 259,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_PERCENTAGE",
+      "value" : 67.97900262467192,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_NEGLIGIBLE_RISK_COUNT",
+      "value" : 32,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_LOW_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_LOC",
+      "value" : 122,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_PERCENTAGE",
+      "value" : 32.020997375328086,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_MEDIUM_RISK_COUNT",
+      "value" : 4,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_LOC",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_PERCENTAGE",
+      "value" : 0.0,
+      "description" : null
+    }, {
+      "id" : "CONDITIONAL_COMPLEXITY_COMPONENT_JS_VERY_HIGH_RISK_COUNT",
+      "value" : 0,
+      "description" : null
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATES",
+      "value" : 70,
+      "description" : "Number of duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_FILES_WITH_DUPLICATES",
+      "value" : 25,
+      "description" : "Number of files with duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES",
+      "value" : 1058,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES",
+      "value" : 5894,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE",
+      "value" : 17.950458092975907,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "UNIT_DUPLICATES_COUNT",
+      "value" : 2,
+      "description" : "Unit duplicates"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_BACKEND",
+      "value" : 244,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_BACKEND",
+      "value" : 244,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_BACKEND",
+      "value" : 100.0,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_FRONTEND",
+      "value" : 814,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_FRONTEND",
+      "value" : 814,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_FRONTEND",
+      "value" : 100.0,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_PRIMARY_ROOT",
+      "value" : 0,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_PRIMARY_ROOT",
+      "value" : 0,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_PRIMARY_ROOT",
+      "value" : "NaN",
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_JS",
+      "value" : 332,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_JS",
+      "value" : 1006,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_JS",
+      "value" : 33.00198807157058,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_CSS",
+      "value" : 504,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_CSS",
+      "value" : 2682,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_CSS",
+      "value" : 18.79194630872483,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_JSX",
+      "value" : 188,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_JSX",
+      "value" : 2095,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_JSX",
+      "value" : 8.973747016706444,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_DUPLICATED_LINES_SQL",
+      "value" : 34,
+      "description" : "Number of duplicated lines"
+    }, {
+      "id" : "DUPLICATION_NUMBER_OF_CLEANED_LINES_SQL",
+      "value" : 88,
+      "description" : "Number of lines after cleaning for duplication calculations"
+    }, {
+      "id" : "DUPLICATION_PERCENTAGE_SQL",
+      "value" : 38.63636363636363,
+      "description" : "Duplication percentage"
+    }, {
+      "id" : "TOTAL_ANALYSIS_TIME_IN_MILLIS",
+      "value" : 117831,
+      "description" : "Total analysis time in milliseconds"
+    } ]
+  },
+  "controlResults" : {
+    "goalsAnalysisResults" : [ {
+      "metricsWithGoal" : {
+        "goal" : "Keep the system simple and easy to change",
+        "description" : "Aim at keeping the system size modest (less than 200,000 LOC is good), duplication low (less than 5% is good), files small (no files longer than 1000 LOC is good), and units simple (no units with more than 25 decision points is good).",
+        "controls" : [ {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        }, {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        }, {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        } ]
+      },
+      "controlStatuses" : [ {
+        "control" : {
+          "metric" : "LINES_OF_CODE_MAIN",
+          "description" : "Total number of lines of main code",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "200000",
+            "tolerance" : "20000"
+          }
+        },
+        "metric" : {
+          "id" : "LINES_OF_CODE_MAIN",
+          "value" : 6324,
+          "description" : null
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "DUPLICATION_PERCENTAGE",
+          "description" : "System duplication",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "5",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "DUPLICATION_PERCENTAGE",
+          "value" : 17.950458092975907,
+          "description" : "Duplication percentage"
+        },
+        "status" : "FAILED"
+      }, {
+        "control" : {
+          "metric" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "description" : "The number of very large files",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "VERY_HIGH_RISK_FILE_SIZE_COUNT",
+          "value" : 0,
+          "description" : "Number of  files with more than 1000 lines of code"
+        },
+        "status" : "OK"
+      }, {
+        "control" : {
+          "metric" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "description" : "Number of very complex units",
+          "desiredRange" : {
+            "min" : "0",
+            "max" : "0",
+            "tolerance" : "1"
+          }
+        },
+        "metric" : {
+          "id" : "CONDITIONAL_COMPLEXITY_VERY_HIGH_RISK_COUNT",
+          "value" : 0,
+          "description" : null
+        },
+        "status" : "OK"
+      } ]
+    } ]
+  },
+  "totalNumberOfFilesInScope" : 79559,
+  "mainAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 49,
+    "linesOfCode" : 6324,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.css",
+      "value" : 13,
+      "description" : [ ]
+    }, {
+      "name" : "  *.jsx",
+      "value" : 15,
+      "description" : [ ]
+    }, {
+      "name" : "  *.js",
+      "value" : 19,
+      "description" : [ ]
+    }, {
+      "name" : "  *.sql",
+      "value" : 1,
+      "description" : [ ]
+    }, {
+      "name" : "  *.html",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.css",
+      "value" : 2682,
+      "description" : [ ]
+    }, {
+      "name" : "  *.jsx",
+      "value" : 2384,
+      "description" : [ ]
+    }, {
+      "name" : "  *.js",
+      "value" : 1143,
+      "description" : [ ]
+    }, {
+      "name" : "  *.sql",
+      "value" : 88,
+      "description" : [ ]
+    }, {
+      "name" : "  *.html",
+      "value" : 27,
+      "description" : [ ]
+    } ]
+  },
+  "testAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 2,
+    "linesOfCode" : 211,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.jsx",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.jsx",
+      "value" : 211,
+      "description" : [ ]
+    } ]
+  },
+  "generatedAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 2,
+    "linesOfCode" : 6888,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 2,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 6888,
+      "description" : [ ]
+    } ]
+  },
+  "buildAndDeployAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 0,
+    "linesOfCode" : 0,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ ],
+    "linesOfCodePerExtension" : [ ]
+  },
+  "otherAspectAnalysisResults" : {
+    "name" : null,
+    "filesCount" : 5,
+    "linesOfCode" : 7009,
+    "numberOfRegexLineMatches" : 0,
+    "fileCountPerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 4,
+      "description" : [ ]
+    }, {
+      "name" : "  *.md",
+      "value" : 1,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerExtension" : [ {
+      "name" : "  *.json",
+      "value" : 6953,
+      "description" : [ ]
+    }, {
+      "name" : "  *.md",
+      "value" : 56,
+      "description" : [ ]
+    } ]
+  },
+  "logicalDecompositionsAnalysisResults" : [ {
+    "key" : "primary",
+    "components" : [ {
+      "name" : "backend",
+      "filesCount" : 13,
+      "linesOfCode" : 899,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 12,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 811,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 88,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "ROOT",
+      "filesCount" : 4,
+      "linesOfCode" : 79,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 3,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.js",
+        "value" : 52,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 27,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "frontend",
+      "filesCount" : 32,
+      "linesOfCode" : 5346,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 13,
+        "description" : [ ]
+      }, {
+        "name" : "  *.jsx",
+        "value" : 15,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 4,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 2682,
+        "description" : [ ]
+      }, {
+        "name" : "  *.jsx",
+        "value" : 2384,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 280,
+        "description" : [ ]
+      } ]
+    } ],
+    "componentDependencies" : [ ],
+    "componentDependenciesErrors" : [ ],
+    "logicalDecomposition" : {
+      "name" : "primary",
+      "scope" : "main",
+      "filters" : [ ],
+      "componentsFolderDepth" : 1,
+      "minComponentsCount" : 0,
+      "components" : [ {
+        "name" : "backend",
+        "sourceFileFilters" : [ {
+          "pathPattern" : ".\\backend\\.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "ROOT",
+        "sourceFileFilters" : [ {
+          "pathPattern" : ".\\.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        }, {
+          "pathPattern" : ".\\backend\\.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        }, {
+          "pathPattern" : ".\\frontend\\.*",
+          "contentPattern" : "",
+          "exception" : true,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      }, {
+        "name" : "frontend",
+        "sourceFileFilters" : [ {
+          "pathPattern" : ".\\frontend\\.*",
+          "contentPattern" : "",
+          "exception" : false,
+          "note" : ""
+        } ],
+        "files" : [ ]
+      } ],
+      "metaComponents" : [ ],
+      "groups" : [ ],
+      "includeRemainingFiles" : true,
+      "dependenciesFinder" : {
+        "useBuiltInDependencyFinders" : true,
+        "rules" : [ ],
+        "metaRules" : [ ]
+      },
+      "renderingOptions" : {
+        "orientation" : "TB",
+        "maxNumberOfDependencies" : 100,
+        "renderComponentsWithoutDependencies" : true,
+        "renderIndirectDependencies" : false,
+        "renderInternalIndirectDependencies" : false,
+        "reverseDirection" : false
+      },
+      "includeExternalComponents" : true,
+      "dependencyLinkThreshold" : 1,
+      "duplicationLinkThreshold" : 50,
+      "temporalLinkThreshold" : 1,
+      "maxSearchDepthLines" : 200
+    },
+    "fileCountPerComponent" : [ {
+      "name" : "backend",
+      "value" : 13,
+      "description" : [ ]
+    }, {
+      "name" : "ROOT",
+      "value" : 4,
+      "description" : [ ]
+    }, {
+      "name" : "frontend",
+      "value" : 32,
+      "description" : [ ]
+    } ],
+    "linesOfCodePerComponent" : [ {
+      "name" : "backend",
+      "value" : 899,
+      "description" : [ ]
+    }, {
+      "name" : "ROOT",
+      "value" : 79,
+      "description" : [ ]
+    }, {
+      "name" : "frontend",
+      "value" : 5346,
+      "description" : [ ]
+    } ]
+  } ],
+  "concernsAnalysisResults" : [ {
+    "key" : "general",
+    "concerns" : [ {
+      "name" : "TODOs",
+      "filesCount" : 1,
+      "linesOfCode" : 235,
+      "numberOfRegexLineMatches" : 1,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.jsx",
+        "value" : 235,
+        "description" : [ ]
+      } ]
+    }, {
+      "name" : "Unclassified",
+      "filesCount" : 48,
+      "linesOfCode" : 6089,
+      "numberOfRegexLineMatches" : 0,
+      "fileCountPerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 13,
+        "description" : [ ]
+      }, {
+        "name" : "  *.jsx",
+        "value" : 14,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 19,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 1,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 1,
+        "description" : [ ]
+      } ],
+      "linesOfCodePerExtension" : [ {
+        "name" : "  *.css",
+        "value" : 2682,
+        "description" : [ ]
+      }, {
+        "name" : "  *.jsx",
+        "value" : 2149,
+        "description" : [ ]
+      }, {
+        "name" : "  *.js",
+        "value" : 1143,
+        "description" : [ ]
+      }, {
+        "name" : "  *.sql",
+        "value" : 88,
+        "description" : [ ]
+      }, {
+        "name" : "  *.html",
+        "value" : 27,
+        "description" : [ ]
+      } ]
+    } ],
+    "concernsGroup" : null,
+    "linesOfCodePerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 235,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 6089,
+      "description" : [ ]
+    } ],
+    "fileCountPerConcern" : [ {
+      "name" : "TODOs",
+      "value" : 1,
+      "description" : [ ]
+    }, {
+      "name" : "Unclassified",
+      "value" : 48,
+      "description" : [ ]
+    } ]
+  } ],
+  "filesAnalysisResults" : {
+    "overalFileSizeDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 1092,
+      "lowRiskValue" : 1726,
+      "mediumRiskValue" : 2982,
+      "highRiskValue" : 524,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 12,
+      "negligibleRiskCount" : 26,
+      "mediumRiskCount" : 10,
+      "highRiskCount" : 1,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 49,
+      "totalValue" : 6324,
+      "mediumRiskPercentage" : 47.15370018975332,
+      "lowRiskPercentage" : 27.292852624920936,
+      "highRiskPercentage" : 8.285895003162555,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 17.267552182163186
+    },
+    "fileSizeDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 587,
+      "lowRiskValue" : 556,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 3,
+      "negligibleRiskCount" : 16,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 19,
+      "totalValue" : 1143,
+      "mediumRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 48.643919510061245,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 51.356080489938755
+    }, {
+      "key" : "sql",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 88,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 1,
+      "totalValue" : 88,
+      "mediumRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0
+    }, {
+      "key" : "css",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 294,
+      "lowRiskValue" : 347,
+      "mediumRiskValue" : 1517,
+      "highRiskValue" : 524,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 3,
+      "negligibleRiskCount" : 4,
+      "mediumRiskCount" : 5,
+      "highRiskCount" : 1,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 13,
+      "totalValue" : 2682,
+      "mediumRiskPercentage" : 56.562266964951526,
+      "lowRiskPercentage" : 12.938105891126025,
+      "highRiskPercentage" : 19.537658463832962,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 10.961968680089486
+    }, {
+      "key" : "jsx",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 96,
+      "lowRiskValue" : 823,
+      "mediumRiskValue" : 1465,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 6,
+      "negligibleRiskCount" : 4,
+      "mediumRiskCount" : 5,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 15,
+      "totalValue" : 2384,
+      "mediumRiskPercentage" : 61.45134228187919,
+      "lowRiskPercentage" : 34.52181208053691,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 4.026845637583893
+    }, {
+      "key" : "html",
+      "lowRiskThreshold" : 100,
+      "mediumRiskThreshold" : 200,
+      "highRiskThreshold" : 500,
+      "veryHighRiskThreshold" : 1000,
+      "negligibleRiskValue" : 27,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-100",
+      "lowRiskLabel" : "101-200",
+      "mediumRiskLabel" : "201-500",
+      "highRiskLabel" : "501-1000",
+      "veryHighRiskLabel" : "1001+",
+      "totalCount" : 1,
+      "totalValue" : 27,
+      "mediumRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0
+    } ],
+    "fileSizeDistributionPerLogicalDecomposition" : [ {
+      "name" : "primary",
+      "fileSizeDistributionPerComponent" : [ {
+        "key" : "backend",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 343,
+        "lowRiskValue" : 556,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 3,
+        "negligibleRiskCount" : 10,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 13,
+        "totalValue" : 899,
+        "mediumRiskPercentage" : 0.0,
+        "lowRiskPercentage" : 61.84649610678532,
+        "highRiskPercentage" : 0.0,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 38.15350389321468
+      }, {
+        "key" : "ROOT",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 79,
+        "lowRiskValue" : 0,
+        "mediumRiskValue" : 0,
+        "highRiskValue" : 0,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 0,
+        "negligibleRiskCount" : 4,
+        "mediumRiskCount" : 0,
+        "highRiskCount" : 0,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 4,
+        "totalValue" : 79,
+        "mediumRiskPercentage" : 0.0,
+        "lowRiskPercentage" : 0.0,
+        "highRiskPercentage" : 0.0,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 100.0
+      }, {
+        "key" : "frontend",
+        "lowRiskThreshold" : 100,
+        "mediumRiskThreshold" : 200,
+        "highRiskThreshold" : 500,
+        "veryHighRiskThreshold" : 1000,
+        "negligibleRiskValue" : 670,
+        "lowRiskValue" : 1170,
+        "mediumRiskValue" : 2982,
+        "highRiskValue" : 524,
+        "veryHighRiskValue" : 0,
+        "lowRiskCount" : 9,
+        "negligibleRiskCount" : 12,
+        "mediumRiskCount" : 10,
+        "highRiskCount" : 1,
+        "veryHighRiskCount" : 0,
+        "negligibleRiskLabel" : "1-100",
+        "lowRiskLabel" : "101-200",
+        "mediumRiskLabel" : "201-500",
+        "highRiskLabel" : "501-1000",
+        "veryHighRiskLabel" : "1001+",
+        "totalCount" : 32,
+        "totalValue" : 5346,
+        "mediumRiskPercentage" : 55.78002244668912,
+        "lowRiskPercentage" : 21.885521885521886,
+        "highRiskPercentage" : 9.801720912832025,
+        "veryHighRiskPercentage" : 0.0,
+        "negligibleRiskPercentage" : 12.532734754956977
+      } ]
+    } ],
+    "longestFiles" : [ {
+      "relativePath" : "frontend\\src\\vues\\employe.css",
+      "extension" : "css",
+      "linesOfCode" : 524,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\logs.css",
+      "extension" : "css",
+      "linesOfCode" : 369,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\logs.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 345,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 336,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+      "extension" : "css",
+      "linesOfCode" : 329,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\accueil.css",
+      "extension" : "css",
+      "linesOfCode" : 325,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 287,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\contact.css",
+      "extension" : "css",
+      "linesOfCode" : 272,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\employe.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 262,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\contact.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 235,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\horaires.css",
+      "extension" : "css",
+      "linesOfCode" : 222,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\accueil.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 195,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+      "extension" : "js",
+      "linesOfCode" : 187,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 3,
+      "linesOfCodeInUnits" : 35
+    }, {
+      "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+      "extension" : "js",
+      "linesOfCode" : 185,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+      "extension" : "js",
+      "linesOfCode" : 184,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 14
+    }, {
+      "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 149,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\client.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 146,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\services_aides.css",
+      "extension" : "css",
+      "linesOfCode" : 121,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\inscription.css",
+      "extension" : "css",
+      "linesOfCode" : 118,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\login.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 118,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\services_aides.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 111,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\client.css",
+      "extension" : "css",
+      "linesOfCode" : 108,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 104,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\services\\apiHoraire.js",
+      "extension" : "js",
+      "linesOfCode" : 97,
+      "unitsCount" : 8,
+      "unitsMcCabeIndexSum" : 19,
+      "linesOfCodeInUnits" : 96
+    }, {
+      "relativePath" : "frontend\\services\\apiUtilisateur.js",
+      "extension" : "js",
+      "linesOfCode" : 89,
+      "unitsCount" : 9,
+      "unitsMcCabeIndexSum" : 20,
+      "linesOfCodeInUnits" : 77
+    }, {
+      "relativePath" : "backend\\bd\\fixiotech.sql",
+      "extension" : "sql",
+      "linesOfCode" : 88,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\vues\\login.css",
+      "extension" : "css",
+      "linesOfCode" : 86,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\services\\apiRendezVous.js",
+      "extension" : "js",
+      "linesOfCode" : 78,
+      "unitsCount" : 10,
+      "unitsMcCabeIndexSum" : 20,
+      "linesOfCodeInUnits" : 74
+    }, {
+      "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.css",
+      "extension" : "css",
+      "linesOfCode" : 76,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\App.css",
+      "extension" : "css",
+      "linesOfCode" : 71,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\index.css",
+      "extension" : "css",
+      "linesOfCode" : 61,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\validateurs\\validateurUtilisateur.js",
+      "extension" : "js",
+      "linesOfCode" : 45,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\App.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 45,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\app.js",
+      "extension" : "js",
+      "linesOfCode" : 44,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
+      "extension" : "js",
+      "linesOfCode" : 37,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\middlewares\\errorHandler.js",
+      "extension" : "js",
+      "linesOfCode" : 31,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 15,
+      "linesOfCodeInUnits" : 30
+    }, {
+      "relativePath" : "eslint.config.js",
+      "extension" : "js",
+      "linesOfCode" : 28,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 22
+    }, {
+      "relativePath" : "index.html",
+      "extension" : "html",
+      "linesOfCode" : 27,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\context\\AuthContext.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 25,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\config\\databaseConnexion.js",
+      "extension" : "js",
+      "linesOfCode" : 23,
+      "unitsCount" : 2,
+      "unitsMcCabeIndexSum" : 6,
+      "linesOfCodeInUnits" : 14
+    }, {
+      "relativePath" : "backend\\routes\\routeRendezVous.js",
+      "extension" : "js",
+      "linesOfCode" : 23,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\routes\\routeUtilisateur.js",
+      "extension" : "js",
+      "linesOfCode" : 23,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "backend\\routes\\routeHoraire.js",
+      "extension" : "js",
+      "linesOfCode" : 21,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\setupTests.js",
+      "extension" : "js",
+      "linesOfCode" : 16,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "frontend\\src\\main.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 15,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "vite.config.js",
+      "extension" : "js",
+      "linesOfCode" : 13,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 11
+    }, {
+      "relativePath" : "frontend\\src\\routes\\ProtectedRoute.jsx",
+      "extension" : "jsx",
+      "linesOfCode" : 11,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    }, {
+      "relativePath" : "vitest.config.js",
+      "extension" : "js",
+      "linesOfCode" : 11,
+      "unitsCount" : 1,
+      "unitsMcCabeIndexSum" : 1,
+      "linesOfCodeInUnits" : 8
+    }, {
+      "relativePath" : "backend\\validateurs\\validateurHoraire.js",
+      "extension" : "js",
+      "linesOfCode" : 8,
+      "unitsCount" : 0,
+      "unitsMcCabeIndexSum" : 0,
+      "linesOfCodeInUnits" : 0
+    } ]
+  },
+  "filesHistoryAnalysisResults" : {
+    "overallFileLastModifiedDistribution" : null,
+    "overallFileFirstModifiedDistribution" : null,
+    "overallFileChangeDistribution" : null,
+    "changeDistributionPerExtension" : [ ],
+    "lastModifiedDistributionPerExtension" : [ ],
+    "firstModifiedDistributionPerExtension" : [ ],
+    "changeDistributionPerLogicalDecomposition" : [ ],
+    "firstModifiedDistributionPerLogicalDecomposition" : [ ],
+    "lastModifiedDistributionPerLogicalDecomposition" : [ ],
+    "oldestFiles" : [ ],
+    "youngestFiles" : [ ],
+    "mostRecentlyChangedFiles" : [ ],
+    "mostPreviouslyChangedFiles" : [ ],
+    "mostChangedFiles" : [ ],
+    "firstDate" : "",
+    "latestDate" : "",
+    "daysBetweenFirstAndLastDate" : 0,
+    "weeks" : 0,
+    "estimatedWorkindDays" : 0,
+    "activeDays" : 0,
+    "ageInDays" : 0,
+    "historyPerExtensionPerYear" : [ ]
+  },
+  "unitsAnalysisResults" : {
+    "totalNumberOfUnits" : 36,
+    "linesOfCodeInUnits" : 381,
+    "unitSizeRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 119,
+      "lowRiskValue" : 51,
+      "mediumRiskValue" : 211,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 4,
+      "negligibleRiskCount" : 24,
+      "mediumRiskCount" : 8,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 36,
+      "totalValue" : 381,
+      "mediumRiskPercentage" : 55.38057742782152,
+      "lowRiskPercentage" : 13.385826771653543,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 31.233595800524935
+    },
+    "conditionalComplexityRiskDistribution" : {
+      "key" : "",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 259,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 122,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 32,
+      "mediumRiskCount" : 4,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 36,
+      "totalValue" : 381,
+      "mediumRiskPercentage" : 32.020997375328086,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 67.97900262467192
+    },
+    "unitSizeRiskDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 119,
+      "lowRiskValue" : 51,
+      "mediumRiskValue" : 211,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 4,
+      "negligibleRiskCount" : 24,
+      "mediumRiskCount" : 8,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 36,
+      "totalValue" : 381,
+      "mediumRiskPercentage" : 55.38057742782152,
+      "lowRiskPercentage" : 13.385826771653543,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 31.233595800524935
+    } ],
+    "unitSizeRiskDistributionPerComponent" : [ [ {
+      "key" : "backend",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 14,
+      "lowRiskValue" : 28,
+      "mediumRiskValue" : 51,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 2,
+      "negligibleRiskCount" : 2,
+      "mediumRiskCount" : 2,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 6,
+      "totalValue" : 93,
+      "mediumRiskPercentage" : 54.83870967741935,
+      "lowRiskPercentage" : 30.107526881720432,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 15.053763440860216
+    }, {
+      "key" : "ROOT",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 8,
+      "lowRiskValue" : 11,
+      "mediumRiskValue" : 22,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 1,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 3,
+      "totalValue" : 41,
+      "mediumRiskPercentage" : 53.65853658536585,
+      "lowRiskPercentage" : 26.829268292682926,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 19.51219512195122
+    }, {
+      "key" : "frontend",
+      "lowRiskThreshold" : 10,
+      "mediumRiskThreshold" : 20,
+      "highRiskThreshold" : 50,
+      "veryHighRiskThreshold" : 100,
+      "negligibleRiskValue" : 97,
+      "lowRiskValue" : 12,
+      "mediumRiskValue" : 138,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 1,
+      "negligibleRiskCount" : 21,
+      "mediumRiskCount" : 5,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-10",
+      "lowRiskLabel" : "11-20",
+      "mediumRiskLabel" : "21-50",
+      "highRiskLabel" : "51-100",
+      "veryHighRiskLabel" : "101+",
+      "totalCount" : 27,
+      "totalValue" : 247,
+      "mediumRiskPercentage" : 55.87044534412956,
+      "lowRiskPercentage" : 4.8582995951417,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 39.27125506072875
+    } ] ],
+    "longestUnits" : [ {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 5,
+      "endLine" : 41,
+      "linesOfCode" : 31,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 4,
+      "endLine" : 40,
+      "linesOfCode" : 31,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function errorHandler()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\middlewares\\errorHandler.js",
+        "extension" : "js",
+        "linesOfCode" : 31,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 15,
+        "linesOfCodeInUnits" : 30
+      },
+      "startLine" : 1,
+      "endLine" : 35,
+      "linesOfCode" : 30,
+      "mcCabeIndex" : 15,
+      "numberOfParameters" : 4,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 3,
+      "endLine" : 38,
+      "linesOfCode" : 30,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function addHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 68,
+      "endLine" : 91,
+      "linesOfCode" : 23,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function updateHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 96,
+      "endLine" : 119,
+      "linesOfCode" : 23,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "eslint.config.js",
+        "extension" : "js",
+        "linesOfCode" : 28,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 7,
+      "endLine" : 28,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "INSERT INTO rendez_vous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 187,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 35
+      },
+      "startLine" : 101,
+      "endLine" : 122,
+      "linesOfCode" : 21,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function colonnesJour()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 187,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 35
+      },
+      "startLine" : 37,
+      "endLine" : 50,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function colonnesJour()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 184,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 152,
+      "endLine" : 166,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function addUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 50,
+      "endLine" : 62,
+      "linesOfCode" : 12,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "vite.config.js",
+        "extension" : "js",
+        "linesOfCode" : 13,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 11
+      },
+      "startLine" : 5,
+      "endLine" : 15,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "port: Number()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\config\\databaseConnexion.js",
+        "extension" : "js",
+        "linesOfCode" : 23,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 6,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 16,
+      "endLine" : 26,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 5,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function addRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 56,
+      "endLine" : 69,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "description_probleme: emptyToNull()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "startLine" : 62,
+        "endLine" : 65,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "export async function updateRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 72,
+      "endLine" : 85,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "description_probleme: emptyToNull()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "startLine" : 78,
+        "endLine" : 81,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "async function loginUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 64,
+      "endLine" : 74,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default mergeConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "vitest.config.js",
+        "extension" : "js",
+        "linesOfCode" : 11,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 5,
+      "endLine" : 12,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function saveHoraireForEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 136,
+      "endLine" : 142,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function updateUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 76,
+      "endLine" : 81,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function deleteHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 124,
+      "endLine" : 128,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function deleteRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 88,
+      "endLine" : 92,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function deleteUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 83,
+      "endLine" : 87,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function assertDb()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\config\\databaseConnexion.js",
+        "extension" : "js",
+        "linesOfCode" : 23,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 6,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 26,
+      "endLine" : 29,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getEmployesDisponibles()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 93,
+      "endLine" : 96,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraires()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 43,
+      "endLine" : 45,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 50,
+      "endLine" : 52,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraireByEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 131,
+      "endLine" : 133,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 46,
+      "endLine" : 48,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousById()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 51,
+      "endLine" : 53,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "description_probleme: emptyToNull()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 62,
+      "endLine" : 65,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "description_probleme: emptyToNull()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 78,
+      "endLine" : 81,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousByEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 94,
+      "endLine" : 96,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousByClient()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 98,
+      "endLine" : 100,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getUtilisateurs()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 42,
+      "endLine" : 44,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 46,
+      "endLine" : 48,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getEmployes()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 89,
+      "endLine" : 91,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ],
+    "conditionalComplexityRiskDistributionPerExtension" : [ {
+      "key" : "js",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 259,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 122,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 32,
+      "mediumRiskCount" : 4,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 36,
+      "totalValue" : 381,
+      "mediumRiskPercentage" : 32.020997375328086,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 67.97900262467192
+    } ],
+    "conditionalComplexityRiskDistributionPerComponent" : [ [ {
+      "key" : "backend",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 63,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 30,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 5,
+      "mediumRiskCount" : 1,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 6,
+      "totalValue" : 93,
+      "mediumRiskPercentage" : 32.25806451612903,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 67.74193548387096
+    }, {
+      "key" : "ROOT",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 41,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 0,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 3,
+      "mediumRiskCount" : 0,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 3,
+      "totalValue" : 41,
+      "mediumRiskPercentage" : 0.0,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 100.0
+    }, {
+      "key" : "frontend",
+      "lowRiskThreshold" : 5,
+      "mediumRiskThreshold" : 10,
+      "highRiskThreshold" : 25,
+      "veryHighRiskThreshold" : 50,
+      "negligibleRiskValue" : 155,
+      "lowRiskValue" : 0,
+      "mediumRiskValue" : 92,
+      "highRiskValue" : 0,
+      "veryHighRiskValue" : 0,
+      "lowRiskCount" : 0,
+      "negligibleRiskCount" : 24,
+      "mediumRiskCount" : 3,
+      "highRiskCount" : 0,
+      "veryHighRiskCount" : 0,
+      "negligibleRiskLabel" : "1-5",
+      "lowRiskLabel" : "6-10",
+      "mediumRiskLabel" : "11-25",
+      "highRiskLabel" : "26-50",
+      "veryHighRiskLabel" : "51+",
+      "totalCount" : 27,
+      "totalValue" : 247,
+      "mediumRiskPercentage" : 37.24696356275304,
+      "lowRiskPercentage" : 0.0,
+      "highRiskPercentage" : 0.0,
+      "veryHighRiskPercentage" : 0.0,
+      "negligibleRiskPercentage" : 62.75303643724696
+    } ] ],
+    "mostComplexUnits" : [ {
+      "shortName" : "function errorHandler()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\middlewares\\errorHandler.js",
+        "extension" : "js",
+        "linesOfCode" : 31,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 15,
+        "linesOfCodeInUnits" : 30
+      },
+      "startLine" : 1,
+      "endLine" : 35,
+      "linesOfCode" : 30,
+      "mcCabeIndex" : 15,
+      "numberOfParameters" : 4,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 3,
+      "endLine" : 38,
+      "linesOfCode" : 30,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 5,
+      "endLine" : 41,
+      "linesOfCode" : 31,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function httpJson()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 4,
+      "endLine" : 40,
+      "linesOfCode" : 31,
+      "mcCabeIndex" : 11,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "port: Number()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\config\\databaseConnexion.js",
+        "extension" : "js",
+        "linesOfCode" : 23,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 6,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 16,
+      "endLine" : 26,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 5,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "INSERT INTO rendez_vous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 187,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 35
+      },
+      "startLine" : 101,
+      "endLine" : 122,
+      "linesOfCode" : 21,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function saveHoraireForEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 136,
+      "endLine" : 142,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function addUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 50,
+      "endLine" : 62,
+      "linesOfCode" : 12,
+      "mcCabeIndex" : 2,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function assertDb()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\config\\databaseConnexion.js",
+        "extension" : "js",
+        "linesOfCode" : 23,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 6,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 26,
+      "endLine" : 29,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function colonnesJour()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 187,
+        "unitsCount" : 2,
+        "unitsMcCabeIndexSum" : 3,
+        "linesOfCodeInUnits" : 35
+      },
+      "startLine" : 37,
+      "endLine" : 50,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "function colonnesJour()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 184,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 14
+      },
+      "startLine" : 152,
+      "endLine" : 166,
+      "linesOfCode" : 14,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "eslint.config.js",
+        "extension" : "js",
+        "linesOfCode" : 28,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 22
+      },
+      "startLine" : 7,
+      "endLine" : 28,
+      "linesOfCode" : 22,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraires()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 43,
+      "endLine" : 45,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 50,
+      "endLine" : 52,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function addHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 68,
+      "endLine" : 91,
+      "linesOfCode" : 23,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function updateHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 96,
+      "endLine" : 119,
+      "linesOfCode" : 23,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function deleteHoraire()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 124,
+      "endLine" : 128,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getHoraireByEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiHoraire.js",
+        "extension" : "js",
+        "linesOfCode" : 97,
+        "unitsCount" : 8,
+        "unitsMcCabeIndexSum" : 19,
+        "linesOfCodeInUnits" : 96
+      },
+      "startLine" : 131,
+      "endLine" : 133,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 46,
+      "endLine" : 48,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousById()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 51,
+      "endLine" : 53,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function addRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 56,
+      "endLine" : 69,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "description_probleme: emptyToNull()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "startLine" : 62,
+        "endLine" : 65,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "description_probleme: emptyToNull()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 62,
+      "endLine" : 65,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function updateRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 72,
+      "endLine" : 85,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ {
+        "shortName" : "description_probleme: emptyToNull()",
+        "longName" : "",
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "startLine" : 78,
+        "endLine" : 81,
+        "linesOfCode" : 3,
+        "mcCabeIndex" : 1,
+        "numberOfParameters" : 1,
+        "numberOfLiterals" : 0,
+        "numberOfStatements" : 0,
+        "numberOfExpressions" : 0,
+        "children" : [ ]
+      } ]
+    }, {
+      "shortName" : "description_probleme: emptyToNull()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 78,
+      "endLine" : 81,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function deleteRendezVous()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 88,
+      "endLine" : 92,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousByEmploye()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 94,
+      "endLine" : 96,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export async function getRendezVousByClient()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiRendezVous.js",
+        "extension" : "js",
+        "linesOfCode" : 78,
+        "unitsCount" : 10,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 74
+      },
+      "startLine" : 98,
+      "endLine" : 100,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getUtilisateurs()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 42,
+      "endLine" : 44,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 46,
+      "endLine" : 48,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function loginUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 64,
+      "endLine" : 74,
+      "linesOfCode" : 10,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function updateUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 76,
+      "endLine" : 81,
+      "linesOfCode" : 6,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function deleteUtilisateur()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 83,
+      "endLine" : 87,
+      "linesOfCode" : 5,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getEmployes()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 89,
+      "endLine" : 91,
+      "linesOfCode" : 3,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 0,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "async function getEmployesDisponibles()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "frontend\\services\\apiUtilisateur.js",
+        "extension" : "js",
+        "linesOfCode" : 89,
+        "unitsCount" : 9,
+        "unitsMcCabeIndexSum" : 20,
+        "linesOfCodeInUnits" : 77
+      },
+      "startLine" : 93,
+      "endLine" : 96,
+      "linesOfCode" : 4,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 2,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default defineConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "vite.config.js",
+        "extension" : "js",
+        "linesOfCode" : 13,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 11
+      },
+      "startLine" : 5,
+      "endLine" : 15,
+      "linesOfCode" : 11,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 1,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    }, {
+      "shortName" : "export default mergeConfig()",
+      "longName" : "",
+      "sourceFile" : {
+        "relativePath" : "vitest.config.js",
+        "extension" : "js",
+        "linesOfCode" : 11,
+        "unitsCount" : 1,
+        "unitsMcCabeIndexSum" : 1,
+        "linesOfCodeInUnits" : 8
+      },
+      "startLine" : 5,
+      "endLine" : 12,
+      "linesOfCode" : 8,
+      "mcCabeIndex" : 1,
+      "numberOfParameters" : 5,
+      "numberOfLiterals" : 0,
+      "numberOfStatements" : 0,
+      "numberOfExpressions" : 0,
+      "children" : [ ]
+    } ]
+  },
+  "duplicationAnalysisResults" : {
+    "overallDuplication" : {
+      "key" : "system",
+      "numberOfDuplicates" : 70,
+      "cleanedLinesOfCode" : 5894,
+      "duplicatedLinesOfCode" : 1058,
+      "numberOfFilesWithDuplicates" : 25,
+      "duplicationPercentage" : 17.950458092975907
+    },
+    "duplicationPerComponent" : [ [ {
+      "key" : "backend",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 821,
+      "duplicatedLinesOfCode" : 244,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 29.71985383678441
+    }, {
+      "key" : "frontend",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 5010,
+      "duplicatedLinesOfCode" : 814,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 16.24750499001996
+    }, {
+      "key" : "ROOT",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 63,
+      "duplicatedLinesOfCode" : 0,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 0.0
+    } ] ],
+    "duplicationPerConcern" : [ ],
+    "duplicationPerExtension" : [ {
+      "key" : "js",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 1006,
+      "duplicatedLinesOfCode" : 332,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 33.00198807157058
+    }, {
+      "key" : "css",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 2682,
+      "duplicatedLinesOfCode" : 504,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 18.79194630872483
+    }, {
+      "key" : "jsx",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 2095,
+      "duplicatedLinesOfCode" : 188,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 8.973747016706444
+    }, {
+      "key" : "sql",
+      "numberOfDuplicates" : 0,
+      "cleanedLinesOfCode" : 88,
+      "duplicatedLinesOfCode" : 34,
+      "numberOfFilesWithDuplicates" : 0,
+      "duplicationPercentage" : 38.63636363636363
+    } ],
+    "longestDuplicates" : [ {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 20,
+        "endLine" : 84,
+        "cleanedStartLine" : 18,
+        "cleanedEndLine" : 74,
+        "blockSize" : 57,
+        "percentage" : 48.30508474576271
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 20,
+        "endLine" : 84,
+        "cleanedStartLine" : 18,
+        "cleanedEndLine" : 74,
+        "blockSize" : 57,
+        "percentage" : 66.27906976744185
+      } ],
+      "blockSize" : 57
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.css",
+          "extension" : "css",
+          "linesOfCode" : 272,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 272,
+        "startLine" : 198,
+        "endLine" : 259,
+        "cleanedStartLine" : 168,
+        "cleanedEndLine" : 221,
+        "blockSize" : 54,
+        "percentage" : 19.852941176470587
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+          "extension" : "css",
+          "linesOfCode" : 329,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 329,
+        "startLine" : 238,
+        "endLine" : 299,
+        "cleanedStartLine" : 206,
+        "cleanedEndLine" : 259,
+        "blockSize" : 54,
+        "percentage" : 16.41337386018237
+      } ],
+      "blockSize" : 54
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 204,
+        "endLine" : 234,
+        "cleanedStartLine" : 173,
+        "cleanedEndLine" : 199,
+        "blockSize" : 27,
+        "percentage" : 8.794788273615636
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 246,
+        "endLine" : 276,
+        "cleanedStartLine" : 209,
+        "cleanedEndLine" : 235,
+        "blockSize" : 27,
+        "percentage" : 8.794788273615636
+      } ],
+      "blockSize" : 27
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 5,
+        "endLine" : 39,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 27,
+        "blockSize" : 25,
+        "percentage" : 39.0625
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 89,
+          "unitsCount" : 9,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 77
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 4,
+        "endLine" : 38,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 26,
+        "blockSize" : 25,
+        "percentage" : 33.78378378378378
+      } ],
+      "blockSize" : 25
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.css",
+          "extension" : "css",
+          "linesOfCode" : 272,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 272,
+        "startLine" : 143,
+        "endLine" : 166,
+        "cleanedStartLine" : 120,
+        "cleanedEndLine" : 139,
+        "blockSize" : 20,
+        "percentage" : 7.352941176470588
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+          "extension" : "css",
+          "linesOfCode" : 329,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 329,
+        "startLine" : 159,
+        "endLine" : 182,
+        "cleanedStartLine" : 138,
+        "cleanedEndLine" : 157,
+        "blockSize" : 20,
+        "percentage" : 6.079027355623101
+      } ],
+      "blockSize" : 20
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.css",
+          "extension" : "css",
+          "linesOfCode" : 272,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 272,
+        "startLine" : 167,
+        "endLine" : 186,
+        "cleanedStartLine" : 140,
+        "cleanedEndLine" : 158,
+        "blockSize" : 19,
+        "percentage" : 6.985294117647059
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+          "extension" : "css",
+          "linesOfCode" : 329,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 329,
+        "startLine" : 184,
+        "endLine" : 203,
+        "cleanedStartLine" : 159,
+        "cleanedEndLine" : 177,
+        "blockSize" : 19,
+        "percentage" : 5.775075987841945
+      } ],
+      "blockSize" : 19
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 72,
+        "endLine" : 90,
+        "cleanedStartLine" : 62,
+        "cleanedEndLine" : 79,
+        "blockSize" : 18,
+        "percentage" : 10.465116279069768
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 141,
+        "endLine" : 159,
+        "cleanedStartLine" : 126,
+        "cleanedEndLine" : 143,
+        "blockSize" : 18,
+        "percentage" : 10.465116279069768
+      } ],
+      "blockSize" : 18
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 26,
+        "endLine" : 42,
+        "cleanedStartLine" : 19,
+        "cleanedEndLine" : 35,
+        "blockSize" : 17,
+        "percentage" : 9.883720930232558
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 94,
+        "endLine" : 110,
+        "cleanedStartLine" : 82,
+        "cleanedEndLine" : 98,
+        "blockSize" : 17,
+        "percentage" : 9.883720930232558
+      } ],
+      "blockSize" : 17
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 69,
+        "endLine" : 85,
+        "cleanedStartLine" : 31,
+        "cleanedEndLine" : 47,
+        "blockSize" : 17,
+        "percentage" : 20.481927710843372
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 97,
+        "endLine" : 113,
+        "cleanedStartLine" : 53,
+        "cleanedEndLine" : 69,
+        "blockSize" : 17,
+        "percentage" : 20.481927710843372
+      } ],
+      "blockSize" : 17
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 49,
+        "endLine" : 64,
+        "cleanedStartLine" : 40,
+        "cleanedEndLine" : 55,
+        "blockSize" : 16,
+        "percentage" : 9.30232558139535
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 114,
+        "endLine" : 129,
+        "cleanedStartLine" : 101,
+        "cleanedEndLine" : 116,
+        "blockSize" : 16,
+        "percentage" : 9.30232558139535
+      } ],
+      "blockSize" : 16
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 72,
+        "endLine" : 86,
+        "cleanedStartLine" : 62,
+        "cleanedEndLine" : 76,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 95,
+        "endLine" : 109,
+        "cleanedStartLine" : 83,
+        "cleanedEndLine" : 97,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 27,
+        "endLine" : 41,
+        "cleanedStartLine" : 20,
+        "cleanedEndLine" : 34,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 50,
+        "endLine" : 64,
+        "cleanedStartLine" : 41,
+        "cleanedEndLine" : 55,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 27,
+        "endLine" : 41,
+        "cleanedStartLine" : 20,
+        "cleanedEndLine" : 34,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 141,
+        "endLine" : 155,
+        "cleanedStartLine" : 126,
+        "cleanedEndLine" : 140,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 27,
+        "endLine" : 41,
+        "cleanedStartLine" : 20,
+        "cleanedEndLine" : 34,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 115,
+        "endLine" : 129,
+        "cleanedStartLine" : 102,
+        "cleanedEndLine" : 116,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 27,
+        "endLine" : 41,
+        "cleanedStartLine" : 20,
+        "cleanedEndLine" : 34,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 72,
+        "endLine" : 86,
+        "cleanedStartLine" : 62,
+        "cleanedEndLine" : 76,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 95,
+        "endLine" : 109,
+        "cleanedStartLine" : 83,
+        "cleanedEndLine" : 97,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 115,
+        "endLine" : 129,
+        "cleanedStartLine" : 102,
+        "cleanedEndLine" : 116,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 115,
+        "endLine" : 129,
+        "cleanedStartLine" : 102,
+        "cleanedEndLine" : 116,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 141,
+        "endLine" : 155,
+        "cleanedStartLine" : 126,
+        "cleanedEndLine" : 140,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 95,
+        "endLine" : 109,
+        "cleanedStartLine" : 83,
+        "cleanedEndLine" : 97,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 141,
+        "endLine" : 155,
+        "cleanedStartLine" : 126,
+        "cleanedEndLine" : 140,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 50,
+        "endLine" : 64,
+        "cleanedStartLine" : 41,
+        "cleanedEndLine" : 55,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 72,
+        "endLine" : 86,
+        "cleanedStartLine" : 62,
+        "cleanedEndLine" : 76,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 72,
+        "endLine" : 86,
+        "cleanedStartLine" : 62,
+        "cleanedEndLine" : 76,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 115,
+        "endLine" : 129,
+        "cleanedStartLine" : 102,
+        "cleanedEndLine" : 116,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 50,
+        "endLine" : 64,
+        "cleanedStartLine" : 41,
+        "cleanedEndLine" : 55,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 141,
+        "endLine" : 155,
+        "cleanedStartLine" : 126,
+        "cleanedEndLine" : 140,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 50,
+        "endLine" : 64,
+        "cleanedStartLine" : 41,
+        "cleanedEndLine" : 55,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 95,
+        "endLine" : 109,
+        "cleanedStartLine" : 83,
+        "cleanedEndLine" : 97,
+        "blockSize" : 15,
+        "percentage" : 8.720930232558139
+      } ],
+      "blockSize" : 15
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 187,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 3,
+          "linesOfCodeInUnits" : 35
+        },
+        "sourceFileCleanedLinesOfCode" : 175,
+        "startLine" : 35,
+        "endLine" : 49,
+        "cleanedStartLine" : 26,
+        "cleanedEndLine" : 39,
+        "blockSize" : 14,
+        "percentage" : 8.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 184,
+          "unitsCount" : 1,
+          "unitsMcCabeIndexSum" : 1,
+          "linesOfCodeInUnits" : 14
+        },
+        "sourceFileCleanedLinesOfCode" : 160,
+        "startLine" : 150,
+        "endLine" : 165,
+        "cleanedStartLine" : 111,
+        "cleanedEndLine" : 124,
+        "blockSize" : 14,
+        "percentage" : 8.75
+      } ],
+      "blockSize" : 14
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 3,
+        "endLine" : 17,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 14,
+        "blockSize" : 13,
+        "percentage" : 15.662650602409638
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 89,
+          "unitsCount" : 9,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 77
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 4,
+        "endLine" : 18,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 14,
+        "blockSize" : 13,
+        "percentage" : 17.56756756756757
+      } ],
+      "blockSize" : 13
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 3,
+        "endLine" : 17,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 14,
+        "blockSize" : 13,
+        "percentage" : 15.662650602409638
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 5,
+        "endLine" : 19,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 15,
+        "blockSize" : 13,
+        "percentage" : 20.3125
+      } ],
+      "blockSize" : 13
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 121,
+        "endLine" : 136,
+        "cleanedStartLine" : 106,
+        "cleanedEndLine" : 118,
+        "blockSize" : 13,
+        "percentage" : 11.016949152542374
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 84,
+        "endLine" : 99,
+        "cleanedStartLine" : 74,
+        "cleanedEndLine" : 86,
+        "blockSize" : 13,
+        "percentage" : 15.116279069767442
+      } ],
+      "blockSize" : 13
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 19,
+        "endLine" : 36,
+        "cleanedStartLine" : 15,
+        "cleanedEndLine" : 25,
+        "blockSize" : 11,
+        "percentage" : 13.25301204819277
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 89,
+          "unitsCount" : 9,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 77
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 22,
+        "endLine" : 38,
+        "cleanedStartLine" : 16,
+        "cleanedEndLine" : 26,
+        "blockSize" : 11,
+        "percentage" : 14.864864864864865
+      } ],
+      "blockSize" : 11
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 19,
+        "endLine" : 36,
+        "cleanedStartLine" : 15,
+        "cleanedEndLine" : 25,
+        "blockSize" : 11,
+        "percentage" : 13.25301204819277
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 23,
+        "endLine" : 39,
+        "cleanedStartLine" : 17,
+        "cleanedEndLine" : 27,
+        "blockSize" : 11,
+        "percentage" : 17.1875
+      } ],
+      "blockSize" : 11
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 187,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 3,
+          "linesOfCodeInUnits" : 35
+        },
+        "sourceFileCleanedLinesOfCode" : 175,
+        "startLine" : 71,
+        "endLine" : 80,
+        "cleanedStartLine" : 53,
+        "cleanedEndLine" : 62,
+        "blockSize" : 10,
+        "percentage" : 5.714285714285714
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 184,
+          "unitsCount" : 1,
+          "unitsMcCabeIndexSum" : 1,
+          "linesOfCodeInUnits" : 14
+        },
+        "sourceFileCleanedLinesOfCode" : 160,
+        "startLine" : 180,
+        "endLine" : 189,
+        "cleanedStartLine" : 134,
+        "cleanedEndLine" : 143,
+        "blockSize" : 10,
+        "percentage" : 6.25
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 37,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 36,
+        "startLine" : 10,
+        "endLine" : 19,
+        "cleanedStartLine" : 7,
+        "cleanedEndLine" : 16,
+        "blockSize" : 10,
+        "percentage" : 27.77777777777778
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 37,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 36,
+        "startLine" : 30,
+        "endLine" : 39,
+        "cleanedStartLine" : 26,
+        "cleanedEndLine" : 35,
+        "blockSize" : 10,
+        "percentage" : 27.77777777777778
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.css",
+          "extension" : "css",
+          "linesOfCode" : 222,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 222,
+        "startLine" : 84,
+        "endLine" : 93,
+        "cleanedStartLine" : 71,
+        "cleanedEndLine" : 80,
+        "blockSize" : 10,
+        "percentage" : 4.504504504504505
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.css",
+          "extension" : "css",
+          "linesOfCode" : 222,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 222,
+        "startLine" : 165,
+        "endLine" : 174,
+        "cleanedStartLine" : 141,
+        "cleanedEndLine" : 150,
+        "blockSize" : 10,
+        "percentage" : 4.504504504504505
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 149,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 138,
+        "startLine" : 134,
+        "endLine" : 145,
+        "cleanedStartLine" : 111,
+        "cleanedEndLine" : 120,
+        "blockSize" : 10,
+        "percentage" : 7.246376811594203
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 111,
+        "startLine" : 103,
+        "endLine" : 114,
+        "cleanedStartLine" : 89,
+        "cleanedEndLine" : 98,
+        "blockSize" : 10,
+        "percentage" : 9.00900900900901
+      } ],
+      "blockSize" : 10
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.css",
+          "extension" : "css",
+          "linesOfCode" : 222,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 222,
+        "startLine" : 103,
+        "endLine" : 111,
+        "cleanedStartLine" : 88,
+        "cleanedEndLine" : 96,
+        "blockSize" : 9,
+        "percentage" : 4.054054054054054
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.css",
+          "extension" : "css",
+          "linesOfCode" : 222,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 222,
+        "startLine" : 183,
+        "endLine" : 191,
+        "cleanedStartLine" : 157,
+        "cleanedEndLine" : 165,
+        "blockSize" : 9,
+        "percentage" : 4.054054054054054
+      } ],
+      "blockSize" : 9
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\bd\\fixiotech.sql",
+          "extension" : "sql",
+          "linesOfCode" : 88,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 88,
+        "startLine" : 104,
+        "endLine" : 112,
+        "cleanedStartLine" : 68,
+        "cleanedEndLine" : 76,
+        "blockSize" : 9,
+        "percentage" : 10.227272727272727
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\bd\\fixiotech.sql",
+          "extension" : "sql",
+          "linesOfCode" : 88,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 88,
+        "startLine" : 116,
+        "endLine" : 124,
+        "cleanedStartLine" : 79,
+        "cleanedEndLine" : 87,
+        "blockSize" : 9,
+        "percentage" : 10.227272727272727
+      } ],
+      "blockSize" : 9
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 149,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 138,
+        "startLine" : 125,
+        "endLine" : 133,
+        "cleanedStartLine" : 102,
+        "cleanedEndLine" : 110,
+        "blockSize" : 9,
+        "percentage" : 6.521739130434782
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 111,
+        "startLine" : 93,
+        "endLine" : 101,
+        "cleanedStartLine" : 79,
+        "cleanedEndLine" : 87,
+        "blockSize" : 9,
+        "percentage" : 8.108108108108109
+      } ],
+      "blockSize" : 9
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\employe.css",
+          "extension" : "css",
+          "linesOfCode" : 524,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 524,
+        "startLine" : 37,
+        "endLine" : 44,
+        "cleanedStartLine" : 29,
+        "cleanedEndLine" : 36,
+        "blockSize" : 8,
+        "percentage" : 1.5267175572519085
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\logs.css",
+          "extension" : "css",
+          "linesOfCode" : 369,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 369,
+        "startLine" : 37,
+        "endLine" : 44,
+        "cleanedStartLine" : 29,
+        "cleanedEndLine" : 36,
+        "blockSize" : 8,
+        "percentage" : 2.168021680216802
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\bd\\fixiotech.sql",
+          "extension" : "sql",
+          "linesOfCode" : 88,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 88,
+        "startLine" : 82,
+        "endLine" : 89,
+        "cleanedStartLine" : 48,
+        "cleanedEndLine" : 55,
+        "blockSize" : 8,
+        "percentage" : 9.090909090909092
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\bd\\fixiotech.sql",
+          "extension" : "sql",
+          "linesOfCode" : 88,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 88,
+        "startLine" : 93,
+        "endLine" : 100,
+        "cleanedStartLine" : 58,
+        "cleanedEndLine" : 65,
+        "blockSize" : 8,
+        "percentage" : 9.090909090909092
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 287,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 266,
+        "startLine" : 46,
+        "endLine" : 53,
+        "cleanedStartLine" : 39,
+        "cleanedEndLine" : 46,
+        "blockSize" : 8,
+        "percentage" : 3.007518796992481
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 35,
+        "endLine" : 42,
+        "cleanedStartLine" : 29,
+        "cleanedEndLine" : 36,
+        "blockSize" : 8,
+        "percentage" : 2.6058631921824102
+      } ],
+      "blockSize" : 8
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 2,
+        "endLine" : 8,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 8,
+        "blockSize" : 7,
+        "percentage" : 5.932203389830509
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 2,
+        "endLine" : 8,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 8,
+        "blockSize" : 7,
+        "percentage" : 8.13953488372093
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 37,
+        "endLine" : 43,
+        "cleanedStartLine" : 32,
+        "cleanedEndLine" : 38,
+        "blockSize" : 7,
+        "percentage" : 5.932203389830509
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 96,
+        "endLine" : 102,
+        "cleanedStartLine" : 84,
+        "cleanedEndLine" : 90,
+        "blockSize" : 7,
+        "percentage" : 5.932203389830509
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.css",
+          "extension" : "css",
+          "linesOfCode" : 272,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 272,
+        "startLine" : 44,
+        "endLine" : 50,
+        "cleanedStartLine" : 37,
+        "cleanedEndLine" : 43,
+        "blockSize" : 7,
+        "percentage" : 2.573529411764706
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.css",
+          "extension" : "css",
+          "linesOfCode" : 272,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 272,
+        "startLine" : 134,
+        "endLine" : 140,
+        "cleanedStartLine" : 112,
+        "cleanedEndLine" : 118,
+        "blockSize" : 7,
+        "percentage" : 2.573529411764706
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 187,
+          "unitsCount" : 2,
+          "unitsMcCabeIndexSum" : 3,
+          "linesOfCodeInUnits" : 35
+        },
+        "sourceFileCleanedLinesOfCode" : 175,
+        "startLine" : 208,
+        "endLine" : 214,
+        "cleanedStartLine" : 168,
+        "cleanedEndLine" : 174,
+        "blockSize" : 7,
+        "percentage" : 4.0
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\routes\\routeRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 23,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 20,
+        "startLine" : 4,
+        "endLine" : 10,
+        "cleanedStartLine" : 1,
+        "cleanedEndLine" : 7,
+        "blockSize" : 7,
+        "percentage" : 35.0
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 235,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 211,
+        "startLine" : 6,
+        "endLine" : 12,
+        "cleanedStartLine" : 5,
+        "cleanedEndLine" : 11,
+        "blockSize" : 7,
+        "percentage" : 3.3175355450236967
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 235,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 211,
+        "startLine" : 81,
+        "endLine" : 87,
+        "cleanedStartLine" : 66,
+        "cleanedEndLine" : 72,
+        "blockSize" : 7,
+        "percentage" : 3.3175355450236967
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 11,
+        "endLine" : 17,
+        "cleanedStartLine" : 10,
+        "cleanedEndLine" : 16,
+        "blockSize" : 7,
+        "percentage" : 5.932203389830509
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 11,
+        "endLine" : 17,
+        "cleanedStartLine" : 10,
+        "cleanedEndLine" : 16,
+        "blockSize" : 7,
+        "percentage" : 8.13953488372093
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 287,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 266,
+        "startLine" : 57,
+        "endLine" : 63,
+        "cleanedStartLine" : 49,
+        "cleanedEndLine" : 55,
+        "blockSize" : 7,
+        "percentage" : 2.6315789473684212
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 46,
+        "endLine" : 52,
+        "cleanedStartLine" : 39,
+        "cleanedEndLine" : 45,
+        "blockSize" : 7,
+        "percentage" : 2.2801302931596092
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 235,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 211,
+        "startLine" : 245,
+        "endLine" : 253,
+        "cleanedStartLine" : 198,
+        "cleanedEndLine" : 204,
+        "blockSize" : 7,
+        "percentage" : 3.3175355450236967
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 351,
+        "endLine" : 359,
+        "cleanedStartLine" : 294,
+        "cleanedEndLine" : 300,
+        "blockSize" : 7,
+        "percentage" : 2.2801302931596092
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 57,
+        "endLine" : 63,
+        "cleanedStartLine" : 34,
+        "cleanedEndLine" : 40,
+        "blockSize" : 7,
+        "percentage" : 10.9375
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 73,
+        "endLine" : 79,
+        "cleanedStartLine" : 46,
+        "cleanedEndLine" : 52,
+        "blockSize" : 7,
+        "percentage" : 10.9375
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 287,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 266,
+        "startLine" : 272,
+        "endLine" : 279,
+        "cleanedStartLine" : 235,
+        "cleanedEndLine" : 241,
+        "blockSize" : 7,
+        "percentage" : 2.6315789473684212
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 287,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 266,
+        "startLine" : 292,
+        "endLine" : 299,
+        "cleanedStartLine" : 250,
+        "cleanedEndLine" : 256,
+        "blockSize" : 7,
+        "percentage" : 2.6315789473684212
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 96,
+        "endLine" : 102,
+        "cleanedStartLine" : 84,
+        "cleanedEndLine" : 90,
+        "blockSize" : 7,
+        "percentage" : 5.932203389830509
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 37,
+        "endLine" : 43,
+        "cleanedStartLine" : 32,
+        "cleanedEndLine" : 38,
+        "blockSize" : 7,
+        "percentage" : 8.13953488372093
+      } ],
+      "blockSize" : 7
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 184,
+          "unitsCount" : 1,
+          "unitsMcCabeIndexSum" : 1,
+          "linesOfCodeInUnits" : 14
+        },
+        "sourceFileCleanedLinesOfCode" : 160,
+        "startLine" : 201,
+        "endLine" : 207,
+        "cleanedStartLine" : 153,
+        "cleanedEndLine" : 159,
+        "blockSize" : 7,
+        "percentage" : 4.375
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\routes\\routeUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 23,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 20,
+        "startLine" : 4,
+        "endLine" : 10,
+        "cleanedStartLine" : 1,
+        "cleanedEndLine" : 7,
+        "blockSize" : 7,
+        "percentage" : 35.0
+      } ],
+      "blockSize" : 7
+    } ],
+    "mostFrequentDuplicates" : [ {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 38,
+        "endLine" : 43,
+        "cleanedStartLine" : 33,
+        "cleanedEndLine" : 38,
+        "blockSize" : 6,
+        "percentage" : 5.084745762711864
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.css",
+          "extension" : "css",
+          "linesOfCode" : 86,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 86,
+        "startLine" : 38,
+        "endLine" : 43,
+        "cleanedStartLine" : 33,
+        "cleanedEndLine" : 38,
+        "blockSize" : 6,
+        "percentage" : 6.976744186046512
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\inscription.css",
+          "extension" : "css",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 118,
+        "startLine" : 97,
+        "endLine" : 102,
+        "cleanedStartLine" : 85,
+        "cleanedEndLine" : 90,
+        "blockSize" : 6,
+        "percentage" : 5.084745762711864
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 36,
+        "endLine" : 41,
+        "cleanedStartLine" : 29,
+        "cleanedEndLine" : 34,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 59,
+        "endLine" : 64,
+        "cleanedStartLine" : 50,
+        "cleanedEndLine" : 55,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 81,
+        "endLine" : 86,
+        "cleanedStartLine" : 71,
+        "cleanedEndLine" : 76,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 104,
+        "endLine" : 109,
+        "cleanedStartLine" : 92,
+        "cleanedEndLine" : 97,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 124,
+        "endLine" : 129,
+        "cleanedStartLine" : 111,
+        "cleanedEndLine" : 116,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 150,
+        "endLine" : 155,
+        "cleanedStartLine" : 135,
+        "cleanedEndLine" : 140,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 9,
+        "endLine" : 15,
+        "cleanedStartLine" : 7,
+        "cleanedEndLine" : 12,
+        "blockSize" : 6,
+        "percentage" : 7.228915662650603
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 11,
+        "endLine" : 17,
+        "cleanedStartLine" : 8,
+        "cleanedEndLine" : 13,
+        "blockSize" : 6,
+        "percentage" : 9.375
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 89,
+          "unitsCount" : 9,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 77
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 10,
+        "endLine" : 16,
+        "cleanedStartLine" : 7,
+        "cleanedEndLine" : 12,
+        "blockSize" : 6,
+        "percentage" : 8.108108108108109
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 97,
+          "unitsCount" : 8,
+          "unitsMcCabeIndexSum" : 19,
+          "linesOfCodeInUnits" : 96
+        },
+        "sourceFileCleanedLinesOfCode" : 83,
+        "startLine" : 3,
+        "endLine" : 9,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 7.228915662650603
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiRendezVous.js",
+          "extension" : "js",
+          "linesOfCode" : 78,
+          "unitsCount" : 10,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 74
+        },
+        "sourceFileCleanedLinesOfCode" : 64,
+        "startLine" : 5,
+        "endLine" : 11,
+        "cleanedStartLine" : 3,
+        "cleanedEndLine" : 8,
+        "blockSize" : 6,
+        "percentage" : 9.375
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\services\\apiUtilisateur.js",
+          "extension" : "js",
+          "linesOfCode" : 89,
+          "unitsCount" : 9,
+          "unitsMcCabeIndexSum" : 20,
+          "linesOfCodeInUnits" : 77
+        },
+        "sourceFileCleanedLinesOfCode" : 74,
+        "startLine" : 4,
+        "endLine" : 10,
+        "cleanedStartLine" : 2,
+        "cleanedEndLine" : 7,
+        "blockSize" : 6,
+        "percentage" : 8.108108108108109
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\contact.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 235,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 211,
+        "startLine" : 246,
+        "endLine" : 253,
+        "cleanedStartLine" : 199,
+        "cleanedEndLine" : 204,
+        "blockSize" : 6,
+        "percentage" : 2.843601895734597
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 336,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 307,
+        "startLine" : 352,
+        "endLine" : 359,
+        "cleanedStartLine" : 295,
+        "cleanedEndLine" : 300,
+        "blockSize" : 6,
+        "percentage" : 1.9543973941368078
+      }, {
+        "sourceFile" : {
+          "relativePath" : "frontend\\src\\vues\\login.jsx",
+          "extension" : "jsx",
+          "linesOfCode" : 118,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 111,
+        "startLine" : 116,
+        "endLine" : 123,
+        "cleanedStartLine" : 100,
+        "cleanedEndLine" : 105,
+        "blockSize" : 6,
+        "percentage" : 5.405405405405405
+      } ],
+      "blockSize" : 6
+    }, {
+      "displayContent" : "",
+      "duplicatedFileBlocks" : [ {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 31,
+        "endLine" : 36,
+        "cleanedStartLine" : 24,
+        "cleanedEndLine" : 29,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 54,
+        "endLine" : 59,
+        "cleanedStartLine" : 45,
+        "cleanedEndLine" : 50,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 76,
+        "endLine" : 81,
+        "cleanedStartLine" : 66,
+        "cleanedEndLine" : 71,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 99,
+        "endLine" : 104,
+        "cleanedStartLine" : 87,
+        "cleanedEndLine" : 92,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 119,
+        "endLine" : 124,
+        "cleanedStartLine" : 106,
+        "cleanedEndLine" : 111,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      }, {
+        "sourceFile" : {
+          "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+          "extension" : "js",
+          "linesOfCode" : 185,
+          "unitsCount" : 0,
+          "unitsMcCabeIndexSum" : 0,
+          "linesOfCodeInUnits" : 0
+        },
+        "sourceFileCleanedLinesOfCode" : 172,
+        "startLine" : 145,
+        "endLine" : 150,
+        "cleanedStartLine" : 130,
+        "cleanedEndLine" : 135,
+        "blockSize" : 6,
+        "percentage" : 3.488372093023256
+      } ],
+      "blockSize" : 6
+    } ]
+  },
+  "contributorsAnalysisResults" : {
+    "latestCommitDate" : "",
+    "contributors" : [ ],
+    "contributorsPerYear" : [ ],
+    "contributorsPerMonth" : [ ],
+    "contributorsPerDay" : [ ],
+    "contributorsPerWeek" : [ ],
+    "commitsPerExtensions" : [ ]
+  },
+  "numberOfExcludedFiles" : 79503,
+  "excludedExtensions" : {
+    "" : 461,
+    "css" : 5,
+    "npmignore" : 10,
+    "def" : 5,
+    "py" : 1,
+    "jscsrc" : 1,
+    "ps1" : 27,
+    "BSD" : 2,
+    "exe" : 2,
+    "xml" : 10,
+    "md" : 645,
+    "lock" : 2,
+    "editorconfig" : 8,
+    "html" : 3,
+    "jar" : 1,
+    "bnf" : 3,
+    "nix" : 1,
+    "jshintrc" : 3,
+    "LICENSE" : 1,
+    "flow" : 72,
+    "zip" : 2,
+    "mdown" : 1,
+    "cts" : 53,
+    "babelrc" : 3,
+    "eslintrc" : 26,
+    "png" : 3,
+    "mts" : 79,
+    "node" : 1,
+    "1" : 1,
+    "gitkeep" : 1,
+    "cmd" : 27,
+    "js" : 51584,
+    "iml" : 2,
+    "jst" : 25,
+    "browserslistrc" : 1,
+    "markdown" : 6,
+    "tsx" : 6,
+    "json" : 741,
+    "yml" : 57,
+    "tsbuildinfo" : 4,
+    "map" : 825,
+    "svg" : 2,
+    "gitignore" : 1,
+    "env" : 2,
+    "cjs" : 207,
+    "nycrc" : 19,
+    "txt" : 33,
+    "mjs" : 166,
+    "coffee" : 2,
+    "php" : 1,
+    "aiven" : 1,
+    "ts" : 24358
+  },
+  "analysisStartTimeMs" : 1763752381832,
+  "maxFileCount" : 49,
+  "maxLinesOfCode" : 7009
+}

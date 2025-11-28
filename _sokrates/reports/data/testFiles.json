@@ -1,0 +1,15 @@
+[ {
+  "relativePath" : "frontend\\src\\tests\\Inscription.test.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 124,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\tests\\Login.test.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 87,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+} ]
