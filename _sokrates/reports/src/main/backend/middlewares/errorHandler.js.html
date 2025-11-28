@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>backend\middlewares\errorHandler.js</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">backend\middlewares\errorHandler.js (<b>31</b> lines of code) (<a href="errorHandler.js">raw</a>):</h3>
+<div id="editor">function errorHandler(error, req, res, next) {
+  if (res.headersSent) return next(error);
+
+  // Priorit&eacute; &agrave; error.status / error.statusCode si pr&eacute;sents et num&eacute;riques
+  let status = Number.isInteger(error.status || error.statusCode)
+    ? error.status || error.statusCode
+    : 500;
+
+  // Map de quelques codes MySQL vers des HTTP codes parlants
+  if (!Number.isInteger(status) &amp;&amp; typeof error.code === &quot;string&quot;) {
+    switch (error.code) {
+      case &quot;ER_NO_SUCH_TABLE&quot;:
+        status = 500;
+        break; // sch&eacute;ma manquant
+      case &quot;ER_DUP_ENTRY&quot;:
+        status = 409;
+        break; // conflit/unique
+      case &quot;ER_BAD_FIELD_ERROR&quot;:
+        status = 400;
+        break; // champ invalide
+      case &quot;ER_ROW_IS_REFERENCED_2&quot;:
+      case &quot;ER_NO_REFERENCED_ROW_2&quot;:
+        status = 409;
+        break; // contrainte FK
+      default:
+        status = 500;
+    }
+  }
+
+  res.status(status).json({
+    message: error.message || &quot;Une erreur inconnue est survenue !&quot;,
+    details: error.details || null,
+    code: error.code || null, // utile au debug c&ocirc;t&eacute; client
+  });
+}
+
+export default errorHandler;
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

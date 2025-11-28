@@ -1,0 +1,324 @@
+id: 1
+unit: async function httpJson()
+file: frontend\services\apiRendezVous.js
+start line: 5
+end line: 41
+size: 31 LOC
+McCabe index: 11
+number of parameters: 2
+
+id: 2
+unit: async function httpJson()
+file: frontend\services\apiUtilisateur.js
+start line: 4
+end line: 40
+size: 31 LOC
+McCabe index: 11
+number of parameters: 2
+
+id: 3
+unit: function errorHandler()
+file: backend\middlewares\errorHandler.js
+start line: 1
+end line: 35
+size: 30 LOC
+McCabe index: 15
+number of parameters: 4
+
+id: 4
+unit: async function httpJson()
+file: frontend\services\apiHoraire.js
+start line: 3
+end line: 38
+size: 30 LOC
+McCabe index: 11
+number of parameters: 2
+
+id: 5
+unit: export async function addHoraire()
+file: frontend\services\apiHoraire.js
+start line: 68
+end line: 91
+size: 23 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 6
+unit: export async function updateHoraire()
+file: frontend\services\apiHoraire.js
+start line: 96
+end line: 119
+size: 23 LOC
+McCabe index: 1
+number of parameters: 2
+
+id: 7
+unit: export default defineConfig()
+file: eslint.config.js
+start line: 7
+end line: 28
+size: 22 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 8
+unit: INSERT INTO rendez_vous()
+file: backend\controleurs\controleurRendezVous.js
+start line: 101
+end line: 122
+size: 21 LOC
+McCabe index: 2
+number of parameters: 5
+
+id: 9
+unit: function colonnesJour()
+file: backend\controleurs\controleurRendezVous.js
+start line: 37
+end line: 50
+size: 14 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 10
+unit: function colonnesJour()
+file: backend\controleurs\controleurUtilisateur.js
+start line: 152
+end line: 166
+size: 14 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 11
+unit: async function addUtilisateur()
+file: frontend\services\apiUtilisateur.js
+start line: 50
+end line: 62
+size: 12 LOC
+McCabe index: 2
+number of parameters: 1
+
+id: 12
+unit: export default defineConfig()
+file: vite.config.js
+start line: 5
+end line: 15
+size: 11 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 13
+unit: port: Number()
+file: backend\config\databaseConnexion.js
+start line: 16
+end line: 26
+size: 10 LOC
+McCabe index: 5
+number of parameters: 1
+
+id: 14
+unit: export async function addRendezVous()
+file: frontend\services\apiRendezVous.js
+start line: 56
+end line: 69
+size: 10 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 15
+unit: export async function updateRendezVous()
+file: frontend\services\apiRendezVous.js
+start line: 72
+end line: 85
+size: 10 LOC
+McCabe index: 1
+number of parameters: 2
+
+id: 16
+unit: async function loginUtilisateur()
+file: frontend\services\apiUtilisateur.js
+start line: 64
+end line: 74
+size: 10 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 17
+unit: export default mergeConfig()
+file: vitest.config.js
+start line: 5
+end line: 12
+size: 8 LOC
+McCabe index: 1
+number of parameters: 5
+
+id: 18
+unit: export async function saveHoraireForEmploye()
+file: frontend\services\apiHoraire.js
+start line: 136
+end line: 142
+size: 6 LOC
+McCabe index: 2
+number of parameters: 1
+
+id: 19
+unit: async function updateUtilisateur()
+file: frontend\services\apiUtilisateur.js
+start line: 76
+end line: 81
+size: 6 LOC
+McCabe index: 1
+number of parameters: 2
+
+id: 20
+unit: export async function deleteHoraire()
+file: frontend\services\apiHoraire.js
+start line: 124
+end line: 128
+size: 5 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 21
+unit: export async function deleteRendezVous()
+file: frontend\services\apiRendezVous.js
+start line: 88
+end line: 92
+size: 5 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 22
+unit: async function deleteUtilisateur()
+file: frontend\services\apiUtilisateur.js
+start line: 83
+end line: 87
+size: 5 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 23
+unit: export async function assertDb()
+file: backend\config\databaseConnexion.js
+start line: 26
+end line: 29
+size: 4 LOC
+McCabe index: 1
+number of parameters: 0
+
+id: 24
+unit: async function getEmployesDisponibles()
+file: frontend\services\apiUtilisateur.js
+start line: 93
+end line: 96
+size: 4 LOC
+McCabe index: 1
+number of parameters: 2
+
+id: 25
+unit: export async function getHoraires()
+file: frontend\services\apiHoraire.js
+start line: 43
+end line: 45
+size: 3 LOC
+McCabe index: 1
+number of parameters: 0
+
+id: 26
+unit: export async function getHoraire()
+file: frontend\services\apiHoraire.js
+start line: 50
+end line: 52
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 27
+unit: export async function getHoraireByEmploye()
+file: frontend\services\apiHoraire.js
+start line: 131
+end line: 133
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 28
+unit: export async function getRendezVous()
+file: frontend\services\apiRendezVous.js
+start line: 46
+end line: 48
+size: 3 LOC
+McCabe index: 1
+number of parameters: 0
+
+id: 29
+unit: export async function getRendezVousById()
+file: frontend\services\apiRendezVous.js
+start line: 51
+end line: 53
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 30
+unit: description_probleme: emptyToNull()
+file: frontend\services\apiRendezVous.js
+start line: 62
+end line: 65
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 31
+unit: description_probleme: emptyToNull()
+file: frontend\services\apiRendezVous.js
+start line: 78
+end line: 81
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 32
+unit: export async function getRendezVousByEmploye()
+file: frontend\services\apiRendezVous.js
+start line: 94
+end line: 96
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 33
+unit: export async function getRendezVousByClient()
+file: frontend\services\apiRendezVous.js
+start line: 98
+end line: 100
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 34
+unit: async function getUtilisateurs()
+file: frontend\services\apiUtilisateur.js
+start line: 42
+end line: 44
+size: 3 LOC
+McCabe index: 1
+number of parameters: 0
+
+id: 35
+unit: async function getUtilisateur()
+file: frontend\services\apiUtilisateur.js
+start line: 46
+end line: 48
+size: 3 LOC
+McCabe index: 1
+number of parameters: 1
+
+id: 36
+unit: async function getEmployes()
+file: frontend\services\apiUtilisateur.js
+start line: 89
+end line: 91
+size: 3 LOC
+McCabe index: 1
+number of parameters: 0
+

@@ -1,0 +1,170 @@
+<html>
+<head>
+    <title>frontend\src\tests\Inscription.test.jsx</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend\src\tests\Inscription.test.jsx (<b>124</b> lines of code) (<a href="Inscription.test.jsx">raw</a>):</h3>
+<div id="editor">import { describe, it, expect, vi, beforeEach } from &quot;vitest&quot;;
+import { render, screen, waitFor } from &quot;@testing-library/react&quot;;
+import { MemoryRouter } from &quot;react-router-dom&quot;;
+import userEvent from &quot;@testing-library/user-event&quot;;
+import Inscription from &quot;../vues/inscription&quot;;
+
+const mockNavigate = vi.fn();
+
+vi.mock(&quot;react-router-dom&quot;, async () =&gt; {
+  const actual = await vi.importActual(&quot;react-router-dom&quot;);
+  return {
+    __esModule: true,
+    ...actual,
+    useNavigate: () =&gt; mockNavigate,
+    Link: actual.Link,
+    NavLink: actual.NavLink,
+  };
+});
+
+describe(&quot;Inscription Component&quot;, () =&gt; {
+  beforeEach(() =&gt; {
+    mockNavigate.mockReset();
+  });
+
+  it(&quot;devrait rendre le formulaire d'inscription&quot;, () =&gt; {
+    render(
+      &lt;MemoryRouter&gt;
+        &lt;Inscription /&gt;
+      &lt;/MemoryRouter&gt;
+    );
+
+    // V&eacute;rifie que les &eacute;l&eacute;ments essentiels sont pr&eacute;sents
+    expect(screen.getByText(&quot;Inscription&quot;)).toBeInTheDocument();
+    expect(screen.getByLabelText(&quot;Adresse courriel&quot;)).toBeInTheDocument();
+    expect(screen.getByLabelText(&quot;Mot de passe&quot;)).toBeInTheDocument();
+    expect(
+      screen.getByLabelText(&quot;Confirmer le mot de passe&quot;)
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText(&quot;Type de compte&quot;)).toBeInTheDocument();
+    expect(
+      screen.getByRole(&quot;button&quot;, { name: &quot;S'inscrire&quot; })
+    ).toBeInTheDocument();
+  });
+
+  it(&quot;devrait afficher une erreur si les champs sont vides&quot;, async () =&gt; {
+    render(
+      &lt;MemoryRouter&gt;
+        &lt;Inscription /&gt;
+      &lt;/MemoryRouter&gt;
+    );
+
+    const submitButton = screen.getByRole(&quot;button&quot;, { name: &quot;S'inscrire&quot; });
+    await userEvent.click(submitButton);
+
+    expect(
+      screen.getByText(&quot;Veuillez remplir tous les champs&quot;)
+    ).toBeInTheDocument();
+  });
+
+  it(&quot;devrait afficher une erreur si les mots de passe ne correspondent pas&quot;, async () =&gt; {
+    render(
+      &lt;MemoryRouter&gt;
+        &lt;Inscription /&gt;
+      &lt;/MemoryRouter&gt;
+    );
+
+    // Remplit le formulaire avec des mots de passe diff&eacute;rents
+    await userEvent.type(
+      screen.getByLabelText(&quot;Adresse courriel&quot;),
+      &quot;test@example.com&quot;
+    );
+    await userEvent.type(screen.getByLabelText(&quot;Mot de passe&quot;), &quot;password123&quot;);
+    await userEvent.type(
+      screen.getByLabelText(&quot;Confirmer le mot de passe&quot;),
+      &quot;different123&quot;
+    );
+
+    const submitButton = screen.getByRole(&quot;button&quot;, { name: &quot;S'inscrire&quot; });
+    await userEvent.click(submitButton);
+
+    expect(
+      screen.getByText(&quot;Les mots de passe ne correspondent pas&quot;)
+    ).toBeInTheDocument();
+  });
+
+  it(&quot;devrait afficher une erreur si le mot de passe est trop court&quot;, async () =&gt; {
+    render(
+      &lt;MemoryRouter&gt;
+        &lt;Inscription /&gt;
+      &lt;/MemoryRouter&gt;
+    );
+
+    // Remplit le formulaire avec un mot de passe court
+    await userEvent.type(
+      screen.getByLabelText(&quot;Adresse courriel&quot;),
+      &quot;test@example.com&quot;
+    );
+    await userEvent.type(screen.getByLabelText(&quot;Mot de passe&quot;), &quot;123&quot;);
+    await userEvent.type(
+      screen.getByLabelText(&quot;Confirmer le mot de passe&quot;),
+      &quot;123&quot;
+    );
+
+    const submitButton = screen.getByRole(&quot;button&quot;, { name: &quot;S'inscrire&quot; });
+    await userEvent.click(submitButton);
+
+    expect(
+      screen.getByText(&quot;Le mot de passe doit contenir au moins 8 caract&egrave;res&quot;)
+    ).toBeInTheDocument();
+  });
+
+  it(&quot;devrait permettre une inscription r&eacute;ussie&quot;, async () =&gt; {
+    render(
+      &lt;MemoryRouter&gt;
+        &lt;Inscription /&gt;
+      &lt;/MemoryRouter&gt;
+    );
+
+    // Remplit le formulaire correctement
+    await userEvent.type(
+      screen.getByLabelText(&quot;Adresse courriel&quot;),
+      &quot;test@example.com&quot;
+    );
+    await userEvent.type(screen.getByLabelText(&quot;Mot de passe&quot;), &quot;password123&quot;);
+    await userEvent.type(
+      screen.getByLabelText(&quot;Confirmer le mot de passe&quot;),
+      &quot;password123&quot;
+    );
+    await userEvent.selectOptions(
+      screen.getByLabelText(&quot;Type de compte&quot;),
+      &quot;client&quot;
+    );
+
+    const submitButton = screen.getByRole(&quot;button&quot;, { name: &quot;S'inscrire&quot; });
+    await userEvent.click(submitButton);
+
+    // V&eacute;rifie que le message de succ&egrave;s s'affiche
+    await waitFor(() =&gt; {
+      expect(
+        screen.getByText(&quot;Votre compte a &eacute;t&eacute; cr&eacute;&eacute; avec succ&egrave;s !&quot;)
+      ).toBeInTheDocument();
+    });
+  });
+});
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

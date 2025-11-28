@@ -1,0 +1,344 @@
+[ {
+  "relativePath" : "backend\\app.js",
+  "extension" : "js",
+  "linesOfCode" : 44,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\bd\\fixiotech.sql",
+  "extension" : "sql",
+  "linesOfCode" : 88,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\config\\databaseConnexion.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 6,
+  "linesOfCodeInUnits" : 14
+}, {
+  "relativePath" : "backend\\controleurs\\controleurHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 185,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 187,
+  "unitsCount" : 2,
+  "unitsMcCabeIndexSum" : 3,
+  "linesOfCodeInUnits" : 35
+}, {
+  "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 184,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 14
+}, {
+  "relativePath" : "backend\\middlewares\\errorHandler.js",
+  "extension" : "js",
+  "linesOfCode" : 31,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 15,
+  "linesOfCodeInUnits" : 30
+}, {
+  "relativePath" : "backend\\routes\\routeHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 21,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\routes\\routeRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\routes\\routeUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 23,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\validateurs\\validateurHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 8,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 37,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "backend\\validateurs\\validateurUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 45,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "eslint.config.js",
+  "extension" : "js",
+  "linesOfCode" : 28,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 22
+}, {
+  "relativePath" : "frontend\\services\\apiHoraire.js",
+  "extension" : "js",
+  "linesOfCode" : 97,
+  "unitsCount" : 8,
+  "unitsMcCabeIndexSum" : 19,
+  "linesOfCodeInUnits" : 96
+}, {
+  "relativePath" : "frontend\\services\\apiRendezVous.js",
+  "extension" : "js",
+  "linesOfCode" : 78,
+  "unitsCount" : 10,
+  "unitsMcCabeIndexSum" : 20,
+  "linesOfCodeInUnits" : 74
+}, {
+  "relativePath" : "frontend\\services\\apiUtilisateur.js",
+  "extension" : "js",
+  "linesOfCode" : 89,
+  "unitsCount" : 9,
+  "unitsMcCabeIndexSum" : 20,
+  "linesOfCodeInUnits" : 77
+}, {
+  "relativePath" : "frontend\\src\\App.css",
+  "extension" : "css",
+  "linesOfCode" : 71,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\App.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 45,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\context\\AuthContext.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 25,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\index.css",
+  "extension" : "css",
+  "linesOfCode" : 61,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\main.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 15,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\routes\\ProtectedRoute.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 11,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\setupTests.js",
+  "extension" : "js",
+  "linesOfCode" : 16,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\accueil.css",
+  "extension" : "css",
+  "linesOfCode" : 325,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\accueil.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 195,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\client.css",
+  "extension" : "css",
+  "linesOfCode" : 108,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\client.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 146,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\contact.css",
+  "extension" : "css",
+  "linesOfCode" : 272,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\contact.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 235,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\employe.css",
+  "extension" : "css",
+  "linesOfCode" : 524,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\employe.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 262,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\horaires.css",
+  "extension" : "css",
+  "linesOfCode" : 222,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 287,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\inscription.css",
+  "extension" : "css",
+  "linesOfCode" : 118,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 149,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\login.css",
+  "extension" : "css",
+  "linesOfCode" : 86,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\login.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 118,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\logs.css",
+  "extension" : "css",
+  "linesOfCode" : 369,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\logs.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 345,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.css",
+  "extension" : "css",
+  "linesOfCode" : 76,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\Navigation\\MainNavigation.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 104,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+  "extension" : "css",
+  "linesOfCode" : 329,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 336,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\services_aides.css",
+  "extension" : "css",
+  "linesOfCode" : 121,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "frontend\\src\\vues\\services_aides.jsx",
+  "extension" : "jsx",
+  "linesOfCode" : 111,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "index.html",
+  "extension" : "html",
+  "linesOfCode" : 27,
+  "unitsCount" : 0,
+  "unitsMcCabeIndexSum" : 0,
+  "linesOfCodeInUnits" : 0
+}, {
+  "relativePath" : "vite.config.js",
+  "extension" : "js",
+  "linesOfCode" : 13,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 11
+}, {
+  "relativePath" : "vitest.config.js",
+  "extension" : "js",
+  "linesOfCode" : 11,
+  "unitsCount" : 1,
+  "unitsMcCabeIndexSum" : 1,
+  "linesOfCodeInUnits" : 8
+} ]

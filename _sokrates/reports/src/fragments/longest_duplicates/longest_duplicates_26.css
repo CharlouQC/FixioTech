@@ -1,0 +1,44 @@
+frontend\src\vues\inscription.css [121:136]:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
+
+.redirect-text {
+  text-align: center;
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+.redirect-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+frontend\src\vues\login.css [84:99]:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
+
+.redirect-text {
+  text-align: center;
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+.redirect-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
+}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+

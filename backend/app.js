@@ -49,10 +49,13 @@ app.use("/api/rendezVous", routerRendezVous);
 
 app.use(errorHandler);
 
-// ---- Lancement ----
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`API écoute sur le port ${PORT}`);
-});
-
+// ---- Export app AVANT de lancer le serveur (pour tests) ----
 export default app;
+
+// ---- Lancement uniquement si exécuté directement ----
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, "/")}`) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`API écoute sur le port ${PORT}`);
+  });
+}

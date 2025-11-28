@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>README.md</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">README.md (<b>56</b> lines of code) (<a href="README.md">raw</a>):</h3>
+<div id="editor"># FixioTech
+
+FixioTech est une application web de gestion de rendez-vous entre
+clients et employ&eacute;s, d&eacute;velopp&eacute;e dans le cadre du projet de session.
+
+## 📖 Description
+
+L'application permet aux utilisateurs de : - Cr&eacute;er un compte et se
+connecter - Consulter les horaires disponibles des employ&eacute;s - R&eacute;server
+des rendez-vous en fonction des plages horaires
+
+Les employ&eacute;s peuvent : - Cr&eacute;er leur compte et se connecter - G&eacute;rer leurs
+disponibilit&eacute;s - Consulter la liste des rendez-vous planifi&eacute;s
+
+## 🛠 Technologies utilis&eacute;es
+
+- **Front-end** : React, Vite
+- **Back-end** : Node.js, Express
+- **Base de donn&eacute;es** : MySQL 8+
+- **Tests** : Vitest, @testing-library/react, JSDOM
+
+## 💻 Instructions d'installation
+
+### 1️⃣ Pr&eacute;requis
+
+- Node.js 18+ et npm
+- MySQL 8+
+- Git
+
+### 2️⃣ Installation du projet
+
+Clonez le d&eacute;p&ocirc;t :
+
+```bash
+git clone https://github.com/&lt;ton_repo&gt;/FixioTech.git
+cd FixioTech
+```
+
+Installez les d&eacute;pendances :
+
+```bash
+npm install
+```
+
+### 3️⃣ Configuration de la base de donn&eacute;es
+
+1.  Ouvrir MySQL Workbench ou terminal\
+2.  Ex&eacute;cuter le script SQL situ&eacute; dans `/database/schema.sql` :
+
+### 4️⃣ Lancer le projet
+
+```bash
+npm run dev
+```
+
+Le projet sera disponible sur &lt;http://localhost:5173&gt;.
+
+## 👨&zwj;💻 Manuel utilisateur (succinct)
+
+### Utilisateur
+
+1.  Aller sur la page d'accueil
+2.  Cliquer sur **Inscription** pour cr&eacute;er un compte
+3.  Entrer un email et un mot de passe valide
+4.  Se connecter pour acc&eacute;der aux fonctionnalit&eacute;s (prise de rendez-vous)
+
+### Employ&eacute;
+
+1.  Cr&eacute;er un compte via **Inscription**
+2.  D&eacute;finir ses disponibilit&eacute;s
+3.  Consulter les rendez-vous planifi&eacute;s
+
+## 🧪 Lancer les tests
+
+Pour ex&eacute;cuter les tests unitaires (Vitest) :
+
+```bash
+npm run test
+```
+
+Les tests actuels couvrent : - Formulaire d'inscription (cas de
+validation) - Formulaire de connexion (cas de validation)
+
+Les tests d'int&eacute;gration et end-to-end seront ajout&eacute;s dans les prochains
+sprints.
+</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/md");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>
