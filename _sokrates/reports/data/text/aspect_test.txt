@@ -1,3 +1,0 @@
-Path	Lines of Code
-frontend\src\tests\Inscription.test.jsx	124
-frontend\src\tests\Login.test.jsx	87
