@@ -1,4 +1,4 @@
-frontend\src\vues\rendez-vous.jsx [204:234]:
+frontend/src/vues/rendez-vous.jsx [204:234]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
               <div className="no-tech">
                 Aucun technicien disponible pour ce créneau.
@@ -35,7 +35,7 @@ frontend\src\vues\rendez-vous.jsx [204:234]:
 
 
 
-frontend\src\vues\rendez-vous.jsx [246:276]:
+frontend/src/vues/rendez-vous.jsx [246:276]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
             <div className="no-tech">
               Aucun technicien disponible pour ce créneau.

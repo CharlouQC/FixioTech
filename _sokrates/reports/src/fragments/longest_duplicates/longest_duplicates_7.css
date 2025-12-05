@@ -1,0 +1,42 @@
+frontend/src/vues/accueil.css [137:151]:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== SECTIONS COMMUNES ========== */
+.services-section,
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+frontend/src/vues/services_aides.css [76:90]:
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Header */
+.services-section,
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+

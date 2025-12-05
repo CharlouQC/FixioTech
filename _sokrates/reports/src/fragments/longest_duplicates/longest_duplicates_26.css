@@ -1,42 +1,22 @@
-frontend\src\vues\inscription.css [121:136]:
+frontend/src/vues/rendez-vous.css [270:275]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-}
-
-.redirect-text {
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
   text-align: center;
-  margin-top: 1rem;
-  color: #2c3e50;
-}
-
-.redirect-text a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.redirect-text a:hover {
-  text-decoration: underline;
+  animation: slideDown 0.3s ease;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-frontend\src\vues\login.css [84:99]:
+frontend/src/vues/rendez-vous.css [279:284]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-}
-
-.redirect-text {
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
   text-align: center;
-  margin-top: 1rem;
-  color: #2c3e50;
-}
-
-.redirect-text a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-.redirect-text a:hover {
-  text-decoration: underline;
+  animation: slideDown 0.3s ease;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

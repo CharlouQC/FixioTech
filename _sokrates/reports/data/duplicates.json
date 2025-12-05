@@ -1,11 +1,11 @@
 {
   "title" : "Duplication",
-  "timestamp" : "2025-11-21 14:15:00",
+  "timestamp" : "2025-12-05 04:25:33",
   "duplicates" : [ {
     "blockSize" : 57,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -18,7 +18,7 @@
       "cleanedEndLine" : 74
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
+        "relativePath" : "frontend/src/vues/login.css",
         "extension" : "css",
         "linesOfCode" : 86,
         "components" : [ "primary::frontend" ],
@@ -34,7 +34,7 @@
     "blockSize" : 54,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -47,7 +47,7 @@
       "cleanedEndLine" : 221
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
         "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
@@ -63,7 +63,7 @@
     "blockSize" : 27,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
         "extension" : "jsx",
         "linesOfCode" : 336,
         "components" : [ "primary::frontend" ],
@@ -76,7 +76,7 @@
       "cleanedEndLine" : 199
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
         "extension" : "jsx",
         "linesOfCode" : 336,
         "components" : [ "primary::frontend" ],
@@ -89,39 +89,10 @@
       "cleanedEndLine" : 235
     } ]
   }, {
-    "blockSize" : 25,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 78,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 64,
-      "startLine" : 5,
-      "endLine" : 39,
-      "cleanedStartLine" : 3,
-      "cleanedEndLine" : 27
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 89,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 74,
-      "startLine" : 4,
-      "endLine" : 38,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 26
-    } ]
-  }, {
     "blockSize" : 20,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -134,7 +105,7 @@
       "cleanedEndLine" : 139
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
         "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
@@ -150,7 +121,7 @@
     "blockSize" : 19,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -163,7 +134,7 @@
       "cleanedEndLine" : 158
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
         "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
@@ -176,561 +147,10 @@
       "cleanedEndLine" : 177
     } ]
   }, {
-    "blockSize" : 18,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 72,
-      "endLine" : 90,
-      "cleanedStartLine" : 62,
-      "cleanedEndLine" : 79
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 141,
-      "endLine" : 159,
-      "cleanedStartLine" : 126,
-      "cleanedEndLine" : 143
-    } ]
-  }, {
-    "blockSize" : 17,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 26,
-      "endLine" : 42,
-      "cleanedStartLine" : 19,
-      "cleanedEndLine" : 35
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 94,
-      "endLine" : 110,
-      "cleanedStartLine" : 82,
-      "cleanedEndLine" : 98
-    } ]
-  }, {
-    "blockSize" : 17,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 69,
-      "endLine" : 85,
-      "cleanedStartLine" : 31,
-      "cleanedEndLine" : 47
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 97,
-      "endLine" : 113,
-      "cleanedStartLine" : 53,
-      "cleanedEndLine" : 69
-    } ]
-  }, {
-    "blockSize" : 16,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 49,
-      "endLine" : 64,
-      "cleanedStartLine" : 40,
-      "cleanedEndLine" : 55
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 114,
-      "endLine" : 129,
-      "cleanedStartLine" : 101,
-      "cleanedEndLine" : 116
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 72,
-      "endLine" : 86,
-      "cleanedStartLine" : 62,
-      "cleanedEndLine" : 76
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 95,
-      "endLine" : 109,
-      "cleanedStartLine" : 83,
-      "cleanedEndLine" : 97
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 27,
-      "endLine" : 41,
-      "cleanedStartLine" : 20,
-      "cleanedEndLine" : 34
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 50,
-      "endLine" : 64,
-      "cleanedStartLine" : 41,
-      "cleanedEndLine" : 55
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 27,
-      "endLine" : 41,
-      "cleanedStartLine" : 20,
-      "cleanedEndLine" : 34
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 141,
-      "endLine" : 155,
-      "cleanedStartLine" : 126,
-      "cleanedEndLine" : 140
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 27,
-      "endLine" : 41,
-      "cleanedStartLine" : 20,
-      "cleanedEndLine" : 34
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 115,
-      "endLine" : 129,
-      "cleanedStartLine" : 102,
-      "cleanedEndLine" : 116
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 27,
-      "endLine" : 41,
-      "cleanedStartLine" : 20,
-      "cleanedEndLine" : 34
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 72,
-      "endLine" : 86,
-      "cleanedStartLine" : 62,
-      "cleanedEndLine" : 76
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 95,
-      "endLine" : 109,
-      "cleanedStartLine" : 83,
-      "cleanedEndLine" : 97
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 115,
-      "endLine" : 129,
-      "cleanedStartLine" : 102,
-      "cleanedEndLine" : 116
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 115,
-      "endLine" : 129,
-      "cleanedStartLine" : 102,
-      "cleanedEndLine" : 116
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 141,
-      "endLine" : 155,
-      "cleanedStartLine" : 126,
-      "cleanedEndLine" : 140
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 95,
-      "endLine" : 109,
-      "cleanedStartLine" : 83,
-      "cleanedEndLine" : 97
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 141,
-      "endLine" : 155,
-      "cleanedStartLine" : 126,
-      "cleanedEndLine" : 140
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 50,
-      "endLine" : 64,
-      "cleanedStartLine" : 41,
-      "cleanedEndLine" : 55
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 72,
-      "endLine" : 86,
-      "cleanedStartLine" : 62,
-      "cleanedEndLine" : 76
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 72,
-      "endLine" : 86,
-      "cleanedStartLine" : 62,
-      "cleanedEndLine" : 76
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 115,
-      "endLine" : 129,
-      "cleanedStartLine" : 102,
-      "cleanedEndLine" : 116
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 50,
-      "endLine" : 64,
-      "cleanedStartLine" : 41,
-      "cleanedEndLine" : 55
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 141,
-      "endLine" : 155,
-      "cleanedStartLine" : 126,
-      "cleanedEndLine" : 140
-    } ]
-  }, {
-    "blockSize" : 15,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 50,
-      "endLine" : 64,
-      "cleanedStartLine" : 41,
-      "cleanedEndLine" : 55
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 95,
-      "endLine" : 109,
-      "cleanedStartLine" : 83,
-      "cleanedEndLine" : 97
-    } ]
-  }, {
-    "blockSize" : 14,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 187,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 175,
-      "startLine" : 35,
-      "endLine" : 49,
-      "cleanedStartLine" : 26,
-      "cleanedEndLine" : 39
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 184,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 160,
-      "startLine" : 150,
-      "endLine" : 165,
-      "cleanedStartLine" : 111,
-      "cleanedEndLine" : 124
-    } ]
-  }, {
     "blockSize" : 13,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 3,
-      "endLine" : 17,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 14
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 89,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 74,
-      "startLine" : 4,
-      "endLine" : 18,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 14
-    } ]
-  }, {
-    "blockSize" : 13,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 3,
-      "endLine" : 17,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 14
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 78,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 64,
-      "startLine" : 5,
-      "endLine" : 19,
-      "cleanedStartLine" : 3,
-      "cleanedEndLine" : 15
-    } ]
-  }, {
-    "blockSize" : 13,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -743,7 +163,7 @@
       "cleanedEndLine" : 118
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
+        "relativePath" : "frontend/src/vues/login.css",
         "extension" : "css",
         "linesOfCode" : 86,
         "components" : [ "primary::frontend" ],
@@ -756,126 +176,39 @@
       "cleanedEndLine" : 86
     } ]
   }, {
-    "blockSize" : 11,
+    "blockSize" : 12,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
+        "relativePath" : "frontend/src/vues/accueil.css",
+        "extension" : "css",
+        "linesOfCode" : 325,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 19,
-      "endLine" : 36,
-      "cleanedStartLine" : 15,
-      "cleanedEndLine" : 25
+      "sourceFileCleanedLinesOfCode" : 325,
+      "startLine" : 137,
+      "endLine" : 151,
+      "cleanedStartLine" : 119,
+      "cleanedEndLine" : 130
     }, {
       "file" : {
-        "relativePath" : "frontend\\services\\apiUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 89,
+        "relativePath" : "frontend/src/vues/services_aides.css",
+        "extension" : "css",
+        "linesOfCode" : 409,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 74,
-      "startLine" : 22,
-      "endLine" : 38,
-      "cleanedStartLine" : 16,
-      "cleanedEndLine" : 26
-    } ]
-  }, {
-    "blockSize" : 11,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 97,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 83,
-      "startLine" : 19,
-      "endLine" : 36,
-      "cleanedStartLine" : 15,
-      "cleanedEndLine" : 25
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\services\\apiRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 78,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 64,
-      "startLine" : 23,
-      "endLine" : 39,
-      "cleanedStartLine" : 17,
-      "cleanedEndLine" : 27
+      "sourceFileCleanedLinesOfCode" : 409,
+      "startLine" : 76,
+      "endLine" : 90,
+      "cleanedStartLine" : 67,
+      "cleanedEndLine" : 78
     } ]
   }, {
     "blockSize" : 10,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 187,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 175,
-      "startLine" : 71,
-      "endLine" : 80,
-      "cleanedStartLine" : 53,
-      "cleanedEndLine" : 62
-    }, {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 184,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 160,
-      "startLine" : 180,
-      "endLine" : 189,
-      "cleanedStartLine" : 134,
-      "cleanedEndLine" : 143
-    } ]
-  }, {
-    "blockSize" : 10,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 37,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 36,
-      "startLine" : 10,
-      "endLine" : 19,
-      "cleanedStartLine" : 7,
-      "cleanedEndLine" : 16
-    }, {
-      "file" : {
-        "relativePath" : "backend\\validateurs\\validateurRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 37,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 36,
-      "startLine" : 30,
-      "endLine" : 39,
-      "cleanedStartLine" : 26,
-      "cleanedEndLine" : 35
-    } ]
-  }, {
-    "blockSize" : 10,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
         "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
@@ -888,7 +221,7 @@
       "cleanedEndLine" : 80
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
         "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
@@ -904,7 +237,7 @@
     "blockSize" : 10,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+        "relativePath" : "frontend/src/vues/inscription.jsx",
         "extension" : "jsx",
         "linesOfCode" : 149,
         "components" : [ "primary::frontend" ],
@@ -917,7 +250,7 @@
       "cleanedEndLine" : 120
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.jsx",
+        "relativePath" : "frontend/src/vues/login.jsx",
         "extension" : "jsx",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -933,65 +266,7 @@
     "blockSize" : 9,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
-        "extension" : "css",
-        "linesOfCode" : 222,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 222,
-      "startLine" : 103,
-      "endLine" : 111,
-      "cleanedStartLine" : 88,
-      "cleanedEndLine" : 96
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
-        "extension" : "css",
-        "linesOfCode" : 222,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 222,
-      "startLine" : 183,
-      "endLine" : 191,
-      "cleanedStartLine" : 157,
-      "cleanedEndLine" : 165
-    } ]
-  }, {
-    "blockSize" : 9,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\bd\\fixiotech.sql",
-        "extension" : "sql",
-        "linesOfCode" : 88,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 88,
-      "startLine" : 104,
-      "endLine" : 112,
-      "cleanedStartLine" : 68,
-      "cleanedEndLine" : 76
-    }, {
-      "file" : {
-        "relativePath" : "backend\\bd\\fixiotech.sql",
-        "extension" : "sql",
-        "linesOfCode" : 88,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 88,
-      "startLine" : 116,
-      "endLine" : 124,
-      "cleanedStartLine" : 79,
-      "cleanedEndLine" : 87
-    } ]
-  }, {
-    "blockSize" : 9,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.jsx",
+        "relativePath" : "frontend/src/vues/inscription.jsx",
         "extension" : "jsx",
         "linesOfCode" : 149,
         "components" : [ "primary::frontend" ],
@@ -1004,7 +279,7 @@
       "cleanedEndLine" : 110
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.jsx",
+        "relativePath" : "frontend/src/vues/login.jsx",
         "extension" : "jsx",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -1017,68 +292,39 @@
       "cleanedEndLine" : 87
     } ]
   }, {
-    "blockSize" : 8,
+    "blockSize" : 9,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\employe.css",
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
-        "linesOfCode" : 524,
+        "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 524,
-      "startLine" : 37,
-      "endLine" : 44,
-      "cleanedStartLine" : 29,
-      "cleanedEndLine" : 36
+      "sourceFileCleanedLinesOfCode" : 222,
+      "startLine" : 103,
+      "endLine" : 111,
+      "cleanedStartLine" : 88,
+      "cleanedEndLine" : 96
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\logs.css",
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
-        "linesOfCode" : 369,
+        "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 369,
-      "startLine" : 37,
-      "endLine" : 44,
-      "cleanedStartLine" : 29,
-      "cleanedEndLine" : 36
+      "sourceFileCleanedLinesOfCode" : 222,
+      "startLine" : 183,
+      "endLine" : 191,
+      "cleanedStartLine" : 157,
+      "cleanedEndLine" : 165
     } ]
   }, {
     "blockSize" : 8,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "backend\\bd\\fixiotech.sql",
-        "extension" : "sql",
-        "linesOfCode" : 88,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 88,
-      "startLine" : 82,
-      "endLine" : 89,
-      "cleanedStartLine" : 48,
-      "cleanedEndLine" : 55
-    }, {
-      "file" : {
-        "relativePath" : "backend\\bd\\fixiotech.sql",
-        "extension" : "sql",
-        "linesOfCode" : 88,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 88,
-      "startLine" : 93,
-      "endLine" : 100,
-      "cleanedStartLine" : 58,
-      "cleanedEndLine" : 65
-    } ]
-  }, {
-    "blockSize" : 8,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+        "relativePath" : "frontend/src/vues/horaires.jsx",
         "extension" : "jsx",
         "linesOfCode" : 287,
         "components" : [ "primary::frontend" ],
@@ -1091,7 +337,7 @@
       "cleanedEndLine" : 46
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
         "extension" : "jsx",
         "linesOfCode" : 336,
         "components" : [ "primary::frontend" ],
@@ -1104,68 +350,39 @@
       "cleanedEndLine" : 36
     } ]
   }, {
-    "blockSize" : 7,
+    "blockSize" : 8,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/employe.css",
         "extension" : "css",
-        "linesOfCode" : 118,
+        "linesOfCode" : 524,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 118,
-      "startLine" : 2,
-      "endLine" : 8,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 8
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
-        "extension" : "css",
-        "linesOfCode" : 86,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 86,
-      "startLine" : 2,
-      "endLine" : 8,
-      "cleanedStartLine" : 2,
-      "cleanedEndLine" : 8
-    } ]
-  }, {
-    "blockSize" : 7,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
-        "extension" : "css",
-        "linesOfCode" : 118,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 118,
+      "sourceFileCleanedLinesOfCode" : 524,
       "startLine" : 37,
-      "endLine" : 43,
-      "cleanedStartLine" : 32,
-      "cleanedEndLine" : 38
+      "endLine" : 44,
+      "cleanedStartLine" : 29,
+      "cleanedEndLine" : 36
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/logs.css",
         "extension" : "css",
-        "linesOfCode" : 118,
+        "linesOfCode" : 369,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 118,
-      "startLine" : 96,
-      "endLine" : 102,
-      "cleanedStartLine" : 84,
-      "cleanedEndLine" : 90
+      "sourceFileCleanedLinesOfCode" : 369,
+      "startLine" : 37,
+      "endLine" : 44,
+      "cleanedStartLine" : 29,
+      "cleanedEndLine" : 36
     } ]
   }, {
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -1178,7 +395,7 @@
       "cleanedEndLine" : 43
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -1194,36 +411,36 @@
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "backend\\controleurs\\controleurRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 187,
-        "components" : [ "primary::backend" ],
+        "relativePath" : "frontend/src/vues/inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 118,
+        "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 175,
-      "startLine" : 208,
-      "endLine" : 214,
-      "cleanedStartLine" : 168,
-      "cleanedEndLine" : 174
+      "sourceFileCleanedLinesOfCode" : 118,
+      "startLine" : 2,
+      "endLine" : 8,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 8
     }, {
       "file" : {
-        "relativePath" : "backend\\routes\\routeRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 23,
-        "components" : [ "primary::backend" ],
+        "relativePath" : "frontend/src/vues/login.css",
+        "extension" : "css",
+        "linesOfCode" : 86,
+        "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 20,
-      "startLine" : 4,
-      "endLine" : 10,
-      "cleanedStartLine" : 1,
-      "cleanedEndLine" : 7
+      "sourceFileCleanedLinesOfCode" : 86,
+      "startLine" : 2,
+      "endLine" : 8,
+      "cleanedStartLine" : 2,
+      "cleanedEndLine" : 8
     } ]
   }, {
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
+        "relativePath" : "frontend/src/vues/contact.jsx",
         "extension" : "jsx",
         "linesOfCode" : 235,
         "components" : [ "primary::frontend" ],
@@ -1236,7 +453,7 @@
       "cleanedEndLine" : 11
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
+        "relativePath" : "frontend/src/vues/contact.jsx",
         "extension" : "jsx",
         "linesOfCode" : 235,
         "components" : [ "primary::frontend" ],
@@ -1252,36 +469,36 @@
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
       "sourceFileCleanedLinesOfCode" : 118,
-      "startLine" : 11,
-      "endLine" : 17,
-      "cleanedStartLine" : 10,
-      "cleanedEndLine" : 16
+      "startLine" : 37,
+      "endLine" : 43,
+      "cleanedStartLine" : 32,
+      "cleanedEndLine" : 38
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
-        "linesOfCode" : 86,
+        "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 86,
-      "startLine" : 11,
-      "endLine" : 17,
-      "cleanedStartLine" : 10,
-      "cleanedEndLine" : 16
+      "sourceFileCleanedLinesOfCode" : 118,
+      "startLine" : 96,
+      "endLine" : 102,
+      "cleanedStartLine" : 84,
+      "cleanedEndLine" : 90
     } ]
   }, {
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+        "relativePath" : "frontend/src/vues/horaires.jsx",
         "extension" : "jsx",
         "linesOfCode" : 287,
         "components" : [ "primary::frontend" ],
@@ -1294,7 +511,7 @@
       "cleanedEndLine" : 55
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
         "extension" : "jsx",
         "linesOfCode" : 336,
         "components" : [ "primary::frontend" ],
@@ -1310,7 +527,7 @@
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
+        "relativePath" : "frontend/src/vues/contact.jsx",
         "extension" : "jsx",
         "linesOfCode" : 235,
         "components" : [ "primary::frontend" ],
@@ -1323,7 +540,7 @@
       "cleanedEndLine" : 204
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
         "extension" : "jsx",
         "linesOfCode" : 336,
         "components" : [ "primary::frontend" ],
@@ -1339,36 +556,36 @@
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\services\\apiRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 78,
+        "relativePath" : "frontend/src/vues/inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 64,
-      "startLine" : 57,
-      "endLine" : 63,
-      "cleanedStartLine" : 34,
-      "cleanedEndLine" : 40
+      "sourceFileCleanedLinesOfCode" : 118,
+      "startLine" : 11,
+      "endLine" : 17,
+      "cleanedStartLine" : 10,
+      "cleanedEndLine" : 16
     }, {
       "file" : {
-        "relativePath" : "frontend\\services\\apiRendezVous.js",
-        "extension" : "js",
-        "linesOfCode" : 78,
+        "relativePath" : "frontend/src/vues/login.css",
+        "extension" : "css",
+        "linesOfCode" : 86,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 64,
-      "startLine" : 73,
-      "endLine" : 79,
-      "cleanedStartLine" : 46,
-      "cleanedEndLine" : 52
+      "sourceFileCleanedLinesOfCode" : 86,
+      "startLine" : 11,
+      "endLine" : 17,
+      "cleanedStartLine" : 10,
+      "cleanedEndLine" : 16
     } ]
   }, {
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+        "relativePath" : "frontend/src/vues/horaires.jsx",
         "extension" : "jsx",
         "linesOfCode" : 287,
         "components" : [ "primary::frontend" ],
@@ -1381,7 +598,7 @@
       "cleanedEndLine" : 241
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.jsx",
+        "relativePath" : "frontend/src/vues/horaires.jsx",
         "extension" : "jsx",
         "linesOfCode" : 287,
         "components" : [ "primary::frontend" ],
@@ -1397,7 +614,7 @@
     "blockSize" : 7,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -1410,7 +627,7 @@
       "cleanedEndLine" : 90
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
+        "relativePath" : "frontend/src/vues/login.css",
         "extension" : "css",
         "linesOfCode" : 86,
         "components" : [ "primary::frontend" ],
@@ -1423,205 +640,31 @@
       "cleanedEndLine" : 38
     } ]
   }, {
-    "blockSize" : 7,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 184,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 160,
-      "startLine" : 201,
-      "endLine" : 207,
-      "cleanedStartLine" : 153,
-      "cleanedEndLine" : 159
-    }, {
-      "file" : {
-        "relativePath" : "backend\\routes\\routeUtilisateur.js",
-        "extension" : "js",
-        "linesOfCode" : 23,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 20,
-      "startLine" : 4,
-      "endLine" : 10,
-      "cleanedStartLine" : 1,
-      "cleanedEndLine" : 7
-    } ]
-  }, {
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
       "sourceFileCleanedLinesOfCode" : 272,
-      "startLine" : 230,
-      "endLine" : 235,
-      "cleanedStartLine" : 195,
-      "cleanedEndLine" : 200
+      "startLine" : 250,
+      "endLine" : 255,
+      "cleanedStartLine" : 213,
+      "cleanedEndLine" : 218
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/services_aides.css",
         "extension" : "css",
-        "linesOfCode" : 329,
+        "linesOfCode" : 409,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 279,
-      "endLine" : 284,
-      "cleanedStartLine" : 241,
-      "cleanedEndLine" : 246
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 118,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 111,
-      "startLine" : 116,
-      "endLine" : 123,
-      "cleanedStartLine" : 100,
-      "cleanedEndLine" : 105
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 336,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 307,
-      "startLine" : 352,
-      "endLine" : 359,
-      "cleanedStartLine" : 295,
-      "cleanedEndLine" : 300
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
-        "extension" : "css",
-        "linesOfCode" : 329,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 45,
-      "endLine" : 50,
-      "cleanedStartLine" : 38,
-      "cleanedEndLine" : 43
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
-        "extension" : "css",
-        "linesOfCode" : 329,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 151,
-      "endLine" : 156,
-      "cleanedStartLine" : 131,
-      "cleanedEndLine" : 136
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\employe.css",
-        "extension" : "css",
-        "linesOfCode" : 524,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 524,
-      "startLine" : 321,
-      "endLine" : 326,
-      "cleanedStartLine" : 263,
-      "cleanedEndLine" : 268
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\employe.css",
-        "extension" : "css",
-        "linesOfCode" : 524,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 524,
-      "startLine" : 504,
-      "endLine" : 509,
-      "cleanedStartLine" : 418,
-      "cleanedEndLine" : 423
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 235,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::TODOs" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 211,
-      "startLine" : 246,
-      "endLine" : 253,
-      "cleanedStartLine" : 199,
-      "cleanedEndLine" : 204
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 118,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 111,
-      "startLine" : 116,
-      "endLine" : 123,
-      "cleanedStartLine" : 100,
-      "cleanedEndLine" : 105
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
-        "extension" : "css",
-        "linesOfCode" : 222,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 222,
-      "startLine" : 24,
-      "endLine" : 29,
-      "cleanedStartLine" : 20,
-      "cleanedEndLine" : 25
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
-        "extension" : "css",
-        "linesOfCode" : 118,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 118,
+      "sourceFileCleanedLinesOfCode" : 409,
       "startLine" : 82,
-      "endLine" : 88,
+      "endLine" : 87,
       "cleanedStartLine" : 72,
       "cleanedEndLine" : 77
     } ]
@@ -1629,94 +672,36 @@
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/services_aides.css",
         "extension" : "css",
-        "linesOfCode" : 329,
+        "linesOfCode" : 409,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 270,
-      "endLine" : 275,
-      "cleanedStartLine" : 233,
-      "cleanedEndLine" : 238
+      "sourceFileCleanedLinesOfCode" : 409,
+      "startLine" : 17,
+      "endLine" : 22,
+      "cleanedStartLine" : 14,
+      "cleanedEndLine" : 19
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/services_aides.css",
         "extension" : "css",
-        "linesOfCode" : 329,
+        "linesOfCode" : 409,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 279,
-      "endLine" : 284,
-      "cleanedStartLine" : 241,
-      "cleanedEndLine" : 246
+      "sourceFileCleanedLinesOfCode" : 409,
+      "startLine" : 375,
+      "endLine" : 380,
+      "cleanedStartLine" : 321,
+      "cleanedEndLine" : 326
     } ]
   }, {
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 149,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 138,
-      "startLine" : 10,
-      "endLine" : 15,
-      "cleanedStartLine" : 8,
-      "cleanedEndLine" : 13
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 149,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 138,
-      "startLine" : 73,
-      "endLine" : 78,
-      "cleanedStartLine" : 60,
-      "cleanedEndLine" : 65
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\accueil.css",
-        "extension" : "css",
-        "linesOfCode" : 325,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 325,
-      "startLine" : 143,
-      "endLine" : 148,
-      "cleanedStartLine" : 124,
-      "cleanedEndLine" : 129
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
-        "extension" : "css",
-        "linesOfCode" : 329,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 290,
-      "endLine" : 295,
-      "cleanedStartLine" : 251,
-      "cleanedEndLine" : 256
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\client.css",
+        "relativePath" : "frontend/src/vues/client.css",
         "extension" : "css",
         "linesOfCode" : 108,
         "components" : [ "primary::frontend" ],
@@ -1729,7 +714,7 @@
       "cleanedEndLine" : 87
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\employe.css",
+        "relativePath" : "frontend/src/vues/employe.css",
         "extension" : "css",
         "linesOfCode" : 524,
         "components" : [ "primary::frontend" ],
@@ -1745,94 +730,65 @@
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 235,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::TODOs" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 211,
-      "startLine" : 198,
-      "endLine" : 203,
-      "cleanedStartLine" : 158,
-      "cleanedEndLine" : 163
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.jsx",
-        "extension" : "jsx",
-        "linesOfCode" : 149,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 138,
-      "startLine" : 127,
-      "endLine" : 132,
-      "cleanedStartLine" : 104,
-      "cleanedEndLine" : 109
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
-        "extension" : "css",
-        "linesOfCode" : 272,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 272,
-      "startLine" : 318,
-      "endLine" : 324,
-      "cleanedStartLine" : 267,
-      "cleanedEndLine" : 272
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
         "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
       "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 370,
-      "endLine" : 376,
-      "cleanedStartLine" : 315,
-      "cleanedEndLine" : 320
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
-        "extension" : "css",
-        "linesOfCode" : 118,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 118,
-      "startLine" : 88,
-      "endLine" : 93,
-      "cleanedStartLine" : 77,
-      "cleanedEndLine" : 82
+      "startLine" : 270,
+      "endLine" : 275,
+      "cleanedStartLine" : 233,
+      "cleanedEndLine" : 238
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
-        "linesOfCode" : 86,
+        "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
-      "sourceFileCleanedLinesOfCode" : 86,
-      "startLine" : 79,
-      "endLine" : 84,
-      "cleanedStartLine" : 69,
-      "cleanedEndLine" : 74
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 279,
+      "endLine" : 284,
+      "cleanedStartLine" : 241,
+      "cleanedEndLine" : 246
     } ]
   }, {
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.jsx",
+        "relativePath" : "frontend/src/vues/inscription.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 149,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 138,
+      "startLine" : 10,
+      "endLine" : 15,
+      "cleanedStartLine" : 8,
+      "cleanedEndLine" : 13
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/inscription.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 149,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 138,
+      "startLine" : 73,
+      "endLine" : 78,
+      "cleanedStartLine" : 60,
+      "cleanedEndLine" : 65
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.jsx",
         "extension" : "jsx",
         "linesOfCode" : 235,
         "components" : [ "primary::frontend" ],
@@ -1845,7 +801,7 @@
       "cleanedEndLine" : 163
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\login.jsx",
+        "relativePath" : "frontend/src/vues/login.jsx",
         "extension" : "jsx",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -1861,94 +817,65 @@
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
-        "extension" : "css",
-        "linesOfCode" : 272,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 272,
-      "startLine" : 230,
-      "endLine" : 235,
-      "cleanedStartLine" : 195,
-      "cleanedEndLine" : 200
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
-        "extension" : "css",
-        "linesOfCode" : 272,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 272,
-      "startLine" : 239,
-      "endLine" : 244,
-      "cleanedStartLine" : 203,
-      "cleanedEndLine" : 208
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "backend\\controleurs\\controleurHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 185,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 172,
-      "startLine" : 189,
-      "endLine" : 194,
-      "cleanedStartLine" : 166,
-      "cleanedEndLine" : 171
-    }, {
-      "file" : {
-        "relativePath" : "backend\\routes\\routeHoraire.js",
-        "extension" : "js",
-        "linesOfCode" : 21,
-        "components" : [ "primary::backend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 18,
-      "startLine" : 4,
-      "endLine" : 9,
-      "cleanedStartLine" : 1,
-      "cleanedEndLine" : 6
-    } ]
-  }, {
-    "blockSize" : 6,
-    "duplicatedFileBlocks" : [ {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
-        "extension" : "css",
-        "linesOfCode" : 272,
-        "components" : [ "primary::frontend" ],
-        "concerns" : [ "::Unclassified" ]
-      },
-      "sourceFileCleanedLinesOfCode" : 272,
-      "startLine" : 239,
-      "endLine" : 244,
-      "cleanedStartLine" : 203,
-      "cleanedEndLine" : 208
-    }, {
-      "file" : {
-        "relativePath" : "frontend\\src\\vues\\rendez-vous.css",
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
         "extension" : "css",
         "linesOfCode" : 329,
         "components" : [ "primary::frontend" ],
         "concerns" : [ "::Unclassified" ]
       },
       "sourceFileCleanedLinesOfCode" : 329,
-      "startLine" : 270,
-      "endLine" : 275,
-      "cleanedStartLine" : 233,
-      "cleanedEndLine" : 238
+      "startLine" : 290,
+      "endLine" : 295,
+      "cleanedStartLine" : 251,
+      "cleanedEndLine" : 256
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/services_aides.css",
+        "extension" : "css",
+        "linesOfCode" : 409,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 409,
+      "startLine" : 82,
+      "endLine" : 87,
+      "cleanedStartLine" : 72,
+      "cleanedEndLine" : 77
     } ]
   }, {
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/accueil.css",
+        "extension" : "css",
+        "linesOfCode" : 325,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 325,
+      "startLine" : 143,
+      "endLine" : 148,
+      "cleanedStartLine" : 124,
+      "cleanedEndLine" : 129
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 290,
+      "endLine" : 295,
+      "cleanedStartLine" : 251,
+      "cleanedEndLine" : 256
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -1961,7 +888,7 @@
       "cleanedEndLine" : 74
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\inscription.css",
+        "relativePath" : "frontend/src/vues/inscription.css",
         "extension" : "css",
         "linesOfCode" : 118,
         "components" : [ "primary::frontend" ],
@@ -1977,7 +904,65 @@
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\accueil.css",
+        "relativePath" : "frontend/src/vues/contact.css",
+        "extension" : "css",
+        "linesOfCode" : 272,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 272,
+      "startLine" : 230,
+      "endLine" : 235,
+      "cleanedStartLine" : 195,
+      "cleanedEndLine" : 200
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.css",
+        "extension" : "css",
+        "linesOfCode" : 272,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 272,
+      "startLine" : 239,
+      "endLine" : 244,
+      "cleanedStartLine" : 203,
+      "cleanedEndLine" : 208
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 118,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 118,
+      "startLine" : 88,
+      "endLine" : 93,
+      "cleanedStartLine" : 77,
+      "cleanedEndLine" : 82
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/login.css",
+        "extension" : "css",
+        "linesOfCode" : 86,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 86,
+      "startLine" : 79,
+      "endLine" : 84,
+      "cleanedStartLine" : 69,
+      "cleanedEndLine" : 74
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/accueil.css",
         "extension" : "css",
         "linesOfCode" : 325,
         "components" : [ "primary::frontend" ],
@@ -1990,7 +975,7 @@
       "cleanedEndLine" : 129
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\contact.css",
+        "relativePath" : "frontend/src/vues/contact.css",
         "extension" : "css",
         "linesOfCode" : 272,
         "components" : [ "primary::frontend" ],
@@ -2006,7 +991,152 @@
     "blockSize" : 6,
     "duplicatedFileBlocks" : [ {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
+        "relativePath" : "frontend/src/vues/contact.css",
+        "extension" : "css",
+        "linesOfCode" : 272,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 272,
+      "startLine" : 318,
+      "endLine" : 324,
+      "cleanedStartLine" : 267,
+      "cleanedEndLine" : 272
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 370,
+      "endLine" : 376,
+      "cleanedStartLine" : 315,
+      "cleanedEndLine" : 320
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 235,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::TODOs" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 211,
+      "startLine" : 246,
+      "endLine" : 253,
+      "cleanedStartLine" : 199,
+      "cleanedEndLine" : 204
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/login.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 118,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 111,
+      "startLine" : 116,
+      "endLine" : 123,
+      "cleanedStartLine" : 100,
+      "cleanedEndLine" : 105
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/employe.css",
+        "extension" : "css",
+        "linesOfCode" : 524,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 524,
+      "startLine" : 321,
+      "endLine" : 326,
+      "cleanedStartLine" : 263,
+      "cleanedEndLine" : 268
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/employe.css",
+        "extension" : "css",
+        "linesOfCode" : 524,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 524,
+      "startLine" : 504,
+      "endLine" : 509,
+      "cleanedStartLine" : 418,
+      "cleanedEndLine" : 423
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/login.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 118,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 111,
+      "startLine" : 116,
+      "endLine" : 123,
+      "cleanedStartLine" : 100,
+      "cleanedEndLine" : 105
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 336,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 307,
+      "startLine" : 352,
+      "endLine" : 359,
+      "cleanedStartLine" : 295,
+      "cleanedEndLine" : 300
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 235,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::TODOs" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 211,
+      "startLine" : 198,
+      "endLine" : 203,
+      "cleanedStartLine" : 158,
+      "cleanedEndLine" : 163
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/inscription.jsx",
+        "extension" : "jsx",
+        "linesOfCode" : 149,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 138,
+      "startLine" : 127,
+      "endLine" : 132,
+      "cleanedStartLine" : 104,
+      "cleanedEndLine" : 109
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
         "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
@@ -2019,7 +1149,7 @@
       "cleanedEndLine" : 22
     }, {
       "file" : {
-        "relativePath" : "frontend\\src\\vues\\horaires.css",
+        "relativePath" : "frontend/src/vues/horaires.css",
         "extension" : "css",
         "linesOfCode" : 222,
         "components" : [ "primary::frontend" ],
@@ -2030,6 +1160,122 @@
       "endLine" : 34,
       "cleanedStartLine" : 25,
       "cleanedEndLine" : 30
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.css",
+        "extension" : "css",
+        "linesOfCode" : 272,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 272,
+      "startLine" : 239,
+      "endLine" : 244,
+      "cleanedStartLine" : 203,
+      "cleanedEndLine" : 208
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 270,
+      "endLine" : 275,
+      "cleanedStartLine" : 233,
+      "cleanedEndLine" : 238
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 45,
+      "endLine" : 50,
+      "cleanedStartLine" : 38,
+      "cleanedEndLine" : 43
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 151,
+      "endLine" : 156,
+      "cleanedStartLine" : 131,
+      "cleanedEndLine" : 136
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/horaires.css",
+        "extension" : "css",
+        "linesOfCode" : 222,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 222,
+      "startLine" : 24,
+      "endLine" : 29,
+      "cleanedStartLine" : 20,
+      "cleanedEndLine" : 25
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/inscription.css",
+        "extension" : "css",
+        "linesOfCode" : 118,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 118,
+      "startLine" : 82,
+      "endLine" : 88,
+      "cleanedStartLine" : 72,
+      "cleanedEndLine" : 77
+    } ]
+  }, {
+    "blockSize" : 6,
+    "duplicatedFileBlocks" : [ {
+      "file" : {
+        "relativePath" : "frontend/src/vues/contact.css",
+        "extension" : "css",
+        "linesOfCode" : 272,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 272,
+      "startLine" : 230,
+      "endLine" : 235,
+      "cleanedStartLine" : 195,
+      "cleanedEndLine" : 200
+    }, {
+      "file" : {
+        "relativePath" : "frontend/src/vues/rendez-vous.css",
+        "extension" : "css",
+        "linesOfCode" : 329,
+        "components" : [ "primary::frontend" ],
+        "concerns" : [ "::Unclassified" ]
+      },
+      "sourceFileCleanedLinesOfCode" : 329,
+      "startLine" : 279,
+      "endLine" : 284,
+      "cleanedStartLine" : 241,
+      "cleanedEndLine" : 246
     } ]
   } ],
   "overallDuplication" : null

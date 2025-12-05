@@ -1,28 +1,20 @@
 <html>
 <head>
-    <title>async function loginUtilisateur()</title>
+    <title>export async function getHoraire()</title>
     <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
     <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">async function loginUtilisateur()</h3>
-<p style="margin-top: 4px">in <i>frontend\services\apiUtilisateur.js [64:74]</i></p>
+<h3 style="margin-bottom: 0">export async function getHoraire()</h3>
+<p style="margin-top: 4px">in <i>frontend/services/apiHoraire.js [33:35]</i></p>
 <ul>
-    <li><b>10</b> lines of code</li>
+    <li><b>3</b> lines of code</li>
     <li><b>1</b> McCabe index (conditional complexity)</li>
 </ul>
 <pre>
 <code class="js">
-async function loginUtilisateur(utilisateur) {
-  const payload = {
-    email: utilisateur.courriel,
-    mot_de_passe: utilisateur.mot_de_passe,
-  };
-
-  return httpJson(`${API_URL}/login`, {
-    method: &quot;POST&quot;,
-    body: JSON.stringify(payload),
-  });
+export async function getHoraire(id) {
+  return httpJson(buildHoraireUrl(`/${id}`));
 }
 
 </code>

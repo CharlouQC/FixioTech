@@ -1,50 +1,42 @@
-frontend\src\vues\contact.css [167:186]:
+frontend/src/vues/inscription.css [121:136]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background-color: white;
+}
+
+.redirect-text {
+  text-align: center;
+  margin-top: 1rem;
   color: #2c3e50;
 }
 
-.form-input:-webkit-autofill,
-.form-input:-webkit-autofill:hover,
-.form-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  -webkit-text-fill-color: #2c3e50;
-  box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
+.redirect-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-frontend\src\vues\rendez-vous.css [184:203]:
+frontend/src/vues/login.css [84:99]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background-color: white;
+}
+
+.redirect-text {
+  text-align: center;
+  margin-top: 1rem;
   color: #2c3e50;
 }
 
-.form-input:-webkit-autofill,
-.form-input:-webkit-autofill:hover,
-.form-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  -webkit-text-fill-color: #2c3e50;
-  box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
+.redirect-text a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.redirect-text a:hover {
+  text-decoration: underline;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

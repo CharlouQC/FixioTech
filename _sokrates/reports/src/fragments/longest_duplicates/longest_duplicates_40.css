@@ -1,25 +1,23 @@
-frontend\src\vues\inscription.css [37:43]:
+frontend/src/vues/horaires.css [21:26]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: white;
-  color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-frontend\src\vues\inscription.css [96:102]:
+frontend/src/vues/horaires.css [29:34]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
-  background-color: white;
-  color: #2c3e50;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 

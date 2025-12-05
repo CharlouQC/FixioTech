@@ -2,12 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import { assertDb } from "./config/databaseConnexion.js";
+import { assertDb, db } from "./config/databaseConnexion.js";
 import routerUtilisateur from "./routes/routeUtilisateur.js";
 import routerHoraire from "./routes/routeHoraire.js";
 import routerRendezVous from "./routes/routeRendezVous.js";
 import errorHandler from "./middlewares/errorHandler.js";
-import process from "process";
 
 dotenv.config();
 
@@ -46,6 +45,22 @@ app.get("/health", async (_req, res) => {
 app.use("/api/utilisateurs", routerUtilisateur);
 app.use("/api/horaires", routerHoraire);
 app.use("/api/rendezVous", routerRendezVous);
+
+app.get("/test-db", async (_req, res) => {
+  try {
+    const result = await new Promise((resolve, reject) => {
+      db.query("SELECT NOW()", (err, r) => {
+        if (err) reject(err);
+        else resolve(r);
+      });
+    });
+
+    const now = result.rows[0].now;
+    res.status(200).send(`Database OK — NOW() = ${now}`);
+  } catch (error) {
+    res.status(500).send(`Database ERROR — ${error.message}`);
+  }
+});
 
 app.use(errorHandler);
 

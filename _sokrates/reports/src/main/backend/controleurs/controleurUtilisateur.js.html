@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>backend\controleurs\controleurUtilisateur.js</title>
+    <title>backend/controleurs/controleurUtilisateur.js</title>
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
@@ -12,36 +12,41 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">backend\controleurs\controleurUtilisateur.js (<b>184</b> lines of code) (<a href="controleurUtilisateur.js">raw</a>):</h3>
+<h3 style="margin-bottom: 0">backend/controleurs/controleurUtilisateur.js (<b>156</b> lines of code) (<a href="controleurUtilisateur.js">raw</a>):</h3>
 <div id="editor">import { db } from &quot;../config/databaseConnexion.js&quot;;
+import { colonnesJour, baseDisponibiliteQuery } from &quot;utils.js&quot;;
 
 const getUtilisateurs = (req, res, next) =&gt; {
   const { role } = req.query; // ex: employe, client, admin
   let sql = &quot;SELECT id, email, nom_complet, role FROM utilisateurs&quot;;
   const params = [];
+
   if (role) {
-    sql += &quot; WHERE role = ?&quot;;
+    sql += &quot; WHERE role = $1&quot;;
     params.push(role);
   }
+
   db.query(sql, params, (err, results) =&gt; {
     if (err) return next(err);
-    res.json(results);
+    res.json(results.rows);
   });
 };
 
 const getUtilisateurById = async (req, res, next) =&gt; {
   const { id } = req.params;
+
   db.query(
-    &quot;SELECT id, email, nom_complet, role FROM utilisateurs WHERE id = ?&quot;,
+    &quot;SELECT id, email, nom_complet, role FROM utilisateurs WHERE id = $1&quot;,
     [id],
     (err, results) =&gt; {
       if (err) {
         return next(err);
       }
-      if (results.length === 0) {
+      const rows = results.rows;
+      if (rows.length === 0) {
         return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
       }
-      res.json(results[0]);
+      res.json(rows[0]);
     }
   );
 };
@@ -53,24 +58,19 @@ const addUtilisateur = async (req, res, next) =&gt; {
     return res.status(400).json({ message: &quot;Champs requis manquants&quot; });
   }
 
-  try {
-    const [results] = await db.query(
-      &quot;INSERT INTO utilisateurs (email, mot_de_passe, nom_complet, role) VALUES (?, ?, ?, ?)&quot;,
-      [email, mot_de_passe, nom_complet, role]
-    );
+  const sql = `
+    INSERT INTO utilisateurs (email, mot_de_passe, nom_complet, role)
+    VALUES ($1, $2, $3, $4)
+    RETURNING id, email, nom_complet, role
+  `;
 
-    res.status(201).json({
-      id: results.insertId,
-      email,
-      nom_complet,
-      role,
-    });
-  } catch (err) {
-    if (err.code === &quot;ER_DUP_ENTRY&quot;) {
-      return res.status(409).json({ message: &quot;Cet email est d&eacute;j&agrave; utilis&eacute;&quot; });
+  db.query(sql, [email, mot_de_passe, nom_complet, role], (err, results) =&gt; {
+    if (err) {
+      return next(err);
     }
-    return next(err);
-  }
+    const row = results.rows[0];
+    res.status(201).json(row);
+  });
 };
 
 const updateUtilisateur = async (req, res, next) =&gt; {
@@ -81,19 +81,19 @@ const updateUtilisateur = async (req, res, next) =&gt; {
   const updateValues = [];
 
   if (email) {
-    updateFields.push(&quot;email = ?&quot;);
+    updateFields.push(`email = $${updateValues.length + 1}`);
     updateValues.push(email);
   }
   if (mot_de_passe) {
-    updateFields.push(&quot;mot_de_passe = ?&quot;);
+    updateFields.push(`mot_de_passe = $${updateValues.length + 1}`);
     updateValues.push(mot_de_passe);
   }
   if (nom_complet) {
-    updateFields.push(&quot;nom_complet = ?&quot;);
+    updateFields.push(`nom_complet = $${updateValues.length + 1}`);
     updateValues.push(nom_complet);
   }
   if (role) {
-    updateFields.push(&quot;role = ?&quot;);
+    updateFields.push(`role = $${updateValues.length + 1}`);
     updateValues.push(role);
   }
 
@@ -101,40 +101,44 @@ const updateUtilisateur = async (req, res, next) =&gt; {
     return res.status(400).json({ message: &quot;Aucun champ &agrave; mettre &agrave; jour&quot; });
   }
 
+  // id devient le dernier param&egrave;tre
   updateValues.push(id);
+  const idIndex = updateValues.length;
 
-  db.query(
-    `UPDATE utilisateurs SET ${updateFields.join(&quot;, &quot;)} WHERE id = ?`,
-    updateValues,
-    (err, results) =&gt; {
-      if (err) {
-        return next(err);
-      }
-      if (results.affectedRows === 0) {
-        return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
-      }
-      res.status(200).json({
-        id,
-        ...(email &amp;&amp; { email }),
-        ...(nom_complet &amp;&amp; { nom_complet }),
-        ...(role &amp;&amp; { role }),
-      });
+  const sql = `
+    UPDATE utilisateurs
+    SET ${updateFields.join(&quot;, &quot;)}
+    WHERE id = $${idIndex}
+    RETURNING id, email, nom_complet, role
+  `;
+
+  db.query(sql, updateValues, (err, results) =&gt; {
+    if (err) {
+      return next(err);
     }
-  );
+    if (results.rowCount === 0) {
+      return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
+    }
+    res.status(200).json(results.rows[0]);
+  });
 };
 
 const deleteUtilisateur = async (req, res, next) =&gt; {
   const { id } = req.params;
 
-  db.query(&quot;DELETE FROM utilisateurs WHERE id = ?&quot;, [id], (err, results) =&gt; {
-    if (err) {
-      return next(err);
+  db.query(
+    &quot;DELETE FROM utilisateurs WHERE id = $1&quot;,
+    [id],
+    (err, results) =&gt; {
+      if (err) {
+        return next(err);
+      }
+      if (results.rowCount === 0) {
+        return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
+      }
+      res.status(200).json({ message: &quot;Utilisateur supprim&eacute; avec succ&egrave;s&quot; });
     }
-    if (results.affectedRows === 0) {
-      return res.status(404).json({ message: &quot;Utilisateur non trouv&eacute;&quot; });
-    }
-    res.status(200).json({ message: &quot;Utilisateur supprim&eacute; avec succ&egrave;s&quot; });
-  });
+  );
 };
 
 const loginUtilisateur = async (req, res, next) =&gt; {
@@ -145,40 +149,29 @@ const loginUtilisateur = async (req, res, next) =&gt; {
   }
 
   db.query(
-    &quot;SELECT id, email, nom_complet, role FROM utilisateurs WHERE email = ? AND mot_de_passe = ?&quot;,
+    `
+    SELECT id, email, nom_complet, role
+    FROM utilisateurs
+    WHERE email = $1 AND mot_de_passe = $2
+  `,
     [email, mot_de_passe],
     (err, results) =&gt; {
       if (err) {
         return next(err);
       }
-      if (results.length === 0) {
+      const rows = results.rows;
+      if (rows.length === 0) {
         return res
           .status(401)
           .json({ message: &quot;Email ou mot de passe incorrect&quot; });
       }
       res.status(200).json({
         message: &quot;Connexion r&eacute;ussie&quot;,
-        utilisateur: results[0],
+        utilisateur: rows[0],
       });
     }
   );
 };
-
-function colonnesJour(dateISO) {
-  // 0=dimanche .. 6=samedi
-  const j = new Date(`${dateISO}T00:00:00`).getDay();
-  const noms = [
-    &quot;dimanche&quot;,
-    &quot;lundi&quot;,
-    &quot;mardi&quot;,
-    &quot;mercredi&quot;,
-    &quot;jeudi&quot;,
-    &quot;vendredi&quot;,
-    &quot;samedi&quot;,
-  ];
-  const jour = noms[j];
-  return { debutCol: `${jour}_debut`, finCol: `${jour}_fin` };
-}
 
 const getEmployesDisponibles = (req, res, next) =&gt; {
   const { date, heure } = req.query; // ex: 2025-10-31, 14:00
@@ -190,38 +183,21 @@ const getEmployesDisponibles = (req, res, next) =&gt; {
 
   const { debutCol, finCol } = colonnesJour(date);
 
-  const sql = `
-    SELECT u.id, u.email, u.nom_complet, u.role
-    FROM utilisateurs u
-    JOIN horaires h ON h.employe_id = u.id
-    LEFT JOIN rendez_vous r
-      ON r.employe_id = u.id AND r.date_rdv = ? AND r.heure_rdv = ?
-    WHERE u.role = 'employe'
-      AND h.${debutCol} IS NOT NULL
-      AND h.${finCol}   IS NOT NULL
-      AND h.${debutCol} &lt;= ?
-      AND ? &lt; h.${finCol}
-      AND r.id IS NULL
-    ORDER BY u.nom_complet ASC
-  `;
+  // Requ&ecirc;tes communes, avec SELECT complet (id + email + nom + role)
+  const sql =
+    baseDisponibiliteQuery(debutCol, finCol) + &quot; ORDER BY u.nom_complet ASC&quot;;
+
   const params = [date, heure, heure, heure];
 
-  db.query(sql, params, (err, rows) =&gt; {
+  db.query(sql, params, (err, results) =&gt; {
     if (err) return next(err);
-    res.json(rows);
+    res.json(results.rows);
   });
 };
 
 export {
-  getUtilisateurs,
-  getUtilisateurById,
-  addUtilisateur,
-  updateUtilisateur,
-  deleteUtilisateur,
-  loginUtilisateur,
-  getEmployesDisponibles,
-};
-</div>
+  getUtilisateurs, getUtilisateurById, addUtilisateur, updateUtilisateur, deleteUtilisateur, loginUtilisateur, getEmployesDisponibles,
+};</div>
 <script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");

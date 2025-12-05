@@ -1,21 +1,42 @@
 <html>
 <head>
-    <title>export async function assertDb()</title>
+    <title>function makeRendezVousValidation()</title>
     <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
     <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">export async function assertDb()</h3>
-<p style="margin-top: 4px">in <i>backend\config\databaseConnexion.js [26:29]</i></p>
+<h3 style="margin-bottom: 0">function makeRendezVousValidation()</h3>
+<p style="margin-top: 4px">in <i>backend/validateurs/validateurRendezVous.js [6:30]</i></p>
 <ul>
-    <li><b>4</b> lines of code</li>
-    <li><b>1</b> McCabe index (conditional complexity)</li>
+    <li><b>20</b> lines of code</li>
+    <li><b>2</b> McCabe index (conditional complexity)</li>
 </ul>
 <pre>
 <code class="js">
-export async function assertDb() {
-  const [rows] = await db.query(&quot;SELECT 1 AS ok&quot;);
-  return rows[0]?.ok === 1;
+function makeRendezVousValidation({ partial = false } = {}) {
+  // Si partial = true (update) &rarr; tous les champs sont optionnels
+  // Sinon (add) &rarr; tous les champs sauf description_probleme sont requis
+  const field = (name) =&gt; (partial ? body(name).optional() : body(name));
+
+  return [
+    field(&quot;client_id&quot;).isInt().withMessage(&quot;ID client invalide&quot;),
+    field(&quot;employe_id&quot;).isInt().withMessage(&quot;ID employ&eacute; invalide&quot;),
+    field(&quot;date_rdv&quot;)
+      .isISO8601()
+      .withMessage(&quot;Date de rendez-vous invalide&quot;),
+    field(&quot;heure_rdv&quot;)
+      .matches(timeRe)
+      .withMessage(&quot;Heure de rendez-vous invalide&quot;),
+
+    // Dans les deux cas, la description reste optionnelle
+    body(&quot;description_probleme&quot;)
+      .optional()
+      .isString()
+      .withMessage(&quot;Description du probl&egrave;me invalide&quot;)
+      .trim()
+      .isLength({ max: 5000 })
+      .withMessage(&quot;Description trop longue (max 5000).&quot;),
+  ];
 }
 
 </code>

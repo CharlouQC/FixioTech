@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>frontend/services/httpClient.js</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
+<h3 style="margin-bottom: 0">frontend/services/httpClient.js (<b>45</b> lines of code) (<a href="httpClient.js">raw</a>):</h3>
+<div id="editor">// Client HTTP g&eacute;n&eacute;rique pour le frontend
+
+export async function httpJson(url, options = {}) {
+  const res = await fetch(url, {
+    headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },
+    ...options,
+  });
+
+  const contentType = res.headers.get(&quot;content-type&quot;) || &quot;&quot;;
+
+  if (!res.ok) {
+    let message = `Erreur HTTP ${res.status}`;
+
+    if (contentType.includes(&quot;application/json&quot;)) {
+      try {
+        const body = await res.json();
+        message = body?.message || message;
+      } catch {
+        // Si le JSON plante, on essaie au moins de lire le texte brut
+        try {
+          const text = await res.text();
+          if (text) message = text;
+        } catch {
+          // Ignore text parsing errors
+        }
+      }
+    } else {
+      try {
+        const text = await res.text();
+        if (text) message = text;
+      } catch {
+        // Ignore text parsing errors
+      }
+    }
+
+    throw new Error(message);
+  }
+
+  if (res.status === 204) return null;
+
+  if (contentType.includes(&quot;application/json&quot;)) {
+    return res.json();
+  } else {
+    const text = await res.text();
+    return text || null;
+  }
+}
+
+// Normalise les URLs bas&eacute;es sur une base
+export const buildUrl = (baseUrl, path = &quot;&quot;) =&gt;
+  path ? `${baseUrl}${path.startsWith(&quot;/&quot;) ? path : `/${path}`}` : baseUrl;
+
+// Wrapper pour factoriser m&eacute;thode + body JSON
+export const apiRequest = (baseUrl, method, path = &quot;&quot;, body) =&gt;
+  httpJson(buildUrl(baseUrl, path), {
+    method,
+    ...(body !== undefined ? { body: JSON.stringify(body) } : {}),
+  });
+
+// Petit utilitaire commun
+export const emptyToNull = (v) =&gt; (v === &quot;&quot; ? null : v);</div>
+<script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setTheme("ace/theme/xcode");
+    editor.setReadOnly(true);
+    editor.setOption("wrap", true);
+    editor.setPrintMarginColumn(120);
+</script>
+</body>

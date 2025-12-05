@@ -8,13 +8,8 @@
   },
   "summary" : [ ],
   "srcRoot" : "..",
-  "extensions" : [ "js", "ts", "json", "md", "cjs", "mjs", "yml", "txt", "ps1", "cmd", "css", "jsx", "npmignore", "xml", "editorconfig", "markdown", "tsx", "html", "jshintrc", "babelrc", "svg", "coffee", "py", "jscsrc", "sql", "nix", "mdown", "gitignore", "php" ],
+  "extensions" : [ "js", "ts", "json", "md", "cjs", "html", "mjs", "txt", "css", "jsx", "yml", "tsx", "npmignore", "xml", "sql", "markdown", "editorconfig", "babelrc", "svg", "py", "jshintrc", "mdown", "gitignore", "coffee", "php" ],
   "ignore" : [ {
-    "pathPattern" : ".*/[.][a-zA-Z0-9_]+.*",
-    "contentPattern" : "",
-    "exception" : false,
-    "note" : "Hidden files and folders"
-  }, {
     "pathPattern" : ".*/node_modules/.*",
     "contentPattern" : "",
     "exception" : false,
@@ -25,25 +20,15 @@
     "exception" : false,
     "note" : "Typescript definition files"
   }, {
-    "pathPattern" : ".*[.]min[.]js",
-    "contentPattern" : "",
-    "exception" : false,
-    "note" : "Minimized JS library"
-  }, {
-    "pathPattern" : ".*/bin/.*",
-    "contentPattern" : "",
-    "exception" : false,
-    "note" : "Binaries for distribution"
-  }, {
     "pathPattern" : ".*/dist/.*",
     "contentPattern" : "",
     "exception" : false,
     "note" : "Distributions"
   }, {
-    "pathPattern" : ".*/deps/.*",
+    "pathPattern" : ".*/[.][a-zA-Z0-9_]+.*",
     "contentPattern" : "",
     "exception" : false,
-    "note" : "Dependencies"
+    "note" : "Hidden files and folders"
   }, {
     "pathPattern" : ".*/react(-[^.]*)?\\.js",
     "contentPattern" : "",
@@ -55,15 +40,30 @@
     "exception" : false,
     "note" : "Documentation"
   }, {
-    "pathPattern" : ".*/[Vv]endors?/.*",
+    "pathPattern" : ".*[.]min[.]js",
     "contentPattern" : "",
     "exception" : false,
-    "note" : "Dependencies"
+    "note" : "Minimized JS library"
+  }, {
+    "pathPattern" : ".*/bin/.*",
+    "contentPattern" : "",
+    "exception" : false,
+    "note" : "Binaries for distribution"
   }, {
     "pathPattern" : ".*/cache/.*",
     "contentPattern" : "",
     "exception" : false,
     "note" : "Caches"
+  }, {
+    "pathPattern" : ".*/[Vv]endors?/.*",
+    "contentPattern" : "",
+    "exception" : false,
+    "note" : "Dependencies"
+  }, {
+    "pathPattern" : ".*/deps/.*",
+    "contentPattern" : "",
+    "exception" : false,
+    "note" : "Dependencies"
   } ],
   "main" : {
     "name" : "main",
@@ -83,11 +83,6 @@
       "exception" : false,
       "note" : "Test files"
     }, {
-      "pathPattern" : ".*/[Tt]ests/.*",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "Test files"
-    }, {
       "pathPattern" : ".*[.][Tt]est[.].*",
       "contentPattern" : "",
       "exception" : false,
@@ -98,12 +93,7 @@
       "exception" : false,
       "note" : "Test files"
     }, {
-      "pathPattern" : ".*[.]spec[.]ts",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "TypeScript test files"
-    }, {
-      "pathPattern" : ".*__tests__.*",
+      "pathPattern" : ".*[-]test[-].*",
       "contentPattern" : "",
       "exception" : false,
       "note" : "Test files"
@@ -113,7 +103,17 @@
       "exception" : false,
       "note" : "JavaScript test files"
     }, {
-      "pathPattern" : ".*[-]test[-].*",
+      "pathPattern" : ".*__tests__.*",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "Test files"
+    }, {
+      "pathPattern" : ".*[.]spec[.]ts",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "TypeScript test files"
+    }, {
+      "pathPattern" : ".*/[Tt]ests/.*",
       "contentPattern" : "",
       "exception" : false,
       "note" : "Test files"
@@ -123,21 +123,31 @@
   "generated" : {
     "name" : "generated",
     "sourceFileFilters" : [ {
-      "pathPattern" : ".*/package[-]lock[.]json",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "A generated npm package lock file"
-    }, {
       "pathPattern" : ".*/generated/.*",
       "contentPattern" : "",
       "exception" : false,
       "note" : "Generated files"
+    }, {
+      "pathPattern" : ".*/package[-]lock[.]json",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "A generated npm package lock file"
     } ],
     "files" : [ ]
   },
   "buildAndDeployment" : {
     "name" : "build and deployment",
     "sourceFileFilters" : [ {
+      "pathPattern" : ".*/package[.]json",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "npm configuration"
+    }, {
+      "pathPattern" : ".*([.]|/)webpack([.]|/).*",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "Webpack configuration files"
+    }, {
       "pathPattern" : ".*[.]git[a-z]+",
       "contentPattern" : "",
       "exception" : false,
@@ -148,36 +158,16 @@
       "exception" : false,
       "note" : "Git ignore files"
     }, {
-      "pathPattern" : ".*/package[.]json",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "npm configuration"
-    }, {
       "pathPattern" : ".*/package[-]lock[.]json",
       "contentPattern" : "",
       "exception" : false,
       "note" : "npm configuration"
-    }, {
-      "pathPattern" : ".*([.]|/)webpack([.]|/).*",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "Webpack configuration files"
     } ],
     "files" : [ ]
   },
   "other" : {
     "name" : "other",
     "sourceFileFilters" : [ {
-      "pathPattern" : ".*/[.]gitignore",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "Ignore list"
-    }, {
-      "pathPattern" : ".*[.]json",
-      "contentPattern" : "",
-      "exception" : false,
-      "note" : "JSON files"
-    }, {
       "pathPattern" : ".*[.]md",
       "contentPattern" : "",
       "exception" : false,
@@ -188,25 +178,30 @@
       "exception" : false,
       "note" : "Text files"
     }, {
-      "pathPattern" : ".*/LICENSE[.][a-z0-9]+",
+      "pathPattern" : ".*[.]json",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "JSON files"
+    }, {
+      "pathPattern" : ".*[.]txt",
       "contentPattern" : "",
       "exception" : false,
       "note" : "Text files"
     }, {
-      "pathPattern" : ".*[.]markdown",
+      "pathPattern" : ".*/LICENSE[.][a-z0-9]+",
       "contentPattern" : "",
       "exception" : false,
-      "note" : "Markdown files"
+      "note" : "Text files"
     }, {
       "pathPattern" : ".*/[.]npmignore",
       "contentPattern" : "",
       "exception" : false,
       "note" : "Ignore list"
     }, {
-      "pathPattern" : ".*[.]txt",
+      "pathPattern" : ".*[.]markdown",
       "contentPattern" : "",
       "exception" : false,
-      "note" : "Text files"
+      "note" : "Markdown files"
     }, {
       "pathPattern" : ".*[.]editorconfig",
       "contentPattern" : "",
@@ -222,6 +217,11 @@
       "contentPattern" : "",
       "exception" : false,
       "note" : "Markdown files"
+    }, {
+      "pathPattern" : ".*/[.]gitignore",
+      "contentPattern" : "",
+      "exception" : false,
+      "note" : "Ignore list"
     } ],
     "files" : [ ]
   },

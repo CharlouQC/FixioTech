@@ -1,4 +1,9 @@
 import { db } from "../config/databaseConnexion.js";
+import { colonnesJour, baseDisponibiliteQuery } from "utils.js";
+
+function emptyToNull(value) {
+  return value === undefined || value === null || value === "" ? null : value;
+}
 
 const getRendezVous = (req, res, next) => {
   const { client_id, employe_id } = req.query;
@@ -42,25 +47,6 @@ const getRendezVousById = async (req, res, next) => {
   );
 };
 
-function colonnesJour(dateISO) {
-  const j = new Date(`${dateISO}T00:00:00`).getDay();
-  const noms = [
-    "dimanche",
-    "lundi",
-    "mardi",
-    "mercredi",
-    "jeudi",
-    "vendredi",
-    "samedi",
-  ];
-  const jour = noms[j];
-  return { debutCol: `${jour}_debut`, finCol: `${jour}_fin` };
-}
-
-function emptyToNull(value) {
-  return value === undefined || value === null || value === "" ? null : value;
-}
-
 const addRendezVous = (req, res, next) => {
   const { client_id, employe_id, date_rdv, heure_rdv } = req.body;
   const description_probleme = emptyToNull(req.body.description_probleme);
@@ -73,19 +59,8 @@ const addRendezVous = (req, res, next) => {
 
   const { debutCol, finCol } = colonnesJour(date_rdv);
 
-  const baseSql = `
-    SELECT u.id
-    FROM utilisateurs u
-    JOIN horaires h ON h.employe_id = u.id
-    LEFT JOIN rendez_vous r
-      ON r.employe_id = u.id AND r.date_rdv = $1 AND r.heure_rdv = $2
-    WHERE u.role = 'employe'
-      AND h.${debutCol} IS NOT NULL
-      AND h.${finCol} IS NOT NULL
-      AND h.${debutCol} <= $3
-      AND $4 < h.${finCol}
-      AND r.id IS NULL
-  `;
+  // Utilisation de la requête de base commune, avec SELECT u.id
+  const baseSql = baseDisponibiliteQuery(debutCol, finCol, "u.id");
   const params = [date_rdv, heure_rdv, heure_rdv, heure_rdv];
 
   const sql = employe_id
@@ -215,11 +190,5 @@ const getRendezVousByClientId = async (req, res, next) => {
 };
 
 export {
-  getRendezVous,
-  getRendezVousById,
-  addRendezVous,
-  updateRendezVous,
-  deleteRendezVous,
-  getRendezVousByEmployeId,
-  getRendezVousByClientId,
+  getRendezVous, getRendezVousById, addRendezVous, updateRendezVous, deleteRendezVous, getRendezVousByEmployeId, getRendezVousByClientId,
 };

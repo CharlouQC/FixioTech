@@ -1,2 +1,2 @@
-frontend\src\vues\contact.jsx (1 line):
+frontend/src/vues/contact.jsx (1 line):
 	- line 69: // TODO: Appel à l'API backend pour envoyer le message

@@ -1,29 +1,27 @@
 <html>
 <head>
-    <title>port: Number()</title>
+    <title>export default defineConfig()</title>
     <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
     <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">port: Number()</h3>
-<p style="margin-top: 4px">in <i>backend\config\databaseConnexion.js [16:26]</i></p>
+<h3 style="margin-bottom: 0">export default defineConfig()</h3>
+<p style="margin-top: 4px">in <i>backend/vitest.config.js [3:11]</i></p>
 <ul>
-    <li><b>10</b> lines of code</li>
-    <li><b>5</b> McCabe index (conditional complexity)</li>
+    <li><b>9</b> lines of code</li>
+    <li><b>1</b> McCabe index (conditional complexity)</li>
 </ul>
 <pre>
 <code class="js">
-  port: Number(process.env.DB_PORT || 3306),
-  user: process.env.DB_USER || &quot;root&quot;,
-  password: process.env.DB_PASSWORD || &quot;&quot;,
-  database: process.env.DB_NAME || &quot;&quot;,
-  ssl,
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
+export default defineConfig({
+  test: {
+    globals: true,
+    environment: &quot;node&quot;,
+    setupFiles: [&quot;./tests/setup.js&quot;],
+    testTimeout: 30000, // 30s pour tests avec base de donn&eacute;es
+    hookTimeout: 30000,
+  },
 });
-
-export async function assertDb() {
 
 </code>
 </pre>

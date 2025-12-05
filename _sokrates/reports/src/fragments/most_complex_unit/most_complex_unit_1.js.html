@@ -6,46 +6,56 @@
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
 <h3 style="margin-bottom: 0">function errorHandler()</h3>
-<p style="margin-top: 4px">in <i>backend\middlewares\errorHandler.js [1:35]</i></p>
+<p style="margin-top: 4px">in <i>backend/middlewares/errorHandler.js [1:45]</i></p>
 <ul>
-    <li><b>30</b> lines of code</li>
-    <li><b>15</b> McCabe index (conditional complexity)</li>
+    <li><b>33</b> lines of code</li>
+    <li><b>16</b> McCabe index (conditional complexity)</li>
 </ul>
 <pre>
 <code class="js">
 function errorHandler(error, req, res, next) {
   if (res.headersSent) return next(error);
 
-  // Priorit&eacute; &agrave; error.status / error.statusCode si pr&eacute;sents et num&eacute;riques
+  // Status explicite dans l'erreur ?
   let status = Number.isInteger(error.status || error.statusCode)
     ? error.status || error.statusCode
-    : 500;
+    : null;
 
-  // Map de quelques codes MySQL vers des HTTP codes parlants
-  if (!Number.isInteger(status) &amp;&amp; typeof error.code === &quot;string&quot;) {
+  // Mappage PostgreSQL
+  if (!status &amp;&amp; typeof error.code === &quot;string&quot;) {
     switch (error.code) {
-      case &quot;ER_NO_SUCH_TABLE&quot;:
-        status = 500;
-        break; // sch&eacute;ma manquant
-      case &quot;ER_DUP_ENTRY&quot;:
+      case &quot;23505&quot;: // unique_violation
         status = 409;
-        break; // conflit/unique
-      case &quot;ER_BAD_FIELD_ERROR&quot;:
+        break;
+
+      case &quot;23503&quot;: // foreign_key_violation
+        status = 409;
+        break;
+
+      case &quot;42601&quot;: // SQL syntax error
         status = 400;
-        break; // champ invalide
-      case &quot;ER_ROW_IS_REFERENCED_2&quot;:
-      case &quot;ER_NO_REFERENCED_ROW_2&quot;:
-        status = 409;
-        break; // contrainte FK
+        break;
+
+      case &quot;42703&quot;: // Column not found
+        status = 400;
+        break;
+
+      case &quot;42P01&quot;: // Table not found
+        status = 500;
+        break;
+
       default:
         status = 500;
     }
   }
 
+  // Si toujours rien
+  if (!status) status = 500;
+
   res.status(status).json({
     message: error.message || &quot;Une erreur inconnue est survenue !&quot;,
     details: error.details || null,
-    code: error.code || null, // utile au debug c&ocirc;t&eacute; client
+    code: error.code || null,
   });
 }
 

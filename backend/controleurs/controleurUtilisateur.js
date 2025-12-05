@@ -1,4 +1,5 @@
 import { db } from "../config/databaseConnexion.js";
+import { colonnesJour, baseDisponibiliteQuery } from "utils.js";
 
 const getUtilisateurs = (req, res, next) => {
   const { role } = req.query; // ex: employe, client, admin
@@ -157,22 +158,6 @@ const loginUtilisateur = async (req, res, next) => {
   );
 };
 
-function colonnesJour(dateISO) {
-  // 0=dimanche .. 6=samedi
-  const j = new Date(`${dateISO}T00:00:00`).getDay();
-  const noms = [
-    "dimanche",
-    "lundi",
-    "mardi",
-    "mercredi",
-    "jeudi",
-    "vendredi",
-    "samedi",
-  ];
-  const jour = noms[j];
-  return { debutCol: `${jour}_debut`, finCol: `${jour}_fin` };
-}
-
 const getEmployesDisponibles = (req, res, next) => {
   const { date, heure } = req.query; // ex: 2025-10-31, 14:00
   if (!date || !heure) {
@@ -183,20 +168,10 @@ const getEmployesDisponibles = (req, res, next) => {
 
   const { debutCol, finCol } = colonnesJour(date);
 
-  const sql = `
-    SELECT u.id, u.email, u.nom_complet, u.role
-    FROM utilisateurs u
-    JOIN horaires h ON h.employe_id = u.id
-    LEFT JOIN rendez_vous r
-      ON r.employe_id = u.id AND r.date_rdv = $1 AND r.heure_rdv = $2
-    WHERE u.role = 'employe'
-      AND h.${debutCol} IS NOT NULL
-      AND h.${finCol}   IS NOT NULL
-      AND h.${debutCol} <= $3
-      AND $4 < h.${finCol}
-      AND r.id IS NULL
-    ORDER BY u.nom_complet ASC
-  `;
+  // Requêtes communes, avec SELECT complet (id + email + nom + role)
+  const sql =
+    baseDisponibiliteQuery(debutCol, finCol) + " ORDER BY u.nom_complet ASC";
+
   const params = [date, heure, heure, heure];
 
   db.query(sql, params, (err, results) => {
@@ -206,11 +181,5 @@ const getEmployesDisponibles = (req, res, next) => {
 };
 
 export {
-  getUtilisateurs,
-  getUtilisateurById,
-  addUtilisateur,
-  updateUtilisateur,
-  deleteUtilisateur,
-  loginUtilisateur,
-  getEmployesDisponibles,
+  getUtilisateurs, getUtilisateurById, addUtilisateur, updateUtilisateur, deleteUtilisateur, loginUtilisateur, getEmployesDisponibles,
 };

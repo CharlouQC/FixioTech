@@ -1,1 +1,1 @@
-[ "frontend\\src\\tests\\Inscription.test.jsx", "frontend\\src\\tests\\Login.test.jsx" ]
+[ "backend/tests/setup.js", "backend/tests/integration/debug.test.js", "backend/tests/integration/rendez-vous.test.js", "backend/tests/integration/utilisateurs.test.js", "frontend/src/tests/Inscription.test.jsx", "frontend/src/tests/Login.test.jsx" ]

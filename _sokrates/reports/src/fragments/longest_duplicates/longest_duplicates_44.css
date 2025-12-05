@@ -1,24 +1,22 @@
-frontend\src\vues\inscription.css [11:17]:
+frontend/src/vues/contact.css [230:235]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  animation: slideDown 0.3s ease;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-frontend\src\vues\login.css [11:17]:
+frontend/src/vues/rendez-vous.css [279:284]:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  animation: slideDown 0.3s ease;
 }
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

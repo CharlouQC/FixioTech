@@ -1,31 +1,29 @@
 <html>
 <head>
-    <title>async function addUtilisateur()</title>
+    <title>query()</title>
     <link rel="stylesheet" charset="UTF-8" href="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/styles/docco.min.css">
     <script charset="UTF-8" type="application/javascript" src="https://d2bb1mtyn3kglb.cloudfront.net/lib/highlight/highlight.min.js"></script>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">async function addUtilisateur()</h3>
-<p style="margin-top: 4px">in <i>frontend\services\apiUtilisateur.js [50:62]</i></p>
+<h3 style="margin-bottom: 0">query()</h3>
+<p style="margin-top: 4px">in <i>backend/config/databaseConnexion.js [33:43]</i></p>
 <ul>
-    <li><b>12</b> lines of code</li>
+    <li><b>10</b> lines of code</li>
     <li><b>2</b> McCabe index (conditional complexity)</li>
 </ul>
 <pre>
 <code class="js">
-async function addUtilisateur(utilisateur) {
-  const payload = {
-    email: utilisateur.courriel,
-    mot_de_passe: utilisateur.mot_de_passe,
-    nom_complet: utilisateur.nom_complet,
-    role: utilisateur.role || &quot;client&quot;,
-  };
+  query(text, params, callback) {
+    if (typeof params === &quot;function&quot;) {
+      callback = params;
+      params = [];
+    }
 
-  return httpJson(API_URL, {
-    method: &quot;POST&quot;,
-    body: JSON.stringify(payload),
-  });
-}
+    pool
+      .query(text, params)
+      .then((res) =&gt; callback(null, res))
+      .catch((err) =&gt; callback(err));
+  },
 
 </code>
 </pre>

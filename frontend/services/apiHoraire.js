@@ -1,140 +1,62 @@
-const API_URL = import.meta.env.VITE_API_URL?.replace('/utilisateurs', '/horaires') || "http://localhost:3000/api/horaires";
+import { httpJson, buildUrl, apiRequest } from "httpClient.js";
 
-async function httpJson(url, options = {}) {
-  const res = await fetch(url, {
-    headers: { "Content-Type": "application/json" },
-    ...options,
-  });
+const API_URL =
+  import.meta.env.VITE_API_URL?.replace("/utilisateurs", "/horaires") ||
+  "http://localhost:3000/api/horaires";
 
-  const contentType = res.headers.get("content-type") || "";
+const buildHoraireUrl = (path = "") => buildUrl(API_URL, path);
 
-  if (!res.ok) {
-    let message = `Erreur HTTP ${res.status}`;
-    if (contentType.includes("application/json")) {
-      try {
-        const body = await res.json();
-        message = body?.message || message;
-      } catch {
-        // Ignore JSON parsing errors
-        try {
-          const text = await res.text();
-          if (text) message = text;
-        } catch {
-          // Ignore text parsing errors
-        }
-      }
-    }
-    throw new Error(message);
-  }
+const buildHorairePayload = (horaire) => ({
+  employe_id: horaire.employe_id,
+  lundi_debut: horaire.lundi_debut ?? null,
+  lundi_fin: horaire.lundi_fin ?? null,
+  mardi_debut: horaire.mardi_debut ?? null,
+  mardi_fin: horaire.mardi_fin ?? null,
+  mercredi_debut: horaire.mercredi_debut ?? null,
+  mercredi_fin: horaire.mercredi_fin ?? null,
+  jeudi_debut: horaire.jeudi_debut ?? null,
+  jeudi_fin: horaire.jeudi_fin ?? null,
+  vendredi_debut: horaire.vendredi_debut ?? null,
+  vendredi_fin: horaire.vendredi_fin ?? null,
+  samedi_debut: horaire.samedi_debut ?? null,
+  samedi_fin: horaire.samedi_fin ?? null,
+  dimanche_debut: horaire.dimanche_debut ?? null,
+  dimanche_fin: horaire.dimanche_fin ?? null,
+});
 
-  if (res.status === 204) return null;
-
-  if (contentType.includes("application/json")) {
-    return res.json();
-  } else {
-    const text = await res.text();
-    return text || null;
-  }
-}
-
-/**
- * GET /api/horaires
- */
+// GET /api/horaires
 export async function getHoraires() {
-  return httpJson(API_URL);
+  return httpJson(buildHoraireUrl());
 }
 
-/**
- * GET /api/horaires/:id
- */
+// GET /api/horaires/:id
 export async function getHoraire(id) {
-  return httpJson(`${API_URL}/${id}`);
+  return httpJson(buildHoraireUrl(`/${id}`));
 }
 
-/**
- * POST /api/horaires
- * @param {Object} horaire
- * {
- *   employe_id,
- *   lundi_debut, lundi_fin,
- *   mardi_debut, mardi_fin,
- *   mercredi_debut, mercredi_fin,
- *   jeudi_debut, jeudi_fin,
- *   vendredi_debut, vendredi_fin,
- *   samedi_debut, samedi_fin,
- *   dimanche_debut, dimanche_fin
- * }
- */
+// POST /api/horaires
 export async function addHoraire(horaire) {
-  const payload = {
-    employe_id: horaire.employe_id,
-    lundi_debut: horaire.lundi_debut ?? null,
-    lundi_fin: horaire.lundi_fin ?? null,
-    mardi_debut: horaire.mardi_debut ?? null,
-    mardi_fin: horaire.mardi_fin ?? null,
-    mercredi_debut: horaire.mercredi_debut ?? null,
-    mercredi_fin: horaire.mercredi_fin ?? null,
-    jeudi_debut: horaire.jeudi_debut ?? null,
-    jeudi_fin: horaire.jeudi_fin ?? null,
-    vendredi_debut: horaire.vendredi_debut ?? null,
-    vendredi_fin: horaire.vendredi_fin ?? null,
-    samedi_debut: horaire.samedi_debut ?? null,
-    samedi_fin: horaire.samedi_fin ?? null,
-    dimanche_debut: horaire.dimanche_debut ?? null,
-    dimanche_fin: horaire.dimanche_fin ?? null,
-  };
-
-  return httpJson(API_URL, {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
+  return apiRequest(API_URL, "POST", "", buildHorairePayload(horaire));
 }
 
-/**
- * PUT /api/horaires/:id
- */
+// PUT /api/horaires/:id
 export async function updateHoraire(id, horaire) {
-  const payload = {
-    employe_id: horaire.employe_id,
-    lundi_debut: horaire.lundi_debut ?? null,
-    lundi_fin: horaire.lundi_fin ?? null,
-    mardi_debut: horaire.mardi_debut ?? null,
-    mardi_fin: horaire.mardi_fin ?? null,
-    mercredi_debut: horaire.mercredi_debut ?? null,
-    mercredi_fin: horaire.mercredi_fin ?? null,
-    jeudi_debut: horaire.jeudi_debut ?? null,
-    jeudi_fin: horaire.jeudi_fin ?? null,
-    vendredi_debut: horaire.vendredi_debut ?? null,
-    vendredi_fin: horaire.vendredi_fin ?? null,
-    samedi_debut: horaire.samedi_debut ?? null,
-    samedi_fin: horaire.samedi_fin ?? null,
-    dimanche_debut: horaire.dimanche_debut ?? null,
-    dimanche_fin: horaire.dimanche_fin ?? null,
-  };
-
-  return httpJson(`${API_URL}/${id}`, {
-    method: "PUT",
-    body: JSON.stringify(payload),
-  });
+  return apiRequest(API_URL, "PUT", `/${id}`, buildHorairePayload(horaire));
 }
 
-/**
- * DELETE /api/horaires/:id
- */
+// DELETE /api/horaires/:id
 export async function deleteHoraire(id) {
-  return httpJson(`${API_URL}/${id}`, {
-    method: "DELETE",
-  });
+  return apiRequest(API_URL, "DELETE", `/${id}`);
 }
 
 // GET /api/horaires/employe/:employeId
 export async function getHoraireByEmploye(employeId) {
-  return httpJson(`${API_URL}/employe/${employeId}`);
+  return httpJson(
+    buildHoraireUrl(`/employe/${encodeURIComponent(employeId)}`)
+  );
 }
 
-// Helper front : charge par employé puis decide add/update
 export async function saveHoraireForEmploye(horaire) {
-  // horaire doit contenir employe_id et éventuellement id si déjà existant
   if (horaire.id) {
     return updateHoraire(horaire.id, horaire);
   }

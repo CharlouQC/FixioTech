@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>backend\controleurs\controleurHoraire.js</title>
+    <title>backend/controleurs/controleurHoraire.js</title>
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
@@ -12,175 +12,142 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">backend\controleurs\controleurHoraire.js (<b>185</b> lines of code) (<a href="controleurHoraire.js">raw</a>):</h3>
+<h3 style="margin-bottom: 0">backend/controleurs/controleurHoraire.js (<b>105</b> lines of code) (<a href="controleurHoraire.js">raw</a>):</h3>
 <div id="editor">import { db } from &quot;../config/databaseConnexion.js&quot;;
 
-const getHoraires = async (req, res, next) =&gt; {
-  db.query(&quot;SELECT * FROM horaires&quot;, (err, results) =&gt; {
+// -----------------------------------------------------------------------------
+// Helpers g&eacute;n&eacute;riques
+// -----------------------------------------------------------------------------
+
+function runQuery(sql, params, next, onSuccess) {
+  db.query(sql, params, (err, results) =&gt; {
     if (err) {
       return next(err);
     }
-    res.json(results);
+    onSuccess(results);
+  });
+}
+
+/**
+ * Helper pour r&eacute;cup&eacute;rer un horaire unique selon une clause WHERE.
+ * - whereClause : cha&icirc;ne du type &quot;id = $1&quot; ou &quot;employe_id = $1&quot;
+ * - params : tableau de param&egrave;tres pour la requ&ecirc;te
+ * - options.allowNull :
+ *      - false  -&gt; 404 si aucun horaire
+ *      - true   -&gt; 200 avec `null` si aucun horaire
+ */
+function findHoraire(whereClause, params, next, res, { allowNull = false } = {}) {
+  const sql = `SELECT * FROM horaires WHERE ${whereClause}`;
+
+  runQuery(sql, params, next, (results) =&gt; {
+    const rows = results.rows;
+    if (rows.length === 0) {
+      if (allowNull) {
+        return res.status(200).json(null);
+      }
+      return res.status(404).json({ message: &quot;Horaire non trouv&eacute;&quot; });
+    }
+    res.json(rows[0]);
+  });
+}
+
+// -----------------------------------------------------------------------------
+// Gestion des colonnes d'horaires (jours de la semaine)
+// -----------------------------------------------------------------------------
+
+const JOUR_COLS = [
+  &quot;lundi_debut&quot;, &quot;lundi_fin&quot;,
+  &quot;mardi_debut&quot;, &quot;mardi_fin&quot;,
+  &quot;mercredi_debut&quot;, &quot;mercredi_fin&quot;,
+  &quot;jeudi_debut&quot;, &quot;jeudi_fin&quot;,
+  &quot;vendredi_debut&quot;, &quot;vendredi_fin&quot;,
+  &quot;samedi_debut&quot;, &quot;samedi_fin&quot;,
+  &quot;dimanche_debut&quot;, &quot;dimanche_fin&quot;,
+];
+
+function buildHoraireParamsFromBody(body) {
+  return JOUR_COLS.map((col) =&gt; body[col]);
+}
+
+// -----------------------------------------------------------------------------
+// Contr&ocirc;leurs
+// -----------------------------------------------------------------------------
+
+const getHoraires = async (req, res, next) =&gt; {
+  runQuery(&quot;SELECT * FROM horaires&quot;, [], next, (results) =&gt; {
+    res.json(results.rows);
   });
 };
 
 const getHoraireById = async (req, res, next) =&gt; {
   const { id } = req.params;
-  db.query(&quot;SELECT * FROM horaires WHERE id = ?&quot;, [id], (err, results) =&gt; {
-    if (err) {
-      return next(err);
-    }
-    if (results.length === 0) {
-      return res.status(404).json({ message: &quot;Horaire non trouv&eacute;&quot; });
-    }
-    res.json(results[0]);
-  });
+  findHoraire(&quot;id = $1&quot;, [id], next, res);
 };
 
 const addHoraire = async (req, res, next) =&gt; {
-  const {
-    employe_id,
-    lundi_debut,
-    lundi_fin,
-    mardi_debut,
-    mardi_fin,
-    mercredi_debut,
-    mercredi_fin,
-    jeudi_debut,
-    jeudi_fin,
-    vendredi_debut,
-    vendredi_fin,
-    samedi_debut,
-    samedi_fin,
-    dimanche_debut,
-    dimanche_fin,
-  } = req.body;
+  const { employe_id } = req.body;
+
   if (!employe_id) {
     return res.status(400).json({ message: &quot;Champs requis manquant&quot; });
   }
 
-  db.query(
-    &quot;INSERT INTO horaires (employe_id, lundi_debut, lundi_fin, mardi_debut, mardi_fin, mercredi_debut, mercredi_fin, jeudi_debut, jeudi_fin, vendredi_debut, vendredi_fin, samedi_debut, samedi_fin, dimanche_debut, dimanche_fin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)&quot;,
-    [
+  const jourParams = buildHoraireParamsFromBody(req.body);
+
+  const sql = `
+    INSERT INTO horaires (
       employe_id,
-      lundi_debut,
-      lundi_fin,
-      mardi_debut,
-      mardi_fin,
-      mercredi_debut,
-      mercredi_fin,
-      jeudi_debut,
-      jeudi_fin,
-      vendredi_debut,
-      vendredi_fin,
-      samedi_debut,
-      samedi_fin,
-      dimanche_debut,
-      dimanche_fin,
-    ],
-    (err, results) =&gt; {
-      if (err) {
-        return next(err);
-      }
-      res.status(201).json({
-        id: results.insertId,
-        employe_id,
-        lundi_debut,
-        lundi_fin,
-        mardi_debut,
-        mardi_fin,
-        mercredi_debut,
-        mercredi_fin,
-        jeudi_debut,
-        jeudi_fin,
-        vendredi_debut,
-        vendredi_fin,
-        samedi_debut,
-        samedi_fin,
-        dimanche_debut,
-        dimanche_fin,
-      });
-    }
-  );
+      ${JOUR_COLS.join(&quot;, &quot;)}
+    )
+    VALUES (
+      $1, ${JOUR_COLS.map((_, i) =&gt; `$${i + 2}`).join(&quot;, &quot;)}
+    )
+    RETURNING *
+  `;
+
+  const params = [employe_id, ...jourParams];
+
+  runQuery(sql, params, next, (results) =&gt; {
+    const row = results.rows[0];
+    res.status(201).json(row);
+  });
 };
 
 const updateHoraire = async (req, res, next) =&gt; {
   const { id } = req.params;
-  const {
-    employe_id,
-    lundi_debut,
-    lundi_fin,
-    mardi_debut,
-    mardi_fin,
-    mercredi_debut,
-    mercredi_fin,
-    jeudi_debut,
-    jeudi_fin,
-    vendredi_debut,
-    vendredi_fin,
-    samedi_debut,
-    samedi_fin,
-    dimanche_debut,
-    dimanche_fin,
-  } = req.body;
+  const { employe_id } = req.body;
 
-  db.query(
-    &quot;UPDATE horaires SET employe_id = ?, lundi_debut = ?, lundi_fin = ?, mardi_debut = ?, mardi_fin = ?, mercredi_debut = ?, mercredi_fin = ?, jeudi_debut = ?, jeudi_fin = ?, vendredi_debut = ?, vendredi_fin = ?, samedi_debut = ?, samedi_fin = ?, dimanche_debut = ?, dimanche_fin = ? WHERE id = ?&quot;,
-    [
-      employe_id,
-      lundi_debut,
-      lundi_fin,
-      mardi_debut,
-      mardi_fin,
-      mercredi_debut,
-      mercredi_fin,
-      jeudi_debut,
-      jeudi_fin,
-      vendredi_debut,
-      vendredi_fin,
-      samedi_debut,
-      samedi_fin,
-      dimanche_debut,
-      dimanche_fin,
-      id,
-    ],
-    (err, results) =&gt; {
-      if (err) {
-        return next(err);
-      }
-      if (results.affectedRows === 0) {
-        return res.status(404).json({ message: &quot;Horaire non trouv&eacute;&quot; });
-      }
-      res.status(200).json({
-        id,
-        employe_id,
-        lundi_debut,
-        lundi_fin,
-        mardi_debut,
-        mardi_fin,
-        mercredi_debut,
-        mercredi_fin,
-        jeudi_debut,
-        jeudi_fin,
-        vendredi_debut,
-        vendredi_fin,
-        samedi_debut,
-        samedi_fin,
-        dimanche_debut,
-        dimanche_fin,
-      });
+  const jourParams = buildHoraireParamsFromBody(req.body);
+
+  const setJourCols = JOUR_COLS
+    .map((col, i) =&gt; `${col} = $${i + 2}`)
+    .join(&quot;, &quot;);
+
+  const sql = `
+    UPDATE horaires
+    SET
+      employe_id = $1,
+      ${setJourCols}
+    WHERE id = $${JOUR_COLS.length + 2}
+    RETURNING *
+  `;
+
+  const params = [employe_id, ...jourParams, id];
+
+  runQuery(sql, params, next, (results) =&gt; {
+    if (results.rowCount === 0) {
+      return res.status(404).json({ message: &quot;Horaire non trouv&eacute;&quot; });
     }
-  );
+    res.status(200).json(results.rows[0]);
+  });
 };
 
 const deleteHoraire = async (req, res, next) =&gt; {
   const { id } = req.params;
 
-  db.query(&quot;DELETE FROM horaires WHERE id = ?&quot;, [id], (err, results) =&gt; {
-    if (err) {
-      return next(err);
-    }
-    if (results.affectedRows === 0) {
+  const sql = &quot;DELETE FROM horaires WHERE id = $1&quot;;
+
+  runQuery(sql, [id], next, (results) =&gt; {
+    if (results.rowCount === 0) {
       return res.status(404).json({ message: &quot;Horaire non trouv&eacute;&quot; });
     }
     res.status(200).json({ message: &quot;Horaire supprim&eacute; avec succ&egrave;s&quot; });
@@ -189,26 +156,13 @@ const deleteHoraire = async (req, res, next) =&gt; {
 
 const getHoraireByEmployeId = async (req, res, next) =&gt; {
   const { employeId } = req.params;
-  db.query(
-    &quot;SELECT * FROM horaires WHERE employe_id = ?&quot;,
-    [employeId],
-    (err, results) =&gt; {
-      if (err) return next(err);
-      if (results.length === 0) return res.status(200).json(null);
-      res.json(results[0]);
-    }
-  );
+  // Comportement original : renvoyer 200 + null si aucun horaire
+  findHoraire(&quot;employe_id = $1&quot;, [employeId], next, res, { allowNull: true });
 };
 
 export {
-  getHoraires,
-  getHoraireById,
-  addHoraire,
-  updateHoraire,
-  deleteHoraire,
-  getHoraireByEmployeId,
-};
-</div>
+  getHoraires, getHoraireById, addHoraire, updateHoraire, deleteHoraire, getHoraireByEmployeId,
+};</div>
 <script src="https://www.zeljkoobrenovic.com/tools/common/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");

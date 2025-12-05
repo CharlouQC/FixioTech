@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>backend\app.js</title>
+    <title>backend/app.js</title>
     <style type="text/css" media="screen">
         #editor {
             position: absolute;
@@ -12,17 +12,16 @@
     </style>
 </head>
 <body style="font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif">
-<h3 style="margin-bottom: 0">backend\app.js (<b>44</b> lines of code) (<a href="app.js">raw</a>):</h3>
+<h3 style="margin-bottom: 0">backend/app.js (<b>57</b> lines of code) (<a href="app.js">raw</a>):</h3>
 <div id="editor">import express from &quot;express&quot;;
 import dotenv from &quot;dotenv&quot;;
 import cors from &quot;cors&quot;;
 
-import { assertDb } from &quot;./config/databaseConnexion.js&quot;;
+import { assertDb, db } from &quot;./config/databaseConnexion.js&quot;;
 import routerUtilisateur from &quot;./routes/routeUtilisateur.js&quot;;
 import routerHoraire from &quot;./routes/routeHoraire.js&quot;;
 import routerRendezVous from &quot;./routes/routeRendezVous.js&quot;;
 import errorHandler from &quot;./middlewares/errorHandler.js&quot;;
-import process from &quot;process&quot;;
 
 dotenv.config();
 
@@ -61,6 +60,22 @@ app.get(&quot;/health&quot;, async (_req, res) =&gt; {
 app.use(&quot;/api/utilisateurs&quot;, routerUtilisateur);
 app.use(&quot;/api/horaires&quot;, routerHoraire);
 app.use(&quot;/api/rendezVous&quot;, routerRendezVous);
+
+app.get(&quot;/test-db&quot;, async (_req, res) =&gt; {
+  try {
+    const result = await new Promise((resolve, reject) =&gt; {
+      db.query(&quot;SELECT NOW()&quot;, (err, r) =&gt; {
+        if (err) reject(err);
+        else resolve(r);
+      });
+    });
+
+    const now = result.rows[0].now;
+    res.status(200).send(`Database OK &mdash; NOW() = ${now}`);
+  } catch (error) {
+    res.status(500).send(`Database ERROR &mdash; ${error.message}`);
+  }
+});
 
 app.use(errorHandler);
 
