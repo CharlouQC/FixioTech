@@ -1,6 +1,0 @@
-Path	Lines of Code
-README.md	56
-backend/package-lock.json	1601
-backend/package.json	23
-package-lock.json	5445
-package.json	41

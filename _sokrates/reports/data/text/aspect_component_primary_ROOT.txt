@@ -1,5 +1,0 @@
-Path	Lines of Code
-eslint.config.js	28
-index.html	27
-vite.config.js	13
-vitest.config.js	11

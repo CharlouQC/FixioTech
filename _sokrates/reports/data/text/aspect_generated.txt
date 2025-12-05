@@ -1,3 +1,0 @@
-Path	Lines of Code
-backend/package-lock.json	1601
-package-lock.json	5445

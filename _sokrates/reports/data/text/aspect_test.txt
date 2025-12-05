@@ -1,7 +1,0 @@
-Path	Lines of Code
-backend/tests/integration/debug.test.js	10
-backend/tests/integration/rendez-vous.test.js	197
-backend/tests/integration/utilisateurs.test.js	198
-backend/tests/setup.js	9
-frontend/src/tests/Inscription.test.jsx	124
-frontend/src/tests/Login.test.jsx	87
