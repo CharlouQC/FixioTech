@@ -14,7 +14,13 @@ pr:
 pool:
   vmImage: ubuntu-latest
 
-- script: dotnet restore
+steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '8.0.x'
+
+  - script: dotnet restore
     displayName: 'Restore'
 
   - script: dotnet build --no-restore
