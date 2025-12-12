@@ -2,21 +2,30 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./inscription.css";
 import { addUtilisateur } from "../../services/apiUtilisateur";
+import FormInput from "./components/FormInput.jsx";
+import MessageAlert from "./components/MessageAlert.jsx";
+import AuthFields from "./components/AuthFields.jsx";
 
 const Inscription = () => {
   const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const initialFormState = {
     nom_complet: "",
     courriel: "",
     mot_de_passe: "",
     confirmer_mot_de_passe: "",
     role: "client",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormState);
 
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const resetForm = () => {
+    setFormData(initialFormState);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -69,13 +78,7 @@ const Inscription = () => {
       setSuccessMessage("Votre compte a été créé avec succès !");
       
       // réinitialisation du formulaire
-      setFormData({
-        nom_complet: "",
-        courriel: "",
-        mot_de_passe: "",
-        confirmer_mot_de_passe: "",
-        role: "client",
-      });
+      resetForm();
 
       // redirection après un petit délai
       setTimeout(() => navigate("/login"), 1200);
@@ -92,8 +95,7 @@ const Inscription = () => {
       <div className="inscription-box">
         <h2>Inscription</h2>
 
-        {error && <div className="error-message">{error}</div>}
-        {successMessage && <div className="success-message">{successMessage}</div>}
+        <MessageAlert error={error} success={successMessage} />
 
         <form onSubmit={handleSubmit}>
           <div className="form-groupe">
@@ -110,53 +112,21 @@ const Inscription = () => {
             </select>
           </div>
 
-          <div className="form-groupe">
-            <label htmlFor="nom_complet">Nom complet</label>
-            <input
-              type="text"
-              id="nom_complet"
-              name="nom_complet"
-              value={formData.nom_complet}
-              onChange={handleChange}
-              placeholder="Entrez votre nom complet"
-            />
-          </div>
+          <FormInput
+            label="Nom complet"
+            id="nom_complet"
+            name="nom_complet"
+            type="text"
+            value={formData.nom_complet}
+            onChange={handleChange}
+            placeholder="Entrez votre nom complet"
+          />
 
-          <div className="form-groupe">
-            <label htmlFor="courriel">Adresse courriel</label>
-            <input
-              type="email"
-              id="courriel"
-              name="courriel"
-              value={formData.courriel}
-              onChange={handleChange}
-              placeholder="Entrez votre adresse courriel"
-            />
-          </div>
-
-          <div className="form-groupe">
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              type="password"
-              id="password"
-              name="mot_de_passe"
-              value={formData.mot_de_passe}
-              onChange={handleChange}
-              placeholder="Entrez votre mot de passe"
-            />
-          </div>
-
-          <div className="form-groupe">
-            <label htmlFor="confirmer_mot_de_passe">Confirmer le mot de passe</label>
-            <input
-              type="password"
-              id="confirmer_mot_de_passe"
-              name="confirmer_mot_de_passe"
-              value={formData.confirmer_mot_de_passe}
-              onChange={handleChange}
-              placeholder="Confirmez votre mot de passe"
-            />
-          </div>
+          <AuthFields
+            formData={formData}
+            handleChange={handleChange}
+            showConfirmPassword={true}
+          />
 
           <button type="submit" className="bouton-soumettre" disabled={loading}>
             {loading ? "Création en cours..." : "S'inscrire"}

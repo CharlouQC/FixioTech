@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./horaires.css";
 import { useAuth } from "../context/AuthContext";
 import {
@@ -6,6 +6,9 @@ import {
   addHoraire,
   updateHoraire,
 } from "../../services/apiHoraire";
+import { SERVICES } from "../constants";
+import { HEURES_DISPONIBLES } from "../utils/timeSlots.js";
+import HeureSelect from "./components/HeureSelect.jsx";
 
 const JOURS = [
   "Lundi",
@@ -42,25 +45,8 @@ const Horaires = () => {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Liste des services disponibles
-  const services = [
-    "Réparation d'ordinateurs",
-    "Réparation de cellulaires",
-    "Réparation de tablettes",
-    "Services à domicile",
-    "Support technique",
-    "Formation personnalisée",
-  ];
-
   // Génère les heures disponibles (8h à 18h)
-  const heuresDisponibles = useMemo(
-    () =>
-      Array.from({ length: 11 }, (_, i) => {
-        const h = String(i + 8).padStart(2, "0");
-        return `${h}:00`;
-      }),
-    []
-  );
+  const heuresDisponibles = HEURES_DISPONIBLES;
 
   // Charger l'horaire existant pour l'employé connecté (s’il existe)
   useEffect(() => {
@@ -220,7 +206,7 @@ const Horaires = () => {
         <div className="services-section">
           <h2 className="services-titres">Mes services proposés</h2>
           <div className="liste-services">
-            {services.map((service) => (
+            {SERVICES.map((service) => (
               <label key={service} className="service-checkbox">
                 <input
                   type="checkbox"
@@ -262,43 +248,23 @@ const Horaires = () => {
 
                 {horairesParJour[jour].actif && (
                   <div className="heures-container">
-                    <div className="heure-groupe">
-                      <label htmlFor={`debut-${jour}`}>Début</label>
-                      <select
-                        id={`debut-${jour}`}
-                        value={horairesParJour[jour].debut}
-                        onChange={(e) =>
-                          handleHeureDebutChange(jour, e.target.value)
-                        }
-                        className="heure-select"
-                      >
-                        {heuresDisponibles.map((heure) => (
-                          <option key={heure} value={heure}>
-                            {heure}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    <HeureSelect
+                      label="Début"
+                      id={`debut-${jour}`}
+                      value={horairesParJour[jour].debut}
+                      onChange={(e) => handleHeureDebutChange(jour, e.target.value)}
+                      heures={heuresDisponibles}
+                    />
 
                     <span className="heure-separateur">—</span>
 
-                    <div className="heure-groupe">
-                      <label htmlFor={`fin-${jour}`}>Fin</label>
-                      <select
-                        id={`fin-${jour}`}
-                        value={horairesParJour[jour].fin}
-                        onChange={(e) =>
-                          handleHeureFinChange(jour, e.target.value)
-                        }
-                        className="heure-select"
-                      >
-                        {heuresDisponibles.map((heure) => (
-                          <option key={heure} value={heure}>
-                            {heure}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    <HeureSelect
+                      label="Fin"
+                      id={`fin-${jour}`}
+                      value={horairesParJour[jour].fin}
+                      onChange={(e) => handleHeureFinChange(jour, e.target.value)}
+                      heures={heuresDisponibles}
+                    />
                   </div>
                 )}
               </div>
