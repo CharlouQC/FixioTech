@@ -1,5 +1,5 @@
 import { db } from "../config/databaseConnexion.js";
-import { colonnesJour, baseDisponibiliteQuery } from "utils.js";
+import { colonnesJour, baseDisponibiliteQuery } from "./utils.js";
 
 const getUtilisateurs = (req, res, next) => {
   const { role } = req.query; // ex: employe, client, admin
@@ -159,7 +159,7 @@ const loginUtilisateur = async (req, res, next) => {
 };
 
 const getEmployesDisponibles = (req, res, next) => {
-  const { date, heure } = req.query; // ex: 2025-10-31, 14:00
+  const { date, heure, service } = req.query; // ex: 2025-10-31, 14:00, "Réparation d'ordinateurs"
   if (!date || !heure) {
     return res.status(400).json({
       message: "Paramètres 'date' et 'heure' requis (YYYY-MM-DD, HH:mm)",
@@ -168,11 +168,18 @@ const getEmployesDisponibles = (req, res, next) => {
 
   const { debutCol, finCol } = colonnesJour(date);
 
+  // Si un service est spécifié, on filtre aussi par services_proposes
+  let serviceFilter = "";
+  let params = [date, heure, heure, heure];
+
+  if (service) {
+    serviceFilter = " AND h.services_proposes ? $5";
+    params.push(service);
+  }
+
   // Requêtes communes, avec SELECT complet (id + email + nom + role)
   const sql =
-    baseDisponibiliteQuery(debutCol, finCol) + " ORDER BY u.nom_complet ASC";
-
-  const params = [date, heure, heure, heure];
+    baseDisponibiliteQuery(debutCol, finCol) + serviceFilter + " ORDER BY u.nom_complet ASC";
 
   db.query(sql, params, (err, results) => {
     if (err) return next(err);
@@ -180,6 +187,30 @@ const getEmployesDisponibles = (req, res, next) => {
   });
 };
 
+const getEmployesParService = (req, res, next) => {
+  const { service } = req.query;
+
+  if (!service) {
+    return res.status(400).json({
+      message: "Paramètre 'service' requis",
+    });
+  }
+
+  const sql = `
+    SELECT u.id, u.email, u.nom_complet, u.role
+    FROM utilisateurs u
+    JOIN horaires h ON h.employe_id = u.id
+    WHERE u.role = 'employe'
+      AND h.services_proposes ? $1
+    ORDER BY u.nom_complet ASC
+  `;
+
+  db.query(sql, [service], (err, results) => {
+    if (err) return next(err);
+    res.json(results.rows);
+  });
+};
+
 export {
-  getUtilisateurs, getUtilisateurById, addUtilisateur, updateUtilisateur, deleteUtilisateur, loginUtilisateur, getEmployesDisponibles,
+  getUtilisateurs, getUtilisateurById, addUtilisateur, updateUtilisateur, deleteUtilisateur, loginUtilisateur, getEmployesDisponibles, getEmployesParService,
 };

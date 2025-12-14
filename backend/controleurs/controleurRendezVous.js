@@ -1,5 +1,5 @@
 import { db } from "../config/databaseConnexion.js";
-import { colonnesJour, baseDisponibiliteQuery } from "utils.js";
+import { colonnesJour, baseDisponibiliteQuery } from "./utils.js";
 
 function emptyToNull(value) {
   return value === undefined || value === null || value === "" ? null : value;
