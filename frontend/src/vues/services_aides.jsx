@@ -1,7 +1,12 @@
 import React from "react";
+import { useRoleNavigation } from "../hooks/useRoleNavigation";
 import "./services_aides.css";
 
 const ServicesAides = () => {
+  const { navigateToBooking, role } = useRoleNavigation();
+
+  // Texte du bouton selon le rôle
+  const texteBouton = role === 'employe' ? 'Mes rendez-vous' : 'Réserver une session';
   const services = [
     {
       id: 1,
@@ -138,10 +143,10 @@ const ServicesAides = () => {
             disponibles 24h/24 pour résoudre tous vos problèmes techniques.
           </p>
           <button
-            onClick={() => (window.location.href = "/rendez-vous")}
+            onClick={navigateToBooking}
             className="hero-cta"
           >
-            Réserver une Session
+            {texteBouton}
           </button>
         </div>
       </div>
@@ -230,10 +235,10 @@ const ServicesAides = () => {
           personnalisée en quelques clics.
         </p>
         <button
-          onClick={() => (window.location.href = "/rendez-vous")}
+          onClick={navigateToBooking}
           className="cta-bouton"
         >
-          Prendre Rendez-vous Maintenant
+          {role === 'employe' ? 'Consulter mes rendez-vous' : 'Prendre un rendez-vous'}
         </button>
       </section>
     </div>

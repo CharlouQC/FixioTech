@@ -1,9 +1,26 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./horaires.css";
 import { useAuth } from "../context/AuthContext";
-import { getHoraireByEmploye, addHoraire, updateHoraire } from "../../services/apiHoraire";
+import {
+  getHoraireByEmploye,
+  addHoraire,
+  updateHoraire,
+} from "../../services/apiHoraire";
 
-const JOURS = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"];
+import { SERVICES } from "../constants";
+import { HEURES_DISPONIBLES } from "../utils/timeSlots.js";
+import HeureSelect from "./components/HeureSelect.jsx";
+
+const JOURS = [
+  "Lundi",
+  "Mardi",
+  "Mercredi",
+  "Jeudi",
+  "Vendredi",
+  "Samedi",
+  "Dimanche",
+];
+
 const k = (jour, type) => `${jour.toLowerCase()}_${type}`;
 
 const Horaires = () => {
@@ -25,23 +42,7 @@ const Horaires = () => {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const services = [
-    "Réparation d'ordinateurs",
-    "Réparation de cellulaires",
-    "Réparation de tablettes",
-    "Services à domicile",
-    "Support technique",
-    "Formation personnalisée",
-  ];
-
-  const heuresDisponibles = useMemo(
-    () =>
-      Array.from({ length: 11 }, (_, i) => {
-        const h = String(i + 8).padStart(2, "0");
-        return `${h}:00`;
-      }),
-    []
-  );
+  const heuresDisponibles = HEURES_DISPONIBLES;
 
   useEffect(() => {
     if (!user?.id || !isEmploye) {
@@ -74,7 +75,6 @@ const Horaires = () => {
           };
         });
 
-        // ✅ Recharge services proposés (JSONB => souvent déjà un array)
         const sp = h.services_proposes;
         if (Array.isArray(sp)) {
           setServicesSelectionnes(sp);
@@ -102,7 +102,9 @@ const Horaires = () => {
 
   const handleServiceToggle = (service) => {
     setServicesSelectionnes((prev) =>
-      prev.includes(service) ? prev.filter((s) => s !== service) : [...prev, service]
+      prev.includes(service)
+        ? prev.filter((s) => s !== service)
+        : [...prev, service]
     );
   };
 
@@ -127,7 +129,9 @@ const Horaires = () => {
     for (const jour of JOURS) {
       const d = horairesParJour[jour];
       if (d.actif && d.debut >= d.fin) {
-        setError(`Erreur pour ${jour} : L'heure de fin doit être après l'heure de début`);
+        setError(
+          `Erreur pour ${jour} : L'heure de fin doit être après l'heure de début`
+        );
         return;
       }
     }
@@ -135,7 +139,7 @@ const Horaires = () => {
     try {
       const payload = {
         employe_id: user.id,
-        services_proposes: servicesSelectionnes, // ✅ sauvegarde services
+        services_proposes: servicesSelectionnes,
       };
 
       JOURS.forEach((jour) => {
@@ -180,13 +184,15 @@ const Horaires = () => {
       <h1 className="horaires-titres">Gestion de mon horaire</h1>
 
       {error && <div className="error-message">{error}</div>}
-      {successMessage && <div className="success-message">{successMessage}</div>}
+      {successMessage && (
+        <div className="success-message">{successMessage}</div>
+      )}
 
       <div className="horaires-grid">
         <div className="services-section">
           <h2 className="services-titres">Mes services proposés</h2>
           <div className="liste-services">
-            {services.map((service) => (
+            {SERVICES.map((service) => (
               <label key={service} className="service-checkbox">
                 <input
                   type="checkbox"
@@ -202,14 +208,17 @@ const Horaires = () => {
         <div className="calendrier-section">
           <h2 className="calendrier-titre">Mes disponibilités</h2>
           <p className="calendrier-description">
-            Sélectionnez les jours où vous êtes disponible et définissez vos heures de début et de fin.
+            Sélectionnez les jours où vous êtes disponible et définissez vos
+            heures de début et de fin.
           </p>
 
           <div className="disponibilites-liste">
             {JOURS.map((jour) => (
               <div
                 key={jour}
-                className={`jour-row ${horairesParJour[jour].actif ? "jour-actif" : ""}`}
+                className={`jour-row ${
+                  horairesParJour[jour].actif ? "jour-actif" : ""
+                }`}
               >
                 <div className="jour-checkbox-container">
                   <label className="jour-checkbox">
@@ -224,46 +233,37 @@ const Horaires = () => {
 
                 {horairesParJour[jour].actif && (
                   <div className="heures-container">
-                    <div className="heure-groupe">
-                      <label htmlFor={`debut-${jour}`}>Début</label>
-                      <select
-                        id={`debut-${jour}`}
-                        value={horairesParJour[jour].debut}
-                        onChange={(e) => handleHeureDebutChange(jour, e.target.value)}
-                        className="heure-select"
-                      >
-                        {heuresDisponibles.map((heure) => (
-                          <option key={heure} value={heure}>
-                            {heure}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    <HeureSelect
+                      label="Début"
+                      id={`debut-${jour}`}
+                      value={horairesParJour[jour].debut}
+                      onChange={(e) =>
+                        handleHeureDebutChange(jour, e.target.value)
+                      }
+                      heures={heuresDisponibles}
+                    />
 
                     <span className="heure-separateur">—</span>
 
-                    <div className="heure-groupe">
-                      <label htmlFor={`fin-${jour}`}>Fin</label>
-                      <select
-                        id={`fin-${jour}`}
-                        value={horairesParJour[jour].fin}
-                        onChange={(e) => handleHeureFinChange(jour, e.target.value)}
-                        className="heure-select"
-                      >
-                        {heuresDisponibles.map((heure) => (
-                          <option key={heure} value={heure}>
-                            {heure}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                    <HeureSelect
+                      label="Fin"
+                      id={`fin-${jour}`}
+                      value={horairesParJour[jour].fin}
+                      onChange={(e) =>
+                        handleHeureFinChange(jour, e.target.value)
+                      }
+                      heures={heuresDisponibles}
+                    />
                   </div>
                 )}
               </div>
             ))}
           </div>
 
-          <button className="bouton-enregistrer-horaire" onClick={handleSauvegarder}>
+          <button
+            className="bouton-enregistrer-horaire"
+            onClick={handleSauvegarder}
+          >
             Enregistrer mon horaire
           </button>
         </div>

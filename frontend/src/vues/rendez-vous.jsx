@@ -1,8 +1,68 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./rendez-vous.css";
 import { useAuth } from "../context/AuthContext";
 import { addRendezVous } from "../../services/apiRendezVous";
-import { getEmployes, getEmployesDisponibles, getEmployesParService } from "../../services/apiUtilisateur";
+import {
+  getEmployes,
+  getEmployesDisponibles,
+  getEmployesParService,
+} from "../../services/apiUtilisateur";
+
+import { SERVICES } from "../constants";
+import { HEURES_DISPONIBLES } from "../utils/timeSlots.js";
+
+// Composant réutilisable pour afficher la liste des techniciens
+const TechniciensListe = ({ techniciens, selectedId, onSelect }) => (
+  <div className="techniciens-liste">
+    {techniciens.map((t) => (
+      <div
+        key={t.id}
+        className={`technicien-card ${
+          selectedId === String(t.id) ? "technicien-selected" : ""
+        }`}
+        onClick={() => onSelect(String(t.id))}
+      >
+        <div className="technicien-avatar">
+          {String(t.nom_complet || t.email || "T")
+            .charAt(0)
+            .toUpperCase()}
+        </div>
+        <div className="technicien-info">
+          <h3>{t.nom_complet || "Technicien"}</h3>
+          <p>Support & Réparation</p>
+        </div>
+        {selectedId === String(t.id) && (
+          <div className="technicien-check">✓</div>
+        )}
+      </div>
+    ))}
+  </div>
+);
+
+// Composant pour afficher l'état des techniciens (chargement/vide/liste)
+const TechniciensDisplay = ({
+  loading,
+  techniciens,
+  selectedId,
+  onSelect,
+  emptyMessage,
+}) => {
+  if (loading) {
+    return <div className="loading-tech">Chargement des techniciens…</div>;
+  }
+
+  if (techniciens.length === 0) {
+    return <div className="no-tech">{emptyMessage}</div>;
+  }
+
+  return (
+    <TechniciensListe
+      techniciens={techniciens}
+      selectedId={selectedId}
+      onSelect={onSelect}
+    />
+  );
+};
 
 const RendezVous = () => {
   const { user } = useAuth();
@@ -28,25 +88,8 @@ const RendezVous = () => {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  // ---------- Constantes ----------
-  const services = [
-    "Réparation d'ordinateurs",
-    "Réparation de cellulaires",
-    "Réparation de tablettes",
-    "Services à domicile",
-    "Support technique",
-    "Formation personnalisée",
-  ];
-
   // 08:00 → 18:00, format "HH:mm"
-  const creneauxHoraires = useMemo(
-    () =>
-      Array.from({ length: 11 }, (_, i) => {
-        const h = String(i + 8).padStart(2, "0");
-        return `${h}:00`;
-      }),
-    []
-  );
+  const creneauxHoraires = HEURES_DISPONIBLES;
 
   // ---------- Helpers ----------
   const getMinDate = () => {
@@ -121,7 +164,7 @@ const RendezVous = () => {
           if (!alive) return;
           const next = list || [];
           setTechniciensDispo(next);
-          // Réinitialiser la sélection si le technicien n'est plus dans la liste
+
           if (
             formData.technicien &&
             !next.some((t) => String(t.id) === String(formData.technicien))
@@ -147,6 +190,7 @@ const RendezVous = () => {
           if (!alive) return;
           const next = list || [];
           setTechniciensDispo(next);
+
           if (
             formData.technicien &&
             !next.some((t) => String(t.id) === String(formData.technicien))
@@ -170,6 +214,7 @@ const RendezVous = () => {
           if (!alive) return;
           const next = list || [];
           setTechniciensDispo(next);
+
           if (
             formData.technicien &&
             !next.some((t) => String(t.id) === String(formData.technicien))
@@ -275,41 +320,18 @@ const RendezVous = () => {
               : "pour ce service"}
           </h2>
 
-          {loadingTech ? (
-            <div className="loading-tech">Chargement des techniciens…</div>
-          ) : listeTechniciens.length === 0 ? (
+          {!afficherAll && !formData.heure ? (
             <div className="no-tech">
-              Aucun technicien disponible pour ce créneau.
+              Sélectionnez une heure pour voir les techniciens disponibles.
             </div>
           ) : (
-            <div className="techniciens-liste">
-              {listeTechniciens.map((t) => (
-                <div
-                  key={t.id}
-                  className={`technicien-card ${
-                    formData.technicien === String(t.id)
-                      ? "technicien-selected"
-                      : ""
-                  }`}
-                  onClick={() =>
-                    setFormData((f) => ({ ...f, technicien: String(t.id) }))
-                  }
-                >
-                  <div className="technicien-avatar">
-                    {String(t.nom_complet || t.email || "T")
-                      .charAt(0)
-                      .toUpperCase()}
-                  </div>
-                  <div className="technicien-info">
-                    <h3>{t.nom_complet || "Technicien"}</h3>
-                    <p>Support & Réparation</p>
-                  </div>
-                  {formData.technicien === String(t.id) && (
-                    <div className="technicien-check">✓</div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <TechniciensDisplay
+              loading={loadingTech}
+              techniciens={listeTechniciens}
+              selectedId={formData.technicien}
+              onSelect={(id) => setFormData((f) => ({ ...f, technicien: id }))}
+              emptyMessage="Aucun technicien disponible pour ce créneau."
+            />
           )}
         </div>
 
@@ -333,7 +355,7 @@ const RendezVous = () => {
                 className="form-select"
               >
                 <option value="">-- Sélectionnez un service --</option>
-                {services.map((service) => (
+                {SERVICES.map((service) => (
                   <option key={service} value={service}>
                     {service}
                   </option>

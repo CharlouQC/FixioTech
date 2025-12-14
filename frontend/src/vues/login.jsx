@@ -3,6 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 import { loginUtilisateur } from "../../services/apiUtilisateur";
 import { useAuth } from "../context/AuthContext.jsx";
+import SubmitButton from "./components/SubmitButton.jsx";
+import FormInput from "./components/FormInput.jsx";
+import MessageAlert from "./components/MessageAlert.jsx";
+import AuthFields from "./components/AuthFields.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,9 +40,8 @@ const Login = () => {
 
     loginUtilisateur(formData)
       .then((response) => {
-        // Exemple de payload attendu :
-        // { utilisateur: {...}, token?: "..." }
-        const u = response?.utilisateur || response?.user || {};
+        // Le backend retourne directement l'utilisateur: {id, email, nom_complet, role}
+        const u = response?.utilisateur || response?.user || response || {};
 
         // Normalisation des champs clés
         const normalized = {
@@ -87,42 +90,18 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h2>Connexion</h2>
-        {error && <div className="error-message">{error}</div>}
+        <MessageAlert error={error} />
 
         <form onSubmit={handleSubmit}>
-          <div className="form-groupe">
-            <label htmlFor="courriel">Adresse courriel</label>
-            <input
-              type="email"
-              id="courriel"
-              name="courriel"
-              value={formData.courriel}
-              onChange={handleChange}
-              placeholder="Entrez votre adresse courriel"
-              autoComplete="email"
-            />
-          </div>
+          <AuthFields
+            formData={formData}
+            handleChange={handleChange}
+            showConfirmPassword={false}
+          />
 
-          <div className="form-groupe">
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              type="password"
-              id="password"
-              name="mot_de_passe"
-              value={formData.mot_de_passe}
-              onChange={handleChange}
-              placeholder="Entrez votre mot de passe"
-              autoComplete="current-password"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="bouton-soumettre"
-            disabled={isLoading}
-          >
-            {isLoading ? "Connexion en cours..." : "Se connecter"}
-          </button>
+          <SubmitButton isLoading={isLoading}>
+            Se connecter
+          </SubmitButton>
         </form>
 
         <p className="redirect-text">

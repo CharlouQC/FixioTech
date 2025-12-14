@@ -81,13 +81,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
-.client-rdv-item .label {
-  font-size: 0.85rem;
-  color: #7f8c8d;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+/* .label and .value styles in shared-stats.css */
 .client-rdv-item .value {
   font-size: 1rem;
   color: #2c3e50;
