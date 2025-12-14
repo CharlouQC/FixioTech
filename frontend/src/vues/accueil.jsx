@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { useRoleNavigation } from "../hooks/useRoleNavigation";
 import "./accueil.css";
 
 const Accueil = () => {
+  const { role } = useAuth();
+  const { navigateToBooking, navigateToSecondary } = useRoleNavigation();
+
+  // Texte des boutons selon le rôle
+  const textePremierBouton = role === 'employe' ? 'Mes rendez-vous' : 'Prendre rendez-vous';
+  const texteSecondBouton = role === 'employe' ? 'Gérer mes horaires' : 'Découvrir nos services';
   return (
     <div className="accueil-container">
       {/* Hero Section */}
@@ -17,12 +25,18 @@ const Accueil = () => {
             personnalisés pour tous vos besoins technologiques.
           </p>
           <div className="cta-boutons">
-            <Link to="/inscription" className="cta-bouton-primary">
-              Prendre rendez-vous
-            </Link>
-            <Link to="/services_aides" className="cta-bouton-secondary">
-              Découvrir nos services
-            </Link>
+            <button 
+              onClick={navigateToBooking}
+              className="cta-bouton-primary"
+            >
+              {textePremierBouton}
+            </button>
+            <button 
+              onClick={navigateToSecondary}
+              className="cta-bouton-secondary"
+            >
+              {texteSecondBouton}
+            </button>
           </div>
         </div>
         <div className="hero-decorations">
@@ -186,14 +200,19 @@ const Accueil = () => {
 
       {/* CTA Section */}
       <section className="cta-section">
-        <h2>Besoin d'Assistance Informatique ?</h2>
+        <h2>{role === 'employe' ? 'Gérer Vos Rendez-vous' : 'Besoin d\'Assistance Informatique ?'}</h2>
         <p>
-          Contactez-nous dès maintenant pour un diagnostic gratuit et une
-          solution adaptée à vos besoins
+          {role === 'employe' 
+            ? 'Consultez vos rendez-vous assignés et gérez votre planning efficacement'
+            : 'Contactez-nous dès maintenant pour un diagnostic gratuit et une solution adaptée à vos besoins'
+          }
         </p>
-        <Link to="/inscription" className="cta-button-large">
-          Prendre Rendez-vous
-        </Link>
+        <button 
+          onClick={navigateToBooking}
+          className="cta-button-large"
+        >
+          {textePremierBouton}
+        </button>
       </section>
     </div>
   );

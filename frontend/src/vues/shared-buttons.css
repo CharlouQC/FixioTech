@@ -1,0 +1,23 @@
+/* Styles de base pour les boutons d'action */
+.btn-action,
+.btn-annuler,
+.btn-enregistrer {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-annuler,
+.btn-enregistrer {
+  padding: 12px 30px;
+}

@@ -1,0 +1,8 @@
+/* Media queries partagées pour les formulaires */
+
+@media (max-width: 768px) {
+  .bouton-soumettre {
+    font-size: 1rem;
+    padding: 0.875rem;
+  }
+}

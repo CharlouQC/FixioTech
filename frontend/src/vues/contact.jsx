@@ -1,19 +1,26 @@
 import React, { useState } from "react";
 import "./contact.css";
+import SubmitButton from "./components/SubmitButton.jsx";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const initialFormState = {
     nom: "",
     prenom: "",
     courriel: "",
     telephone: "",
     sujet: "",
     message: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormState);
 
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  const resetForm = () => {
+    setFormData(initialFormState);
+  };
 
   // Gère les changements dans le formulaire
   const handleChange = (e) => {
@@ -77,14 +84,7 @@ const Contact = () => {
       );
 
       // Réinitialise le formulaire
-      setFormData({
-        nom: "",
-        prenom: "",
-        courriel: "",
-        telephone: "",
-        sujet: "",
-        message: "",
-      });
+      resetForm();
     } catch (err) {
       setError(err.message || "Erreur lors de l'envoi du message");
     } finally {
@@ -246,13 +246,9 @@ const Contact = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              className="bouton-soumettre"
-              disabled={isLoading}
-            >
-              {isLoading ? "Envoi en cours..." : "Envoyer le message"}
-            </button>
+            <SubmitButton isLoading={isLoading}>
+              Envoyer le message
+            </SubmitButton>
 
             <p className="form-note">
               * Champs obligatoires. Nous nous engageons à répondre à tous les

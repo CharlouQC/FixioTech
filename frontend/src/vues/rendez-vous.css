@@ -41,7 +41,8 @@
   height: fit-content;
 }
 
-.techniciens-section h2 {
+.techniciens-section h2,
+.formulaire-section h2 {
   color: #2c3e50;
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -139,67 +140,17 @@
   }
 }
 
-/* Section du formulaire */
+/* Section du formulaire - styles de base dans shared-forms.css */
 .formulaire-section {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Hérite de .form-section dans shared-forms.css */
 }
 
-.formulaire-section h2 {
-  color: #2c3e50;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
-}
+/* .formulaire-section h2 already defined above */
 
 .rendez-vous-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.form-groupe {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-groupe label {
-  color: #2c3e50;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.form-input,
-.form-select,
-.form-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #dcdde1;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background-color: white;
-  color: #2c3e50;
-}
-
-.form-input:-webkit-autofill,
-.form-input:-webkit-autofill:hover,
-.form-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
-  -webkit-text-fill-color: #2c3e50;
-  box-shadow: 0 0 0px 1000px white inset;
-  transition: background-color 5000s ease-in-out 0s;
 }
 
 .form-input[type="date"] {
@@ -254,44 +205,13 @@
   margin-top: 0.5rem;
 }
 
-.bouton-soumettre:hover:not(:disabled) {
+/* Bouton submit spécifique rendez-vous avec gradient */
+.formulaire-section .bouton-soumettre {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.formulaire-section .bouton-soumettre:hover:not(:disabled) {
   background: linear-gradient(135deg, #2980b9, #21618c);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
-}
-
-.bouton-soumettre:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.error-message {
-  background-color: #ff6b6b;
-  color: white;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: center;
-  animation: slideDown 0.3s ease;
-}
-
-.success-message {
-  background-color: #2ecc71;
-  color: white;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: center;
-  animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .form-note {
@@ -367,11 +287,6 @@
 
   .technicien-info h3 {
     font-size: 1rem;
-  }
-
-  .bouton-soumettre {
-    font-size: 1rem;
-    padding: 0.875rem;
   }
 }
 
