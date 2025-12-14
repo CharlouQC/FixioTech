@@ -1,4 +1,4 @@
-import { httpJson, buildUrl, apiRequest } from "httpClient.js";
+import { httpJson, buildUrl, apiRequest } from "./httpClient.js";
 
 const API_URL =
   import.meta.env.VITE_API_URL?.replace("/utilisateurs", "/horaires") ||
@@ -8,6 +8,12 @@ const buildHoraireUrl = (path = "") => buildUrl(API_URL, path);
 
 const buildHorairePayload = (horaire) => ({
   employe_id: horaire.employe_id,
+
+  // ✅ JSONB: tableau de strings
+  services_proposes: Array.isArray(horaire.services_proposes)
+    ? horaire.services_proposes
+    : [],
+
   lundi_debut: horaire.lundi_debut ?? null,
   lundi_fin: horaire.lundi_fin ?? null,
   mardi_debut: horaire.mardi_debut ?? null,
@@ -24,41 +30,31 @@ const buildHorairePayload = (horaire) => ({
   dimanche_fin: horaire.dimanche_fin ?? null,
 });
 
-// GET /api/horaires
 export async function getHoraires() {
   return httpJson(buildHoraireUrl());
 }
 
-// GET /api/horaires/:id
 export async function getHoraire(id) {
   return httpJson(buildHoraireUrl(`/${id}`));
 }
 
-// POST /api/horaires
 export async function addHoraire(horaire) {
   return apiRequest(API_URL, "POST", "", buildHorairePayload(horaire));
 }
 
-// PUT /api/horaires/:id
 export async function updateHoraire(id, horaire) {
   return apiRequest(API_URL, "PUT", `/${id}`, buildHorairePayload(horaire));
 }
 
-// DELETE /api/horaires/:id
 export async function deleteHoraire(id) {
   return apiRequest(API_URL, "DELETE", `/${id}`);
 }
 
-// GET /api/horaires/employe/:employeId
 export async function getHoraireByEmploye(employeId) {
-  return httpJson(
-    buildHoraireUrl(`/employe/${encodeURIComponent(employeId)}`)
-  );
+  return httpJson(buildHoraireUrl(`/employe/${encodeURIComponent(employeId)}`));
 }
 
 export async function saveHoraireForEmploye(horaire) {
-  if (horaire.id) {
-    return updateHoraire(horaire.id, horaire);
-  }
+  if (horaire.id) return updateHoraire(horaire.id, horaire);
   return addHoraire(horaire);
 }

@@ -8,6 +8,7 @@ import {
   deleteUtilisateur,
   loginUtilisateur,
   getEmployesDisponibles,
+  getEmployesParService,
 } from "../controleurs/controleurUtilisateur.js";
 
 import {
@@ -19,6 +20,7 @@ const routerUtilisateur = express.Router();
 
 routerUtilisateur.get("/", getUtilisateurs);
 routerUtilisateur.get("/disponibles", getEmployesDisponibles);
+routerUtilisateur.get("/par-service", getEmployesParService);
 routerUtilisateur.get("/:id", getUtilisateurById);
 routerUtilisateur.post("/", addUtilisateurValidation, addUtilisateur);
 routerUtilisateur.put("/:id", updateUtilisateurValidation, updateUtilisateur);

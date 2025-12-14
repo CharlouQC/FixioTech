@@ -1,4 +1,4 @@
-import { httpJson, buildUrl, apiRequest, emptyToNull } from "httpClient.js";
+import { httpJson, buildUrl, apiRequest, emptyToNull } from "./httpClient.js";
 
 const API_URL =
   import.meta.env.VITE_API_URL?.replace("/utilisateurs", "/rendezVous") ||

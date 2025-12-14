@@ -1,4 +1,4 @@
-import { httpJson, buildUrl, apiRequest } from "httpClient.js";
+import { httpJson, buildUrl, apiRequest } from "./httpClient.js";
 
 const API_URL =
   import.meta.env.VITE_API_URL || "http://localhost:3000/api/utilisateurs";
@@ -45,9 +45,14 @@ async function getEmployes() {
   return httpJson(buildUserUrl("?role=employe"));
 }
 
-async function getEmployesDisponibles(dateISO, heureHHmm) {
-  const qs = new URLSearchParams({ date: dateISO, heure: heureHHmm });
+async function getEmployesDisponibles(dateISO, heureHHmm, service) {
+  const qs = new URLSearchParams({ date: dateISO, heure: heureHHmm, service });
   return httpJson(buildUserUrl(`/disponibles?${qs.toString()}`));
+}
+
+async function getEmployesParService(service) {
+  const qs = new URLSearchParams({ service });
+  return httpJson(buildUserUrl(`/par-service?${qs.toString()}`));
 }
 
 export {

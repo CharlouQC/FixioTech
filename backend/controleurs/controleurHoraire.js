@@ -6,9 +6,7 @@ import { db } from "../config/databaseConnexion.js";
 
 function runQuery(sql, params, next, onSuccess) {
   db.query(sql, params, (err, results) => {
-    if (err) {
-      return next(err);
-    }
+    if (err) return next(err);
     onSuccess(results);
   });
 }
@@ -27,9 +25,7 @@ function findHoraire(whereClause, params, next, res, { allowNull = false } = {})
   runQuery(sql, params, next, (results) => {
     const rows = results.rows;
     if (rows.length === 0) {
-      if (allowNull) {
-        return res.status(200).json(null);
-      }
+      if (allowNull) return res.status(200).json(null);
       return res.status(404).json({ message: "Horaire non trouvé" });
     }
     res.json(rows[0]);
@@ -54,6 +50,28 @@ function buildHoraireParamsFromBody(body) {
   return JOUR_COLS.map((col) => body[col]);
 }
 
+/**
+ * Normalise services_proposes pour qu'il finisse TOUJOURS en tableau.
+ * Accepte :
+ *  - Array (cas normal)
+ *  - String JSON (ex: '["Support technique"]')
+ *  - null/undefined/autre => []
+ */
+function normalizeServices(value) {
+  if (Array.isArray(value)) return value;
+
+  if (typeof value === "string") {
+    try {
+      const parsed = JSON.parse(value);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  return [];
+}
+
 // -----------------------------------------------------------------------------
 // Contrôleurs
 // -----------------------------------------------------------------------------
@@ -76,24 +94,27 @@ const addHoraire = async (req, res, next) => {
     return res.status(400).json({ message: "Champs requis manquant" });
   }
 
+  const services = normalizeServices(req.body.services_proposes);
   const jourParams = buildHoraireParamsFromBody(req.body);
 
   const sql = `
     INSERT INTO horaires (
       employe_id,
+      services_proposes,
       ${JOUR_COLS.join(", ")}
     )
     VALUES (
-      $1, ${JOUR_COLS.map((_, i) => `$${i + 2}`).join(", ")}
+      $1,
+      $2::jsonb,
+      ${JOUR_COLS.map((_, i) => `$${i + 3}`).join(", ")}
     )
     RETURNING *
   `;
 
-  const params = [employe_id, ...jourParams];
+  const params = [employe_id, JSON.stringify(services), ...jourParams];
 
   runQuery(sql, params, next, (results) => {
-    const row = results.rows[0];
-    res.status(201).json(row);
+    res.status(201).json(results.rows[0]);
   });
 };
 
@@ -101,22 +122,26 @@ const updateHoraire = async (req, res, next) => {
   const { id } = req.params;
   const { employe_id } = req.body;
 
+  if (!employe_id) {
+    return res.status(400).json({ message: "Champs requis manquant" });
+  }
+
+  const services = normalizeServices(req.body.services_proposes);
   const jourParams = buildHoraireParamsFromBody(req.body);
 
-  const setJourCols = JOUR_COLS
-    .map((col, i) => `${col} = $${i + 2}`)
-    .join(", ");
+  const setJourCols = JOUR_COLS.map((col, i) => `${col} = $${i + 3}`).join(", ");
 
   const sql = `
     UPDATE horaires
     SET
       employe_id = $1,
+      services_proposes = $2::jsonb,
       ${setJourCols}
-    WHERE id = $${JOUR_COLS.length + 2}
+    WHERE id = $${JOUR_COLS.length + 3}
     RETURNING *
   `;
 
-  const params = [employe_id, ...jourParams, id];
+  const params = [employe_id, JSON.stringify(services), ...jourParams, id];
 
   runQuery(sql, params, next, (results) => {
     if (results.rowCount === 0) {
@@ -141,10 +166,14 @@ const deleteHoraire = async (req, res, next) => {
 
 const getHoraireByEmployeId = async (req, res, next) => {
   const { employeId } = req.params;
-  // Comportement original : renvoyer 200 + null si aucun horaire
   findHoraire("employe_id = $1", [employeId], next, res, { allowNull: true });
 };
 
 export {
-  getHoraires, getHoraireById, addHoraire, updateHoraire, deleteHoraire, getHoraireByEmployeId,
+  getHoraires,
+  getHoraireById,
+  addHoraire,
+  updateHoraire,
+  deleteHoraire,
+  getHoraireByEmployeId,
 };
