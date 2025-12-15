@@ -1,3 +1,10 @@
+// Constante pour les noms de jours (index = getDay())
+// Note: commence par dimanche (index 0) pour correspondre à Date.getDay()
+const JOURS_SEMAINE = (() => {
+  const jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
+  return ["dimanche", ...jours];
+})();
+
 /**
  * À partir d'une date ISO (YYYY-MM-DD), retourne les noms de colonnes
  * d'horaire à utiliser (lundi_debut, lundi_fin, etc.).
@@ -5,16 +12,7 @@
 export function colonnesJour(dateISO) {
   // 0 = dimanche .. 6 = samedi
   const j = new Date(`${dateISO}T00:00:00`).getDay();
-  const noms = [
-    "dimanche",
-    "lundi",
-    "mardi",
-    "mercredi",
-    "jeudi",
-    "vendredi",
-    "samedi",
-  ];
-  const jour = noms[j];
+  const jour = JOURS_SEMAINE[j];
   return { debutCol: `${jour}_debut`, finCol: `${jour}_fin` };
 }
 

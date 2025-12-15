@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from "vitest";
+import { describe, it, expect} from "vitest";
 import request from "supertest";
 import app from "../../app.js";
 
@@ -208,13 +208,14 @@ describe("Tests d'intégration - API Utilisateurs", () => {
 
   describe("DELETE /api/utilisateurs/:id - Suppression d'un utilisateur", () => {
     it("devrait supprimer un utilisateur existant", async () => {
-      const response = await request(app)
+      await request(app)
         .delete(`/api/utilisateurs/${testUserId}`)
         .expect("Content-Type", /json/)
-        .expect(200);
-
-      expect(response.body).toHaveProperty("message");
-      expect(response.body.message).toContain("supprimé");
+        .expect(200)
+        .expect((res) => {
+          expect(res.body).toHaveProperty("message");
+          expect(res.body.message).toContain("supprimé");
+        });
     });
 
     it("devrait retourner 404 pour la suppression d'un utilisateur inexistant", async () => {
@@ -227,7 +228,7 @@ describe("Tests d'intégration - API Utilisateurs", () => {
     });
 
     it("devrait confirmer que l'utilisateur a bien été supprimé", async () => {
-      const response = await request(app)
+      await request(app)
         .get(`/api/utilisateurs/${testUserId}`)
         .expect("Content-Type", /json/)
         .expect(404);

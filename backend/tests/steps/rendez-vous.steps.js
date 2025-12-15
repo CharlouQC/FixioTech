@@ -124,7 +124,8 @@ When('je spécifie le service {string}', function(service) {
   testData.service = service;
 });
 
-When('je sélectionne l\'employé {string}', async function(email) {
+// eslint-disable-next-line no-unused-vars
+When('je sélectionne l\'employé {string}', async function(_employeEmail) {
   testData.client_id = testClientId;
   testData.employe_id = testEmployeId;
   
@@ -165,7 +166,7 @@ Then('la réponse devrait contenir un {string} de rendez-vous', function(field) 
 
 Then('le statut du rendez-vous devrait être {string}', function(statut) {
   expect(response.body).to.have.property('statut');
-  // Note: gérer l'encodage UTF-8 si nécessaire
+  expect(response.body.statut).to.equal(statut);
 });
 
 Then('la date devrait être {string}', function(date) {

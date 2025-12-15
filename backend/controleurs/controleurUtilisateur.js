@@ -2,6 +2,19 @@ import { db } from "../config/databaseConnexion.js";
 import { colonnesJour, baseDisponibiliteQuery } from "./utils.js";
 import { validationResult } from "express-validator";
 
+// Helper pour vérifier les erreurs de validation
+const checkValidationErrors = (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(400).json({ 
+      message: errors.array()[0].msg,
+      errors: errors.array() 
+    });
+    return true;
+  }
+  return false;
+};
+
 const getUtilisateurs = (req, res, next) => {
   const { role } = req.query; // ex: employe, client, admin
   let sql = "SELECT id, email, nom_complet, role FROM utilisateurs";
@@ -39,13 +52,7 @@ const getUtilisateurById = async (req, res, next) => {
 
 const addUtilisateur = async (req, res, next) => {
   // Vérification des erreurs de validation
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ 
-      message: errors.array()[0].msg,
-      errors: errors.array() 
-    });
-  }
+  if (checkValidationErrors(req, res)) return;
 
   const { email, mot_de_passe, nom_complet, role = "client" } = req.body;
 
@@ -70,13 +77,7 @@ const addUtilisateur = async (req, res, next) => {
 
 const updateUtilisateur = async (req, res, next) => {
   // Vérification des erreurs de validation
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ 
-      message: errors.array()[0].msg,
-      errors: errors.array() 
-    });
-  }
+  if (checkValidationErrors(req, res)) return;
 
   const { id } = req.params;
   const { email, mot_de_passe, nom_complet, role } = req.body;
