@@ -1,5 +1,6 @@
 import { db } from "../config/databaseConnexion.js";
 import { colonnesJour, baseDisponibiliteQuery } from "./utils.js";
+import { validationResult } from "express-validator";
 
 const getUtilisateurs = (req, res, next) => {
   const { role } = req.query; // ex: employe, client, admin
@@ -37,6 +38,15 @@ const getUtilisateurById = async (req, res, next) => {
 };
 
 const addUtilisateur = async (req, res, next) => {
+  // Vérification des erreurs de validation
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ 
+      message: errors.array()[0].msg,
+      errors: errors.array() 
+    });
+  }
+
   const { email, mot_de_passe, nom_complet, role = "client" } = req.body;
 
   if (!email || !mot_de_passe || !nom_complet) {
@@ -59,6 +69,15 @@ const addUtilisateur = async (req, res, next) => {
 };
 
 const updateUtilisateur = async (req, res, next) => {
+  // Vérification des erreurs de validation
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ 
+      message: errors.array()[0].msg,
+      errors: errors.array() 
+    });
+  }
+
   const { id } = req.params;
   const { email, mot_de_passe, nom_complet, role } = req.body;
 
@@ -150,10 +169,7 @@ const loginUtilisateur = async (req, res, next) => {
           .status(401)
           .json({ message: "Email ou mot de passe incorrect" });
       }
-      res.status(200).json({
-        message: "Connexion réussie",
-        utilisateur: rows[0],
-      });
+      res.status(200).json(rows[0]);
     }
   );
 };

@@ -64,4 +64,5 @@ export {
   deleteUtilisateur,
   getEmployes,
   getEmployesDisponibles,
+  getEmployesParService,
 };

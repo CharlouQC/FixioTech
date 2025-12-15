@@ -1,8 +1,14 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import Inscription from "../vues/inscription";
+import * as apiUtilisateur from "../../services/apiUtilisateur";
+
+// Mock du service API
+vi.mock("../../services/apiUtilisateur", () => ({
+  addUtilisateur: vi.fn(),
+}));
 
 const mockNavigate = vi.fn();
 
@@ -66,6 +72,10 @@ describe("Inscription Component", () => {
 
     // Remplit le formulaire avec des mots de passe différents
     await userEvent.type(
+      screen.getByLabelText("Nom complet"),
+      "Test User"
+    );
+    await userEvent.type(
       screen.getByLabelText("Adresse courriel"),
       "test@example.com"
     );
@@ -92,6 +102,10 @@ describe("Inscription Component", () => {
 
     // Remplit le formulaire avec un mot de passe court
     await userEvent.type(
+      screen.getByLabelText("Nom complet"),
+      "Test User"
+    );
+    await userEvent.type(
       screen.getByLabelText("Adresse courriel"),
       "test@example.com"
     );
@@ -110,6 +124,15 @@ describe("Inscription Component", () => {
   });
 
   it("devrait permettre une inscription réussie", async () => {
+    // Mock d'une réponse API réussie
+    const mockUser = {
+      id: 1,
+      email: "test@example.com",
+      nom_complet: "Test User",
+      role: "client",
+    };
+    vi.spyOn(apiUtilisateur, "addUtilisateur").mockResolvedValue(mockUser);
+
     render(
       <MemoryRouter>
         <Inscription />
@@ -117,6 +140,10 @@ describe("Inscription Component", () => {
     );
 
     // Remplit le formulaire correctement
+    await userEvent.type(
+      screen.getByLabelText("Nom complet"),
+      "Test User"
+    );
     await userEvent.type(
       screen.getByLabelText("Adresse courriel"),
       "test@example.com"

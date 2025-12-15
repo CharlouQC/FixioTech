@@ -1,6 +1,6 @@
 import { body } from "express-validator";
 
-const timeRe = /^([0-1]\d|2[0-3]):([0-5]\d)$/; // HH:MM
+const timeRe = /^([0-1]\d|2[0-3]):([0-5]\d)(:[0-5]\d)?$/; // HH:MM ou HH:MM:SS
 
 // Fabrique générique pour les validations de rendez-vous
 function makeRendezVousValidation({ partial = false } = {}) {

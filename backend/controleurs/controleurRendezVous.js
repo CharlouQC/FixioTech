@@ -57,6 +57,16 @@ const addRendezVous = (req, res, next) => {
     });
   }
 
+  // Vérifier que la date n'est pas dans le passé
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const rdvDate = new Date(date_rdv + "T00:00:00");
+  if (rdvDate < today) {
+    return res.status(400).json({
+      message: "La date du rendez-vous ne peut pas être dans le passé",
+    });
+  }
+
   const { debutCol, finCol } = colonnesJour(date_rdv);
 
   // Utilisation de la requête de base commune, avec SELECT u.id
@@ -111,32 +121,54 @@ const updateRendezVous = async (req, res, next) => {
     employe_id,
     date_rdv,
     heure_rdv,
+    statut,
     description_probleme,
-  } = {
-    ...req.body,
-    description_probleme: emptyToNull(req.body.description_probleme),
-  };
+  } = req.body;
+
+  const updateFields = [];
+  const updateValues = [];
+
+  if (client_id !== undefined) {
+    updateFields.push(`client_id = $${updateValues.length + 1}`);
+    updateValues.push(client_id);
+  }
+  if (employe_id !== undefined) {
+    updateFields.push(`employe_id = $${updateValues.length + 1}`);
+    updateValues.push(employe_id);
+  }
+  if (date_rdv !== undefined) {
+    updateFields.push(`date_rdv = $${updateValues.length + 1}`);
+    updateValues.push(date_rdv);
+  }
+  if (heure_rdv !== undefined) {
+    updateFields.push(`heure_rdv = $${updateValues.length + 1}`);
+    updateValues.push(heure_rdv);
+  }
+  if (statut !== undefined) {
+    updateFields.push(`statut = $${updateValues.length + 1}`);
+    updateValues.push(statut);
+  }
+  if (description_probleme !== undefined) {
+    updateFields.push(`description_probleme = $${updateValues.length + 1}`);
+    updateValues.push(emptyToNull(description_probleme));
+  }
+
+  if (updateFields.length === 0) {
+    return res.status(400).json({ message: "Aucun champ à mettre à jour" });
+  }
+
+  // id devient le dernier paramètre
+  updateValues.push(id);
+  const idIndex = updateValues.length;
 
   const sql = `
     UPDATE rendez_vous
-    SET client_id = $1,
-        employe_id = $2,
-        date_rdv = $3,
-        heure_rdv = $4,
-        description_probleme = $5
-    WHERE id = $6
+    SET ${updateFields.join(", ")}
+    WHERE id = $${idIndex}
     RETURNING *
   `;
-  const params = [
-    client_id,
-    employe_id,
-    date_rdv,
-    heure_rdv,
-    description_probleme,
-    id,
-  ];
 
-  db.query(sql, params, (err, results) => {
+  db.query(sql, updateValues, (err, results) => {
     if (err) return next(err);
     if (results.rowCount === 0) {
       return res.status(404).json({ message: "Rendez-vous non trouvé" });
