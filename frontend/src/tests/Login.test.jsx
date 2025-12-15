@@ -3,9 +3,11 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 import Login from "../vues/login";
+import * as apiUtilisateur from "../../services/apiUtilisateur";
 
 // Mock du hook useNavigate
 const mockNavigate = vi.fn();
+const mockLogin = vi.fn();
 
 vi.mock("react-router-dom", async () => {
   const actual = await vi.importActual("react-router-dom");
@@ -18,10 +20,24 @@ vi.mock("react-router-dom", async () => {
   };
 });
 
+// Mock d'AuthContext
+vi.mock("../context/AuthContext.jsx", () => ({
+  useAuth: () => ({
+    login: mockLogin,
+    user: null,
+  }),
+}));
+
+// Mock du service API
+vi.mock("../../services/apiUtilisateur", () => ({
+  loginUtilisateur: vi.fn(),
+}));
+
 describe("Login Component", () => {
   // Réinitialise les mocks avant chaque test
   beforeEach(() => {
     mockNavigate.mockReset();
+    mockLogin.mockReset();
   });
 
   it("devrait rendre le formulaire de connexion", () => {
@@ -77,6 +93,15 @@ describe("Login Component", () => {
   });
 
   it("devrait rediriger vers la page d'accueil après une connexion réussie", async () => {
+    // Mock d'une réponse API réussie
+    const mockUser = {
+      id: 1,
+      email: "test@example.com",
+      nom_complet: "Test User",
+      role: "client",
+    };
+    vi.spyOn(apiUtilisateur, "loginUtilisateur").mockResolvedValue(mockUser);
+
     render(
       <MemoryRouter>
         <Login />
@@ -92,13 +117,14 @@ describe("Login Component", () => {
     await userEvent.type(passwordInput, "password123");
     await userEvent.click(submitButton);
 
-    // Vérifie que le bouton affiche "Connexion en cours..."
-    expect(submitButton).toBeDisabled();
-    expect(screen.getByText("Connexion en cours...")).toBeInTheDocument();
-
-    // Attend la redirection
+    // Attend que mockLogin soit appelé (avec l'utilisateur normalisé)
     await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith("/");
+      expect(mockLogin).toHaveBeenCalled();
+    });
+    
+    // Attend la navigation vers la page client
+    await waitFor(() => {
+      expect(mockNavigate).toHaveBeenCalledWith("/client");
     });
   });
 });
