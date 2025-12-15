@@ -19,7 +19,11 @@ steps:
       versionSpec: "20.x"
     displayName: "Use Node.js 20"
 
-  # ---- Frontend ----
+  - script: |
+      cd backend
+      npm ci
+    displayName: "Install backend deps"
+
   - script: |
       cd frontend
       npm ci
@@ -31,22 +35,6 @@ steps:
     displayName: "Run frontend tests"
 
   - script: |
-      cd frontend
-      npm run build
-    displayName: "Build frontend"
-
-  # ---- Backend ----
-  - script: |
-      cd backend
-      npm ci
-    displayName: "Install backend deps"
-
-  - script: |
       cd backend
       npm test
     displayName: "Run backend tests"
-
-  - script: |
-      cd backend
-      npm run build
-    displayName: "Build backend"
