@@ -13,5 +13,4 @@ beforeAll(async () => {
 // Fermer les connexions après tous les tests
 afterAll(async () => {
   console.log("🧹 Nettoyage après les tests...");
-  await db.end();
 });

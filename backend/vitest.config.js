@@ -5,7 +5,16 @@ export default defineConfig({
     globals: true,
     environment: "node",
     setupFiles: ["./tests/setup.js"],
-    testTimeout: 30000, // 30s pour tests avec base de données
-    hookTimeout: 30000,
+    testTimeout: 10000,
+    hookTimeout: 10000,
+    env: {
+      NODE_ENV: "test",
+      DB_HOST: "localhost",
+      DB_PORT: "5432",
+      DB_USER: "postgres",
+      DB_PASSWORD: "Charles16$",
+      DB_NAME: "fixiotech",
+      DB_SSL: "false"
+    }
   },
 });

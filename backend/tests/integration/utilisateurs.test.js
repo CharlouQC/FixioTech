@@ -91,10 +91,10 @@ describe("Tests d'intégration - API Utilisateurs", () => {
           mot_de_passe: "Test1234$",
         })
         .expect("Content-Type", /json/)
-        .expect(404);
+        .expect(401);
 
       expect(response.body).toHaveProperty("message");
-      expect(response.body.message).toContain("Utilisateur non trouvé");
+      expect(response.body.message).toContain("Email ou mot de passe incorrect");
     });
 
     it("devrait rejeter une connexion avec un mot de passe incorrect", async () => {
@@ -108,7 +108,7 @@ describe("Tests d'intégration - API Utilisateurs", () => {
         .expect(401);
 
       expect(response.body).toHaveProperty("message");
-      expect(response.body.message).toContain("Mot de passe incorrect");
+      expect(response.body.message).toContain("Email ou mot de passe incorrect");
     });
   });
 
@@ -166,6 +166,7 @@ describe("Tests d'intégration - API Utilisateurs", () => {
     it("devrait récupérer la liste des employés disponibles", async () => {
       const response = await request(app)
         .get("/api/utilisateurs/disponibles")
+        .query({ date: "2025-12-01", heure: "10:00" })
         .expect("Content-Type", /json/)
         .expect(200);
 
@@ -190,8 +191,8 @@ describe("Tests d'intégration - API Utilisateurs", () => {
         .expect("Content-Type", /json/)
         .expect(200);
 
-      expect(response.body).toHaveProperty("message");
-      expect(response.body.message).toContain("modifié");
+      expect(response.body).toHaveProperty("id");
+      expect(response.body.nom_complet).toBe(updates.nom_complet);
     });
 
     it("devrait retourner 404 pour la modification d'un utilisateur inexistant", async () => {
