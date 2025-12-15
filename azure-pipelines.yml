@@ -1,30 +1,52 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
-- master
+  branches:
+    include:
+      - main
+      - master
 
 pr:
   branches:
     include:
-      - main 
+      - main
+      - master
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: UseDotNet@2
+  - task: NodeTool@0
     inputs:
-      packageType: 'sdk'
-      version: '8.0.x'
+      versionSpec: "20.x"
+    displayName: "Use Node.js 20"
 
-  - script: dotnet restore
-    displayName: 'Restore'
+  # ---- Frontend ----
+  - script: |
+      cd frontend
+      npm ci
+    displayName: "Install frontend deps"
 
-  - script: dotnet build --no-restore
-    displayName: 'Build'
+  - script: |
+      cd frontend
+      npm test -- --watch=false
+    displayName: "Run frontend tests"
 
-  - script: dotnet test --no-build --collect "Code Coverage"
-    displayName: 'Run tests'
+  - script: |
+      cd frontend
+      npm run build
+    displayName: "Build frontend"
+
+  # ---- Backend ----
+  - script: |
+      cd backend
+      npm ci
+    displayName: "Install backend deps"
+
+  - script: |
+      cd backend
+      npm test
+    displayName: "Run backend tests"
+
+  - script: |
+      cd backend
+      npm run build
+    displayName: "Build backend"
