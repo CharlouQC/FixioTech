@@ -11,6 +11,22 @@ import {
 import { SERVICES } from "../constants";
 import { HEURES_DISPONIBLES } from "../utils/timeSlots.js";
 
+// Constante pour l'état initial du formulaire
+const INITIAL_FORM_DATA = {
+  service: "",
+  date: "",
+  heure: "",
+  technicien: "",
+  description: "",
+};
+
+// Helper pour générer le titre dynamique de la section techniciens
+const getTechniciensTitle = (afficherAll, date, heure) => {
+  if (afficherAll) return "Techniciens (tous)";
+  if (date && heure) return "Techniciens Disponibles";
+  return "Techniciens pour ce service";
+};
+
 // Composant réutilisable pour afficher la liste des techniciens
 const TechniciensListe = ({ techniciens, selectedId, onSelect }) => (
   <div className="techniciens-liste">
@@ -68,13 +84,7 @@ const RendezVous = () => {
   const { user } = useAuth();
 
   // ---------- UI state ----------
-  const [formData, setFormData] = useState({
-    service: "",
-    date: "",
-    heure: "",
-    technicien: "",
-    description: "",
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
   // Tous les employés (pour affichage quand pas de filtre complet)
   const [allEmployes, setAllEmployes] = useState([]);
@@ -157,80 +167,47 @@ const RendezVous = () => {
     // 2. Service + date : filtre par service et disponibilité générale
     // 3. Service + date + heure : filtre par service et disponibilité spécifique
 
+    // Fonction helper pour charger et mettre à jour la liste des techniciens
+    const loadTechniciens = (promise, errorMsg) => {
+      promise
+        .then((list) => {
+          if (!alive) return;
+          const next = list || [];
+          setTechniciensDispo(next);
+
+          if (
+            formData.technicien &&
+            !next.some((t) => String(t.id) === String(formData.technicien))
+          ) {
+            setFormData((f) => ({ ...f, technicien: "" }));
+          }
+        })
+        .catch((err) => {
+          if (!alive) return;
+          setTechniciensDispo([]);
+          setError(err.message || errorMsg);
+        })
+        .finally(() => alive && setLoadingDispo(false));
+    };
+
     if (!date) {
       // Filtrage par service seulement
-      getEmployesParService(service)
-        .then((list) => {
-          if (!alive) return;
-          const next = list || [];
-          setTechniciensDispo(next);
-
-          if (
-            formData.technicien &&
-            !next.some((t) => String(t.id) === String(formData.technicien))
-          ) {
-            setFormData((f) => ({ ...f, technicien: "" }));
-          }
-        })
-        .catch((err) => {
-          if (!alive) return;
-          setTechniciensDispo([]);
-          setError(
-            err.message ||
-              "Erreur lors du chargement des techniciens pour ce service."
-          );
-        })
-        .finally(() => alive && setLoadingDispo(false));
+      loadTechniciens(
+        getEmployesParService(service),
+        "Erreur lors du chargement des techniciens pour ce service."
+      );
     } else if (!heure) {
       // Filtrage par service et date (disponibilité générale)
-      // Pour l'instant, on utilise la même logique que service seul
-      // TODO: Implémenter un filtrage plus fin par date seule
-      getEmployesParService(service)
-        .then((list) => {
-          if (!alive) return;
-          const next = list || [];
-          setTechniciensDispo(next);
-
-          if (
-            formData.technicien &&
-            !next.some((t) => String(t.id) === String(formData.technicien))
-          ) {
-            setFormData((f) => ({ ...f, technicien: "" }));
-          }
-        })
-        .catch((err) => {
-          if (!alive) return;
-          setTechniciensDispo([]);
-          setError(
-            err.message ||
-              "Erreur lors du chargement des techniciens pour ce service."
-          );
-        })
-        .finally(() => alive && setLoadingDispo(false));
+      loadTechniciens(
+        getEmployesParService(service),
+        "Erreur lors du chargement des techniciens pour ce service."
+      );
     } else {
       // Filtrage complet : service + date + heure
-      getEmployesDisponibles(date, heure, service)
-        .then((list) => {
-          if (!alive) return;
-          const next = list || [];
-          setTechniciensDispo(next);
-
-          if (
-            formData.technicien &&
-            !next.some((t) => String(t.id) === String(formData.technicien))
-          ) {
-            setFormData((f) => ({ ...f, technicien: "" }));
-          }
-        })
-        .catch((err) => {
-          if (!alive) return;
-          setTechniciensDispo([]);
-          setError(
-            err.message ||
-              "Erreur lors du chargement des techniciens disponibles."
-          );
-        })
-        .finally(() => alive && setLoadingDispo(false));
+      loadTechniciens(
+        getEmployesDisponibles(date, heure, service),
+        "Erreur lors du chargement des techniciens disponibles."
+      );
     }
 
     return () => {
@@ -311,14 +288,7 @@ const RendezVous = () => {
       <div className="rendez-vous-content">
         {/* TECHNICIENS */}
         <div className="techniciens-section">
-          <h2>
-            Techniciens{" "}
-            {afficherAll
-              ? "(tous)"
-              : formData.date && formData.heure
-              ? "Disponibles"
-              : "pour ce service"}
-          </h2>
+          <h2>{getTechniciensTitle(afficherAll, formData.date, formData.heure)}</h2>
 
           {!afficherAll && !formData.heure ? (
             <div className="no-tech">

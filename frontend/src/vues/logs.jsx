@@ -15,11 +15,11 @@ const Logs = () => {
     },
     {
       id: 2,
-      type: "demande_creation",
+      type: "rdv_creation",
       utilisateur: "sophie.martin@email.com",
-      action: "Nouvelle demande créée",
+      action: "Nouveau rendez-vous créé",
       details:
-        "Demande #45 - Réparation d'ordinateurs - Technicien: Jean Tremblay",
+        "Rendez-vous #45 - Réparation d'ordinateurs - Technicien: Jean Tremblay",
       dateHeure: "2025-10-24T09:30:15",
       statut: "succes",
     },
@@ -34,10 +34,10 @@ const Logs = () => {
     },
     {
       id: 4,
-      type: "demande_modification",
+      type: "rdv_modification",
       utilisateur: "jean.tremblay@fixiotech.com",
-      action: "Demande mise à jour",
-      details: "Demande #45 - Statut changé de 'en_attente' à 'en_cours'",
+      action: "Rendez-vous mis à jour",
+      details: "Rendez-vous #45 - Statut changé de 'en_attente' à 'en_cours'",
       dateHeure: "2025-10-24T10:00:12",
       statut: "succes",
     },
@@ -61,19 +61,19 @@ const Logs = () => {
     },
     {
       id: 7,
-      type: "demande_traitement",
+      type: "rdv_traitement",
       utilisateur: "jean.tremblay@fixiotech.com",
-      action: "Demande traitée",
-      details: "Demande #45 - Marquée comme traitée avec message de résolution",
+      action: "Rendez-vous terminé",
+      details: "Rendez-vous #45 - Marqué comme terminé avec message de résolution",
       dateHeure: "2025-10-24T11:15:30",
       statut: "succes",
     },
     {
       id: 8,
-      type: "demande_suppression",
+      type: "rdv_suppression",
       utilisateur: "admin@fixiotech.com",
-      action: "Demande supprimée",
-      details: "Demande #23 - Supprimée par l'administrateur (client inactif)",
+      action: "Rendez-vous supprimé",
+      details: "Rendez-vous #23 - Supprimé par l'administrateur (client inactif)",
       dateHeure: "2025-10-24T11:45:18",
       statut: "avertissement",
     },
@@ -88,19 +88,19 @@ const Logs = () => {
     },
     {
       id: 10,
-      type: "demande_archivage",
+      type: "rdv_archivage",
       utilisateur: "sophie.martin@email.com",
-      action: "Demande archivée",
-      details: "Demande #45 - Archivée par le client (problème résolu)",
+      action: "Rendez-vous archivé",
+      details: "Rendez-vous #45 - Archivé par le client (problème résolu)",
       dateHeure: "2025-10-24T12:30:42",
       statut: "succes",
     },
     {
       id: 11,
-      type: "demande_creation",
+      type: "rdv_creation",
       utilisateur: "julie.gagnon@email.com",
-      action: "Nouvelle demande créée",
-      details: "Demande #46 - Support technique - Technicien: Marie Dubois",
+      action: "Nouveau rendez-vous créé",
+      details: "Rendez-vous #46 - Support technique - Technicien: Marie Dubois",
       dateHeure: "2025-10-24T13:15:20",
       statut: "succes",
     },
@@ -136,11 +136,11 @@ const Logs = () => {
     const icons = {
       connexion: "🔐",
       inscription: "📝",
-      demande_creation: "➕",
-      demande_modification: "✏️",
-      demande_traitement: "✅",
-      demande_suppression: "🗑️",
-      demande_archivage: "📦",
+      rdv_creation: "➕",
+      rdv_modification: "✏️",
+      rdv_traitement: "✅",
+      rdv_suppression: "🗑️",
+      rdv_archivage: "📦",
     };
     return icons[type] || "📋";
   };
@@ -183,11 +183,11 @@ const Logs = () => {
     const labels = {
       connexion: "Connexion",
       inscription: "Inscription",
-      demande_creation: "Création de demande",
-      demande_modification: "Modification de demande",
-      demande_traitement: "Traitement de demande",
-      demande_suppression: "Suppression de demande",
-      demande_archivage: "Archivage de demande",
+      rdv_creation: "Création de rendez-vous",
+      rdv_modification: "Modification de rendez-vous",
+      rdv_traitement: "Traitement de rendez-vous",
+      rdv_suppression: "Suppression de rendez-vous",
+      rdv_archivage: "Archivage de rendez-vous",
     };
     return labels[type] || type;
   };
@@ -263,15 +263,15 @@ const Logs = () => {
               <option value="tous">Tous les types</option>
               <option value="connexion">Connexion</option>
               <option value="inscription">Inscription</option>
-              <option value="demande_creation">Création de demande</option>
-              <option value="demande_modification">
-                Modification de demande
+              <option value="rdv_creation">Création de rendez-vous</option>
+              <option value="rdv_modification">
+                Modification de rendez-vous
               </option>
-              <option value="demande_traitement">Traitement de demande</option>
-              <option value="demande_suppression">
-                Suppression de demande
+              <option value="rdv_traitement">Traitement de rendez-vous</option>
+              <option value="rdv_suppression">
+                Suppression de rendez-vous
               </option>
-              <option value="demande_archivage">Archivage de demande</option>
+              <option value="rdv_archivage">Archivage de rendez-vous</option>
             </select>
           </div>
 

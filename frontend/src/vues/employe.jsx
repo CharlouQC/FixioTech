@@ -15,11 +15,10 @@ const mapDbStatutToUi = (db) => {
 };
 
 const getStatutBadge = (ui) => {
-  // ui ∈ { en_attente, en_cours, traitee }
+  // ui ∈ { en_attente, traitee }
   const badges = {
     en_attente: { classe: "statut-attente", texte: "En attente" },
-    en_cours: { classe: "statut-encours", texte: "En cours" },
-    traitee: { classe: "statut-traitee", texte: "Traitée" },
+    traitee: { classe: "statut-traitee", texte: "Passé" },
   };
   return badges[ui] || badges.en_attente;
 };
@@ -27,7 +26,6 @@ const getStatutBadge = (ui) => {
 const getStatutIcon = (ui) => {
   const icons = {
     en_attente: "⏱️",
-    en_cours: "🔧",
     traitee: "✅",
   };
   return icons[ui] || "📋";
@@ -45,7 +43,7 @@ const Employe = () => {
   useEffect(() => {
     if (!user?.id) {
       setLoading(false);
-      setError("Vous devez être connecté pour voir vos demandes.");
+      setError("Vous devez être connecté pour voir vos rendez-vous.");
       return;
     }
     if (role !== "employe") {
@@ -72,7 +70,7 @@ const Employe = () => {
         setRdvs(list || []);
       } catch (err) {
         if (!alive) return;
-        setError(err?.message || "Erreur lors du chargement des demandes.");
+        setError(err?.message || "Erreur lors du chargement des rendez-vous.");
       } finally {
         if (alive) setLoading(false);
       }
@@ -117,7 +115,7 @@ const Employe = () => {
       <div className="employe-header">
         <h1>Espace Employé</h1>
         <p className="employe-intro">
-          Gérez les demandes de support qui vous sont assignées.
+          Gérez les rendez-vous qui vous sont assignés.
         </p>
       </div>
 
@@ -131,17 +129,10 @@ const Employe = () => {
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">🔧</div>
-          <div className="stat-info">
-            <span className="stat-nombre">{countBy("en_cours")}</span>
-            <span className="stat-label">En cours</span>
-          </div>
-        </div>
-        <div className="stat-card">
           <div className="stat-icon">✅</div>
           <div className="stat-info">
             <span className="stat-nombre">{countBy("traitee")}</span>
-            <span className="stat-label">Traitées</span>
+            <span className="stat-label">Passés</span>
           </div>
         </div>
         <div className="stat-card total">
@@ -172,19 +163,11 @@ const Employe = () => {
           </button>
           <button
             className={`filtre-btn ${
-              filtreStatut === "en_cours" ? "active" : ""
-            }`}
-            onClick={() => setFiltreStatut("en_cours")}
-          >
-            En cours ({countBy("en_cours")})
-          </button>
-          <button
-            className={`filtre-btn ${
               filtreStatut === "traitee" ? "active" : ""
             }`}
             onClick={() => setFiltreStatut("traitee")}
           >
-            Traitées ({countBy("traitee")})
+            Passés ({countBy("traitee")})
           </button>
         </div>
       </div>
@@ -194,7 +177,7 @@ const Employe = () => {
         {loading ? (
           <div className="aucune-demande">
             <div className="aucune-demande-icon">⏳</div>
-            <h2>Chargement de vos demandes…</h2>
+            <h2>Chargement de vos rendez-vous…</h2>
           </div>
         ) : error ? (
           <div className="aucune-demande">
@@ -204,8 +187,8 @@ const Employe = () => {
         ) : demandesFiltrees.length === 0 ? (
           <div className="aucune-demande">
             <div className="aucune-demande-icon">📭</div>
-            <h2>Aucune demande pour ce filtre</h2>
-            <p>Les nouvelles demandes apparaîtront ici.</p>
+            <h2>Aucun rendez-vous pour ce filtre</h2>
+            <p>Les nouveaux rendez-vous apparaîtront ici.</p>
           </div>
         ) : (
           <div className="demandes-liste">
@@ -215,7 +198,7 @@ const Employe = () => {
                 <div key={demande.id} className="demande-card">
                   <div className="demande-header-card">
                     <div className="demande-id-statut">
-                      <span className="demande-id">Demande #{demande.id}</span>
+                      <span className="demande-id">Rendez-vous #{demande.id}</span>
                       <span className={`statut-badge ${badge.classe}`}>
                         {getStatutIcon(demande.statut)} {badge.texte}
                       </span>

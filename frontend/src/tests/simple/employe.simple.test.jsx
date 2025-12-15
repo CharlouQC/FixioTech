@@ -30,10 +30,10 @@ describe("Employe Page", () => {
     expect(getByText(/chargement/i)).toBeInTheDocument();
   });
 
-  it("devrait afficher message si aucune demande", async () => {
+  it("devrait afficher message si aucun rendez-vous", async () => {
     const { default: Employe } = await import("../../vues/employe");
     const { findByText } = render(<Employe />);
-    const msg = await findByText(/aucune demande/i);
+    const msg = await findByText(/aucun rendez-vous/i);
     expect(msg).toBeInTheDocument();
   });
 

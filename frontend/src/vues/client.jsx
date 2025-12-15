@@ -151,9 +151,9 @@ const Client = () => {
   return (
     <div className="client-container">
       <div className="client-header">
-        <h1>Mes demandes</h1>
+        <h1>Mes rendez-vous</h1>
         <p className="client-intro">
-          Consultez ici vos rendez-vous demandés et leur statut.
+          Consultez ici vos rendez-vous et leur statut.
         </p>
       </div>
 

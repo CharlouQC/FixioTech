@@ -48,7 +48,7 @@ const MainNavigation = () => {
             </li>
             <li>
               <Link to="/client" className="nav-link">
-                Mes demandes
+                Mes rendez-vous
               </Link>
             </li>
           </>
