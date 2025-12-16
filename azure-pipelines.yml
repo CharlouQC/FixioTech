@@ -1,17 +1,31 @@
 trigger:
   branches:
     include:
-      - main
       - master
 
 pr:
   branches:
     include:
-      - main
       - master
 
 pool:
   vmImage: ubuntu-latest
+
+services:
+  postgres:
+    image: postgres:16
+    env:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: fixiotech_test
+    ports:
+      - 5432:5432
+    options: >-
+      --health-cmd="pg_isready -U postgres"
+      --health-interval=10s
+      --health-timeout=5s
+      --health-retries=10
+
 
 steps:
   - task: NodeTool@0
@@ -30,11 +44,23 @@ steps:
     displayName: "Install frontend deps"
 
   - script: |
-      cd frontend
-      npm test -- --watch=false
-    displayName: "Run frontend tests"
+      sudo apt-get update
+      sudo apt-get install -y postgresql-client
+    displayName: Install psql client
 
   - script: |
-      cd backend
-      npm test:unit
-    displayName: "Run backend unit tests"
+      export PGPASSWORD=postgres
+      psql -h localhost -U postgres -d fixiotech_test -c "DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'fixio_local') THEN CREATE ROLE fixio_local LOGIN PASSWORD 'fixio_local'; END IF; END $$;"
+      psql -h localhost -U postgres -d fixiotech_test -f backend/bd/fixiotech.sql
+    displayName: Init DB schema (fixiotech.sql)
+
+  - script: |
+      npm test
+    displayName: Run tests (backend and frontend)
+    env:
+      NODE_ENV: test
+      DB_HOST: localhost
+      DB_PORT: '5432'
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: fixiotech_test
