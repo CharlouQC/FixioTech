@@ -8,6 +8,7 @@
     "test:watch": "vitest",
     "test:cucumber": "cucumber-js",
     "test:all": "npm run test && npm run test:cucumber",
+    "test:unit": "vitest --run --exclude **/tests/integration/**",
     "start": "node app.js",
     "dev": "nodemon app.js",
     "lint": "eslint .",
