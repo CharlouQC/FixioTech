@@ -12,7 +12,7 @@ export default defineConfig({
       DB_HOST: "localhost",
       DB_PORT: "5432",
       DB_USER: "postgres",
-      DB_PASSWORD: "Charles16$",
+      DB_PASSWORD: "postgres",
       DB_NAME: "fixiotech",
       DB_SSL: "false"
     }

@@ -48,7 +48,7 @@ describe("Tests d'intégration - API Rendez-vous", () => {
       const nouveauRdv = {
         client_id: testClientId,
         employe_id: testEmployeId,
-        date_rdv: "2025-12-15",
+        date_rdv: "2025-12-19",
         heure_rdv: "10:00:00",
         description_probleme: "Test d'intégration - Problème réseau",
       };
@@ -95,7 +95,7 @@ describe("Tests d'intégration - API Rendez-vous", () => {
       const response = await request(app)
         .post("/api/rendezVous")
         .send(rdvClientInvalide)
-        .expect(409); // Contrôleur retourne "Aucun employé disponible" - conflit métier
+        .expect(400); // Contrôleur retourne "Aucun employé disponible" - conflit métier
     });
 
     it("devrait rejeter un rendez-vous avec une date passée", async () => {

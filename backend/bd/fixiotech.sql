@@ -150,30 +150,3 @@ CREATE TRIGGER trg_rdv_roles_upd
 BEFORE UPDATE ON rendez_vous
 FOR EACH ROW
 EXECUTE FUNCTION check_rdv_roles();
-
--- ====================================================================
--- PERMISSIONS (à adapter au user utilisé par l'API)
--- ====================================================================
-
-DO $$
-DECLARE
-  app_user TEXT := 'fixio_local';
-BEGIN
-  -- Accès au schéma
-  EXECUTE format('GRANT USAGE ON SCHEMA public TO %I', app_user);
-
-  -- Droits sur les tables
-  EXECUTE format('GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.utilisateurs TO %I', app_user);
-  EXECUTE format('GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.horaires TO %I', app_user);
-  EXECUTE format('GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE public.rendez_vous TO %I', app_user);
-
-  -- Droits sur les séquences (SERIAL)
-  -- (les noms suivants sont ceux générés par SERIAL, à 99% ce seront ceux-là)
-  EXECUTE format('GRANT USAGE, SELECT, UPDATE ON SEQUENCE public.utilisateurs_id_seq TO %I', app_user);
-  EXECUTE format('GRANT USAGE, SELECT, UPDATE ON SEQUENCE public.horaires_id_seq TO %I', app_user);
-  EXECUTE format('GRANT USAGE, SELECT, UPDATE ON SEQUENCE public.rendez_vous_id_seq TO %I', app_user);
-
-  -- Optionnel : exécution des fonctions (souvent pas nécessaire, mais safe)
-  EXECUTE format('GRANT EXECUTE ON FUNCTION public.check_horaires_role() TO %I', app_user);
-  EXECUTE format('GRANT EXECUTE ON FUNCTION public.check_rdv_roles() TO %I', app_user);
-END $$;
