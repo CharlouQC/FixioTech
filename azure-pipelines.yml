@@ -17,7 +17,7 @@ services:
     env:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: fixiotech_test
+      POSTGRES_DB: fixiotech
     ports:
       - 5432:5432
     options: >-
