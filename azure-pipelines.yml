@@ -60,6 +60,6 @@ steps:
       NODE_ENV: test
       DB_HOST: localhost
       DB_PORT: '5432'
-      DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_USER: fixio_local
+      DB_PASSWORD: fixio_local123
       DB_NAME: fixiotech_test
