@@ -36,5 +36,5 @@ steps:
 
   - script: |
       cd backend
-      npm test
-    displayName: "Run backend tests"
+      npm test:unit
+    displayName: "Run backend unit tests"
