@@ -50,7 +50,7 @@ test.describe('Gestion des Rendez-vous', () => {
     console.log('ÉTAPE 2: Vérification de l\'affichage des rendez-vous');
 
     // Vérifier que la section rendez-vous est présente
-    const titre = page.locator('h1:has-text("Mes demandes")');
+    const titre = page.locator('h1:has-text("Mes rendez-vous")');
     await expect(titre).toBeVisible({ timeout: 10000 });
 
     // Attendre un peu pour le chargement des rendez-vous

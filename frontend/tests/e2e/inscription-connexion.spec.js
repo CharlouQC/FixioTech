@@ -68,7 +68,7 @@ test.describe('Inscription et Connexion Client', () => {
     await expect(welcomeMessage).toBeVisible({ timeout: 5000 });
 
     // Vérifier la présence des éléments du dashboard client
-    await expect(page.locator('h1:has-text("Mes demandes")')).toBeVisible();
+    await expect(page.locator('h1:has-text("Mes rendez-vous")')).toBeVisible();
 
     // Vérifier le bouton de déconnexion
     const logoutButton = page.locator('button:has-text("Déconnexion"), a:has-text("Déconnexion")');

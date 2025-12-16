@@ -13,7 +13,7 @@ export const SERVICES = [
 ];
 
 /**
- * Jours de la semaine 
+ * Jours de la semaine (ordre d'affichage: lundi à dimanche)
  */
 export const JOURS_SEMAINE = [
   "lundi",

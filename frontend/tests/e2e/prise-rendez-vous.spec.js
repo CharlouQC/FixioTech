@@ -108,7 +108,7 @@ test.describe('Prise de Rendez-vous', () => {
     
     // Vérifier qu'on est bien sur la page client
     await expect(page).toHaveURL('/client');
-    const pageTitle = page.locator('h1:has-text("Mes demandes")');
+    const pageTitle = page.locator('h1:has-text("Mes rendez-vous")');
     await expect(pageTitle).toBeVisible({ timeout: 5000 });
 
     console.log('✅ Test réussi: Rendez-vous créé avec succès');

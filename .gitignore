@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Sokrates reports (can be regenerated)
+_sokrates/
+
+# Playwright reports (can be regenerated)
+playwright-report/
+.last-run.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
