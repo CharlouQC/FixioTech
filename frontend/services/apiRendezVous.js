@@ -12,6 +12,7 @@ const buildRdvPayload = (rdv) => ({
   employe_id: rdv.employe_id,
   date_rdv: rdv.date_rdv,   // "YYYY-MM-DD"
   heure_rdv: rdv.heure_rdv, // "HH:mm"
+  service: rdv.service || null,
   description_probleme: emptyToNull(rdv.description_probleme ?? null),
 });
 

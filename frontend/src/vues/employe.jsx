@@ -83,17 +83,33 @@ const Employe = () => {
 
   const demandes = useMemo(() => {
     // Adapte chaque RDV aux champs attendus par le rendu existant
+    const aujourdhui = new Date();
+    aujourdhui.setHours(0, 0, 0, 0);
+    
     return (rdvs || []).map((r) => {
-      const ui = mapDbStatutToUi(r.statut || "Programmé");
+      let statut = r.statut || "Programmé";
+      
+      // Si le rendez-vous est "Programmé" mais la date est passée, le considérer comme "Terminé"
+      if (statut === "Programmé" || statut === "Programmθ") {
+        // Extraire la partie date YYYY-MM-DD de la chaîne ISO
+        const dateStr = typeof r.date_rdv === 'string' 
+          ? r.date_rdv.split('T')[0] 
+          : r.date_rdv;
+        const dateRdv = new Date(dateStr + "T00:00:00");
+        if (dateRdv < aujourdhui) {
+          statut = "Terminé";
+        }
+      }
+      
+      const ui = mapDbStatutToUi(statut);
       return {
         id: r.id,
-        // On n’a pas le détail client (nom/email) côté RDV → on affiche un identifiant simple.
         client: {
-          nom: `Client #${r.client_id}`,
-          courriel: "",
+          nom: r.client_nom || `Client #${r.client_id}`,
+          courriel: r.client_email || "",
         },
-        service: r.service || "Support technique", // champ “service” non stocké en DB : valeur par défaut
-        technicien: `Vous (#${r.employe_id})`,
+        service: r.service || "Non spécifié",
+        technicien: r.employe_nom || `Technicien #${r.employe_id}`,
         date: r.date_rdv, // "YYYY-MM-DD"
         heure: r.heure_rdv || "—", // "HH:mm"
         description: r.description_probleme || "—",

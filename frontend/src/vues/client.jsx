@@ -95,6 +95,9 @@ const Client = () => {
       );
     }
 
+    const aujourdhui = new Date();
+    aujourdhui.setHours(0, 0, 0, 0);
+    
     return (
       <div className="client-rdv-liste">
         {rdvs.map((r) => {
@@ -102,16 +105,27 @@ const Client = () => {
           const techLabel =
             tech?.nom_complet || tech?.email || `Technicien #${r.employe_id}`;
 
+          // Si le rendez-vous est "Programmé" mais la date est passée, le considérer comme "Terminé"
+          let statut = r.statut || "Programmé";
+          if (statut === "Programmé" || statut === "Programmθ") {
+            // Extraire la partie date YYYY-MM-DD de la chaîne ISO
+            const dateStr = typeof r.date_rdv === 'string' 
+              ? r.date_rdv.split('T')[0] 
+              : r.date_rdv;
+            const dateRdv = new Date(dateStr + "T00:00:00");
+            if (dateRdv < aujourdhui) {
+              statut = "Terminé";
+            }
+          }
+
           return (
             <div key={r.id} className="client-rdv-card">
               <div className="client-rdv-header">
                 <div className="client-rdv-id">RDV #{r.id}</div>
                 <div
-                  className={`client-statut-badge client-statut-${(
-                    r.statut || "Programmé"
-                  ).toLowerCase()}`}
+                  className={`client-statut-badge client-statut-${statut.toLowerCase()}`}
                 >
-                  {r.statut || "Programmé"}
+                  {statut}
                 </div>
               </div>
 
@@ -128,6 +142,10 @@ const Client = () => {
                 </div>
 
                 <div className="client-rdv-row">
+                  <div className="client-rdv-item">
+                    <div className="label">Service</div>
+                    <div className="value">{r.service || "Non spécifié"}</div>
+                  </div>
                   <div className="client-rdv-item">
                     <div className="label">Technicien assigné</div>
                     <div className="value">{techLabel}</div>

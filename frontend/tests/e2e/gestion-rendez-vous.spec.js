@@ -57,7 +57,7 @@ test.describe('Gestion des Rendez-vous', () => {
     await page.waitForTimeout(2000);
 
     // Vérifier qu'il y a au moins un rendez-vous ou un message "Aucun rendez-vous"
-    const hasRendezVous = await page.locator('.client-rdv-item').count() > 0;
+    const hasRendezVous = await page.locator('.client-rdv-card').count() > 0;
     const noRendezVousMessage = await page.locator('text=/n\'avez pas encore de rendez-vous|aucun rendez-vous/i, p, div, span').first().isVisible().catch(() => false);
 
     expect(hasRendezVous || noRendezVousMessage).toBeTruthy();
@@ -76,7 +76,7 @@ test.describe('Gestion des Rendez-vous', () => {
     console.log('Test: Affichage des détails d\'un rendez-vous');
 
     // Compter les rendez-vous dans la liste
-    const rendezVousCount = await page.locator('.client-rdv-item').count();
+    const rendezVousCount = await page.locator('.client-rdv-card').count();
 
     if (rendezVousCount === 0) {
       console.log('ℹ️  Aucun rendez-vous à consulter - création d\'un rendez-vous d\'abord');
@@ -217,7 +217,7 @@ test.describe('Gestion des Rendez-vous', () => {
 
     console.log('Test: Vérification des restrictions client');
 
-    const rendezVousCount = await page.locator('.client-rdv-item').count();
+    const rendezVousCount = await page.locator('.client-rdv-card').count();
 
     if (rendezVousCount === 0) {
       console.log('ℹ️  Test ignoré: Aucun rendez-vous pour vérifier les restrictions');
