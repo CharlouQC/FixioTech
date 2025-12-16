@@ -34,14 +34,8 @@ steps:
     displayName: "Use Node.js 20"
 
   - script: |
-      cd backend
       npm ci
-    displayName: "Install backend deps"
-
-  - script: |
-      cd frontend
-      npm ci
-    displayName: "Install frontend deps"
+    displayName: "Install deps"
 
   - script: |
       sudo apt-get update
